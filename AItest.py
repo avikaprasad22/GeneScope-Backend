@@ -1,8 +1,17 @@
 import os
 import google.generativeai as genai
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get the API key
+api_key = os.getenv("CHATAPIKEY")
 # Configure the API key (ensure the API_KEY environment variable is set)
-genai.configure(api_key="AIzaSyD6ZDCbcjONe3qZcaVgSpkuTp2kKRqPkHE")
+
+genai.configure(api_key=api_key)
+
 
 # Create the model with the configuration
 generation_config = {
@@ -17,15 +26,11 @@ model = genai.GenerativeModel(
     model_name="gemini-1.5-pro",
     generation_config=generation_config,
     system_instruction=(
-        "You are an expert in suggesting gifts for people. Your task is to engage "
-        "in conversations about gift-giving and provide thoughtful suggestions. "
-        "Understand the user’s preferences, occasion, and budget to offer personalized "
-        "gift ideas. Use relatable examples, humor, and creativity to make the interaction "
-        "enjoyable. Ask clarifying questions to better understand the recipient’s personality "
-        "and interests. Offer practical tips for wrapping, presenting, or adding a personal touch "
-        "to the gift. Tailor suggestions to fit a range of scenarios, from simple and inexpensive "
-        "to elaborate and luxurious."
-        "Also when giving suggestion, give some trending product description, prices, customer ratings and where to find the item "
+        "You are a highly intelligent and professional AI assistant designed for business support. "
+        "Your primary role is to provide exceptional customer service while leveraging deep expertise in market analysis, "
+        "inventory management, and sales strategy. You have access to real-time data and can present current sales trends,"
+        " identify growth opportunities, and assist with complex decision-making. You communicate clearly, offer strategic"
+        " recommendations, and adapt your guidance to each unique business scenario. Be proactive, concise, and data-driven."
     ),
 )
 
@@ -46,7 +51,7 @@ while True:
 
         model_response = response.text
 
-        print(f'Giftinator 3000: {model_response}\n')
+        print(f'Captain Cruncher: {model_response}\n')
 
         # Update the conversation history
         history.append({"role": "user", "parts": [user_input]})
