@@ -23,23 +23,14 @@ from api.channel import channel_api
 from api.group import group_api
 from api.section import section_api
 from api.student import student_api
-from api.bookrec import bookrec_api
 from api.nestPost import nestPost_api # Justin added this, custom format for his website
 from api.messages_api import messages_api # Adi added this, messages for his website
-from api.carphoto import car_api
-from api.carChat import car_chat_api
-from api.bookreview import bookreview_api
-from api.reaction import reaction_api
-from api.wishlist import wishlist_api  # Import the wishlist blueprint
-from api.suggest import suggest_api
-from api.bookpurchase import bookpurchase_api # Avika added this, book purchase for her website
-from api.emotion import emotion_api
+from api.trivia import trivia_api
 
 
 
 from api.vote import vote_api
 # database Initialization functions
-from model.carChat import CarChat
 from model.user import User, initUsers
 from model.section import Section, initSections
 from model.group import Group, initGroups
@@ -47,39 +38,22 @@ from model.channel import Channel, initChannels
 from model.post import Post, initPosts
 from model.nestPost import NestPost, initNestPosts # Justin added this, custom format for his website
 from model.vote import Vote, initVotes
-from model.librarydb import Book, initBooks 
-from model.reaction import Reaction, initReactions
-from model.commentsdb import Comments, initComments
-from model.suggest import SuggestedBook, initSuggest
-from model.bookpurchasedb import CartItem, init_books_in_cart
-from model.wishlist import Wishlist, initWishlist
-from model.bookrecdb import SaveBookRec, initSavedBookRecs
-from model.emotion import Emotion, initEmotion
+from model.trivia import TriviaQuestion, TriviaResponse
 
-# server only Views
 
 # register URIs for api endpoints
 app.register_blueprint(messages_api) # Adi added this, messages for his website
 app.register_blueprint(user_api)
-app.register_blueprint(wishlist_api)  # Ensure this line is present
 app.register_blueprint(pfp_api) 
 app.register_blueprint(post_api)
 app.register_blueprint(channel_api)
 app.register_blueprint(group_api)
 app.register_blueprint(section_api)
 app.register_blueprint(student_api)
-app.register_blueprint(bookrec_api)
-app.register_blueprint(car_chat_api)
-app.register_blueprint(bookreview_api)
-app.register_blueprint(suggest_api)
-app.register_blueprint(reaction_api)
-app.register_blueprint(bookpurchase_api) # Avika added this, book purchase for her website
-# Added new files to create nestPosts, uses a different format than Mortensen and didn't want to touch his junk
 app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
-app.register_blueprint(car_api)
-app.register_blueprint(emotion_api)
+app.register_blueprint(trivia_api)
 
 
 # Tell Flask-Login the view function name of your login route
@@ -188,14 +162,6 @@ def generate_data():
     initPosts()
     initNestPosts()
     initVotes()
-    initBooks()
-    initComments()
-    initReactions()
-    initWishlist()
-    initSavedBookRecs()
-    init_books_in_cart()
-    initSuggest()
-    initEmotion()
     
 # Backup the old database
 def backup_database(db_uri, backup_uri):
@@ -217,16 +183,6 @@ def extract_data():
         data['groups'] = [group.read() for group in Group.query.all()]
         data['channels'] = [channel.read() for channel in Channel.query.all()]
         data['posts'] = [post.read() for post in Post.query.all()]
-        data['books'] = [book.read() for book in Book.query.all()]
-        data['comments'] = [comment.read() for comment in Comments.query.all()]
-        data['suggestions'] = [suggestion.read() for suggestion in SuggestedBook.query.all()]
-        data['cart_items'] = [cart_item.read() for cart_item in CartItem.query.all()]
-        data['wishlist'] = [wishlist_item.read() for wishlist_item in Wishlist.query.all()]
-        data['savedbookrecs'] = [savedbookrec.read() for savedbookrec in SaveBookRec.query.all()]
-        data['wishlist'] = [wishlist_item.read() for wishlist_item in Wishlist.query.all()]
-        data['reaction'] = [reaction.read() for reaction in Reaction.query.all()]
-        data['emotion'] = [emotion.read() for emotion in Emotion.query.all()]
-
     return data
 
 # Save extracted data to JSON files
@@ -253,12 +209,6 @@ def restore_data(data):
         _ = Section.restore(data['sections'])
         _ = Group.restore(data['groups'], users)
         _ = Channel.restore(data['channels'])
-        _ = SuggestedBook.restore(data['suggestions'])
-        _ = Wishlist.restore(data['wishlist']) 
-        _ = Book.restore(data['books'])
-        _ = Comments.restore(data['comments'])
-        _ = CartItem.restore(data['cart_items'])
-
     print("Data restored to the new database.")
 
 # Define a command to backup data
