@@ -38,7 +38,7 @@ from model.channel import Channel, initChannels
 from model.post import Post, initPosts
 from model.nestPost import NestPost, initNestPosts # Justin added this, custom format for his website
 from model.vote import Vote, initVotes
-from model.trivia import TriviaQuestion, TriviaResponse
+from model.trivia import TriviaQuestion, TriviaResponse, init_trivia
 
 
 # register URIs for api endpoints
@@ -162,6 +162,7 @@ def generate_data():
     initPosts()
     initNestPosts()
     initVotes()
+    init_trivia()  # Initialize trivia tables and add sample questions
     
 # Backup the old database
 def backup_database(db_uri, backup_uri):

@@ -102,3 +102,23 @@ def add_trivia_question():
         return jsonify({'message': 'Trivia question added successfully', 'question_id': new_question.id}), 201
     
     return jsonify({'error': 'Request must be JSON'}), 415
+
+# Route to get the leaderboard
+@trivia_api.route('/leaderboard', methods=['GET'])
+def get_leaderboard():
+    """Retrieve the leaderboard with users and their total scores."""
+    leaderboard = (
+        db.session.query(
+            TriviaResponse.name,
+            db.func.sum(TriviaResponse.score).label('total_score')
+        )
+        .group_by(TriviaResponse.name)
+        .order_by(db.desc('total_score'))
+        .limit(10)  # Limit to top 10 users
+        .all()
+    )
+    
+    return jsonify([
+        {'name': entry.name, 'total_score': entry.total_score}
+        for entry in leaderboard
+    ])
