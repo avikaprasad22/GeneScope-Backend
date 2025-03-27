@@ -1,0 +1,7 @@
+Feature,Question,Type
+Patient Age,What is your age?,base
+Gender,Sex assigned at birth (male/female):,base
+Genes in mother's side,Is there a history of genetic conditions on your mother's side? (yes/no):,base
+Birth asphyxia,Did the birth involve asphyxia? (yes/no):,base
+Symptom 1,Are you experiencing sudden vision loss? (yes/no):,symptom
+Symptom 2,Are you having trouble seeing colors? (yes/no):,symptom
