@@ -38,7 +38,7 @@ from model.channel import Channel, initChannels
 from model.post import Post, initPosts
 from model.nestPost import NestPost, initNestPosts # Justin added this, custom format for his website
 from model.vote import Vote, initVotes
-from model.trivia import TriviaQuestion, TriviaResponse, init_trivia
+from model.trivia import TriviaQuestion, TriviaResponse, init_trivia, backup_trivia_data, restore_trivia_data
 
 
 # register URIs for api endpoints
@@ -198,7 +198,7 @@ def save_data_to_json(data, directory='backup'):
 # Load data from JSON files
 def load_data_from_json(directory='backup'):
     data = {}
-    for table in ['users', 'sections', 'groups', 'channels', 'wishlist', 'cart_items', 'suggestions', 'books', 'comments']:
+    for table in ['users', 'sections', 'groups', 'channels']:
         with open(os.path.join(directory, f'{table}.json'), 'r') as f:
             data[table] = json.load(f)
     return data
@@ -218,12 +218,14 @@ def backup_data():
     data = extract_data()
     save_data_to_json(data)
     backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
+    backup_trivia_data()  # Backup trivia data
 
 # Define a command to restore data
 @custom_cli.command('restore_data')
 def restore_data_command():
     data = load_data_from_json()
     restore_data(data)
+    restore_trivia_data()  # Restore trivia data
     
 # Register the custom command group with the Flask application
 app.cli.add_command(custom_cli)
