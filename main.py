@@ -26,6 +26,7 @@ from api.student import student_api
 from api.nestPost import nestPost_api # Justin added this, custom format for his website
 from api.messages_api import messages_api # Adi added this, messages for his website
 from api.trivia import trivia_api
+from chatbot import DiseasePredictor
 
 
 
@@ -239,3 +240,22 @@ if __name__ == "__main__":
     # second number - 5
     # third + 4th - # of table
     # 8504
+
+if __name__ == "__main__":
+    predictor = DiseasePredictor("symbipredict_2024.csv")
+
+    print("Welcome to the Disease Risk Predictor!")
+    disease = input("Enter a disease name: ").strip()
+    
+    symptoms = predictor.get_symptoms_for_disease(disease)
+    if not symptoms:
+        print("Sorry, disease not found.")
+    else:
+        user_input = {}
+        print("\nPlease answer the following symptom questions (yes/no):")
+        for symptom in symptoms:
+            answer = input(f"Do you have {symptom.replace('_', ' ')}? ").strip().lower()
+            user_input[symptom] = 1 if answer in ["yes", "y"] else 0
+        
+        probability = predictor.predict(user_input, disease)
+        print(f"\nEstimated likelihood of having {disease}: {probability:.2f}%")
