@@ -37,7 +37,7 @@ class DiseasePredictor:
         disease_index = self.model.classes_.tolist().index(symptom_dict["target_disease"])
         return probabilities[disease_index] * 100
 
-# Conversational chatbot in terminal
+# chatbot in terminal
 if __name__ == "__main__":
     predictor = DiseasePredictor("symbipredict_2024.csv")
 
