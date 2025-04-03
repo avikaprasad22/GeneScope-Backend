@@ -25,9 +25,9 @@ from api.section import section_api
 from api.student import student_api
 from api.nestPost import nestPost_api # Justin added this, custom format for his website
 from api.messages_api import messages_api # Adi added this, messages for his website
-from api.trivia import trivia_api
 from chatbot import DiseasePredictor
-
+from api.questions import questions_api
+from api.scoreboard import scoreboard_api
 
 
 from api.vote import vote_api
@@ -39,7 +39,6 @@ from model.channel import Channel, initChannels
 from model.post import Post, initPosts
 from model.nestPost import NestPost, initNestPosts # Justin added this, custom format for his website
 from model.vote import Vote, initVotes
-from model.trivia import TriviaQuestion, TriviaResponse, init_trivia, backup_trivia_data, restore_trivia_data
 
 
 # register URIs for api endpoints
@@ -54,7 +53,8 @@ app.register_blueprint(student_api)
 app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
-app.register_blueprint(trivia_api)
+app.register_blueprint(questions_api)
+app.register_blueprint(scoreboard_api)
 
 
 # Tell Flask-Login the view function name of your login route
@@ -163,7 +163,6 @@ def generate_data():
     initPosts()
     initNestPosts()
     initVotes()
-    init_trivia()  # Initialize trivia tables and add sample questions
     
 # Backup the old database
 def backup_database(db_uri, backup_uri):
@@ -219,14 +218,12 @@ def backup_data():
     data = extract_data()
     save_data_to_json(data)
     backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
-    backup_trivia_data()  # Backup trivia data
 
 # Define a command to restore data
 @custom_cli.command('restore_data')
 def restore_data_command():
     data = load_data_from_json()
     restore_data(data)
-    restore_trivia_data()  # Restore trivia data
     
 # Register the custom command group with the Flask application
 app.cli.add_command(custom_cli)
