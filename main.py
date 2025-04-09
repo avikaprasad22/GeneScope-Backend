@@ -14,6 +14,9 @@ import shutil
 
 # import "objects" from "this" project
 from __init__ import app, db, login_manager  # Key Flask objects 
+from flask_cors import CORS
+CORS(app)
+
 # API endpoints
 from api.user import user_api 
 from api.pfp import pfp_api
@@ -29,6 +32,7 @@ from chatbot import DiseasePredictor
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 
+from api.illumina import illumina_api
 
 from api.vote import vote_api
 # database Initialization functions
@@ -39,6 +43,7 @@ from model.channel import Channel, initChannels
 from model.post import Post, initPosts
 from model.nestPost import NestPost, initNestPosts # Justin added this, custom format for his website
 from model.vote import Vote, initVotes
+
 
 
 # register URIs for api endpoints
@@ -53,6 +58,7 @@ app.register_blueprint(student_api)
 app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
+app.register_blueprint(illumina_api)
 
 
 # Tell Flask-Login the view function name of your login route
