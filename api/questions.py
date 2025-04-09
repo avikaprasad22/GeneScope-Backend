@@ -4,47 +4,34 @@ import random
 
 questions_api = Blueprint('questions', __name__, url_prefix="/api")
 
-# Trivia API Base URL (fetch only 1 question per request)
-TRIVIA_API_URL = "https://opentdb.com/api.php?amount=1&category=17"
+# Trivia API Base URL (fetch multiple questions per request)
+TRIVIA_API_URL = "https://opentdb.com/api.php?amount=15&category=17"
 
-# Cache to store previously fetched questions
-cached_questions = []
+@questions_api.route('/get_questions', methods=['GET'])
+def get_questions():
+    """Fetches a batch of trivia questions for preloading."""
+    difficulty = request.args.get('difficulty', 'medium')
+    api_url = f"{TRIVIA_API_URL}&difficulty={difficulty}"
 
-@questions_api.route('/get_question', methods=['GET'])
-def get_question():
-    """Fetches a single trivia question with difficulty selection, optimizing response time."""
-    global cached_questions
-    
-    difficulty = request.args.get('difficulty', 'medium')  # Default: medium
+    try:
+        response = requests.get(api_url)
+        response.raise_for_status()
+        data = response.json()
 
-    # If cached questions exist, use them instead of making a new API request
-    if cached_questions:
-        question_data = cached_questions.pop()  # Retrieve a question from cache
-    else:
-        api_url = f"{TRIVIA_API_URL}&difficulty={difficulty}"
-        try:
-            response = requests.get(api_url)
-            response.raise_for_status()
-            data = response.json()
+        if "results" not in data or not data["results"]:
+            return jsonify({"error": "No questions found"}), 404
 
-            # Validate API response
-            if "results" not in data or not data["results"]:
-                return jsonify({"error": "No questions found"}), 404
+        questions = []
+        for q in data["results"]:
+            options = q["incorrect_answers"] + [q["correct_answer"]]
+            random.shuffle(options)
+            questions.append({
+                "question": q["question"],
+                "options": options,
+                "correct_answer": q["correct_answer"]
+            })
 
-            cached_questions = data["results"]  # Store fetched questions in cache
-            question_data = cached_questions.pop()  # Get one question
+        return jsonify(questions)
 
-        except requests.exceptions.RequestException as e:
-            return jsonify({"error": f"Failed to fetch question: {str(e)}"}), 500
-
-    # Shuffle answers
-    options = question_data["incorrect_answers"] + [question_data["correct_answer"]]
-    random.shuffle(options)
-
-    question = {
-        "question": question_data["question"],
-        "options": options,
-        "correct_answer": question_data["correct_answer"]
-    }
-
-    return jsonify(question)
+    except requests.exceptions.RequestException as e:
+        return jsonify({"error": f"Failed to fetch questions: {str(e)}"}), 500
