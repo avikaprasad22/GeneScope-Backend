@@ -9,8 +9,6 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-
-# Allow frontend requests (adjust the port if needed)
 CORS(app, resources={r"/sequence": {"origins": "http://127.0.0.1:3000"}}, supports_credentials=True)
 
 # Handle preflight OPTIONS request
@@ -24,37 +22,43 @@ def sequence_preflight():
     response.headers.add("Access-Control-Allow-Credentials", "true")
     return response, 200
 
-# Gene ID mapping for organisms (Ensembl IDs)
-GENE_IDS = {
-    "human": "ENSG00000139618",        # BRCA2 gene
-    "bacteria": "EBMG00000000001",     # Example placeholder
-    "virus": "ENSG00000284733",        # Example: viral gene
-    "strawberry": "ENSFAG00000000002"  # Placeholder
-}
-
-# Define the /sequence POST endpoint
+# Define the dynamic /sequence POST endpoint
 @app.route('/sequence', methods=['POST'])
 def get_dna_sequence():
     try:
         print("Sequence request received")
-        organism = request.json.get('organism', '').lower()
-        if not organism:
-            print("No organism provided")
-            return jsonify({"error": "No organism provided"}), 400
+        data = request.json
+        organism = data.get('organism', '').lower().replace(' ', '_')  # e.g., homo sapiens → homo_sapiens
+        gene_symbol = data.get('gene', '').upper()
 
-        gene_id = GENE_IDS.get(organism)
-        if not gene_id:
-            print(f"Organism '{organism}' not found")
-            return jsonify({"error": f"Organism '{organism}' not found"}), 404
+        if not organism or not gene_symbol:
+            return jsonify({"error": "Please provide both 'organism' and 'gene'"}), 400
 
-        url = f"https://rest.ensembl.org/sequence/id/{gene_id}?content-type=text/plain"
-        print(f"Fetching from Ensembl: {url}")
-        response = requests.get(url)
-        if response.status_code != 200:
-            print("Error fetching data from Ensembl")
+        # Lookup Ensembl gene ID dynamically
+        lookup_url = f"https://rest.ensembl.org/xrefs/symbol/{organism}/{gene_symbol}?content-type=application/json"
+        print(f"Looking up gene ID from: {lookup_url}")
+        lookup_response = requests.get(lookup_url)
+
+        if lookup_response.status_code != 200 or not lookup_response.json():
+            return jsonify({"error": f"No gene ID found for {gene_symbol} in {organism}"}), 404
+
+        gene_id = lookup_response.json()[0]['id']
+        print(f"Found gene ID: {gene_id}")
+
+        # Now fetch the actual sequence
+        seq_url = f"https://rest.ensembl.org/sequence/id/{gene_id}?content-type=text/plain"
+        print(f"Fetching sequence from: {seq_url}")
+        seq_response = requests.get(seq_url)
+
+        if seq_response.status_code != 200:
             return jsonify({"error": "Failed to fetch sequence from Ensembl"}), 500
 
-        return jsonify({"sequence": response.text})
+        return jsonify({
+            "gene": gene_symbol,
+            "organism": organism,
+            "ensembl_id": gene_id,
+            "sequence": seq_response.text
+        })
 
     except Exception as e:
         print(f"Error: {str(e)}")
