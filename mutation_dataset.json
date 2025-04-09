@@ -1,0 +1,5002 @@
+[
+  {
+    "gene": "EHHADH",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KNSTRN",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CRISPLD2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "VPS13A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NEB",
+    "mutation": "substitution",
+    "condition": "Nemaline myopathy 2"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2J;Dilated cardiomyopathy 1G"
+  },
+  {
+    "gene": "SMARCA4",
+    "mutation": "substitution",
+    "condition": "Rhabdoid tumor predisposition syndrome 2|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "ONECUT2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CSF3R",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive severe congenital neutropenia due to CSF3R deficiency|Inborn genetic diseases"
+  },
+  {
+    "gene": "TMEM230",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PRPH",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "GCDH",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SUGCT",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DSG1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "JAML",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "FRY",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "GATA4",
+    "mutation": "substitution",
+    "condition": "Atrioventricular septal defect 4"
+  },
+  {
+    "gene": "FLVCR1",
+    "mutation": "substitution",
+    "condition": "not provided|Inborn genetic diseases"
+  },
+  {
+    "gene": "CSMD3",
+    "mutation": "substitution",
+    "condition": "CSMD3-related disorder"
+  },
+  {
+    "gene": "CIC",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MSH6",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|not provided"
+  },
+  {
+    "gene": "FOXE3",
+    "mutation": "substitution",
+    "condition": "Congenital primary aphakia;Anterior segment dysgenesis"
+  },
+  {
+    "gene": "SARAF",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CALM2",
+    "mutation": "substitution",
+    "condition": "Long QT syndrome 1"
+  },
+  {
+    "gene": "OTOG",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "APP",
+    "mutation": "substitution",
+    "condition": "Alzheimer disease"
+  },
+  {
+    "gene": "BRCA1",
+    "mutation": "substitution",
+    "condition": "Breast-ovarian cancer"
+  },
+  {
+    "gene": "CCDC40;GAA",
+    "mutation": "substitution",
+    "condition": "not specified|Primary ciliary dyskinesia|Glycogen storage disease"
+  },
+  {
+    "gene": "KIF14",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MSH6",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|Hereditary nonpolyposis colorectal neoplasms"
+  },
+  {
+    "gene": "ARSL",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "RAD51C",
+    "mutation": "substitution",
+    "condition": "Fanconi anemia complementation group O"
+  },
+  {
+    "gene": "ABCA1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SCN5A",
+    "mutation": "substitution",
+    "condition": "Cardiac arrhythmia"
+  },
+  {
+    "gene": "CEP290",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "ITGB2",
+    "mutation": "substitution",
+    "condition": "Leukocyte adhesion deficiency 1"
+  },
+  {
+    "gene": "DYSF",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CSRP3",
+    "mutation": "substitution",
+    "condition": "Hypertrophic cardiomyopathy 12;Dilated cardiomyopathy 1M|not provided"
+  },
+  {
+    "gene": "BRIP1",
+    "mutation": "substitution",
+    "condition": "Familial cancer of breast;Fanconi anemia complementation group J"
+  },
+  {
+    "gene": "ABCA1",
+    "mutation": "substitution",
+    "condition": "Hypoalphalipoproteinemia"
+  },
+  {
+    "gene": "NDUFS1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "TBL1XR1",
+    "mutation": "substitution",
+    "condition": "Intellectual disability"
+  },
+  {
+    "gene": "IFT88",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "BCKDHA",
+    "mutation": "substitution",
+    "condition": "Maple syrup urine disease|not provided"
+  },
+  {
+    "gene": "CHD7",
+    "mutation": "substitution",
+    "condition": "CHARGE syndrome"
+  },
+  {
+    "gene": "PTGIS",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DNAH1",
+    "mutation": "substitution",
+    "condition": "Spermatogenic failure 18;Ciliary dyskinesia"
+  },
+  {
+    "gene": "DNAH5",
+    "mutation": "substitution",
+    "condition": "Primary ciliary dyskinesia"
+  },
+  {
+    "gene": "BUB1B",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases|Mosaic variegated aneuploidy syndrome 1"
+  },
+  {
+    "gene": "CTSA",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SUN1",
+    "mutation": "substitution",
+    "condition": "Emery-Dreifuss muscular dystrophy"
+  },
+  {
+    "gene": "SZT2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MRE11",
+    "mutation": "substitution",
+    "condition": "Ataxia-telangiectasia-like disorder|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "ZKSCAN2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PLEKHM2",
+    "mutation": "substitution",
+    "condition": "Dilated Cardiomyopathy"
+  },
+  {
+    "gene": "COL1A1",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype"
+  },
+  {
+    "gene": "ATM",
+    "mutation": "substitution",
+    "condition": "Ataxia-telangiectasia syndrome|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "ACAT1",
+    "mutation": "substitution",
+    "condition": "Deficiency of acetyl-CoA acetyltransferase"
+  },
+  {
+    "gene": "CSF2RB",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DST",
+    "mutation": "substitution",
+    "condition": "Epidermolysis bullosa simplex 3"
+  },
+  {
+    "gene": "CYLD",
+    "mutation": "substitution",
+    "condition": "Frontotemporal dementia and/or amyotrophic lateral sclerosis 8"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "not provided|Dilated cardiomyopathy 1G;Autosomal recessive limb-girdle muscular dystrophy type 2J"
+  },
+  {
+    "gene": "VWA5B1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ANO3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "LAMC2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "LDLR",
+    "mutation": "substitution",
+    "condition": "not specified|Familial hypercholesterolemia|Cardiovascular phenotype|Hypercholesterolemia"
+  },
+  {
+    "gene": "ERCC2",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "TRPC7",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MAP3K7",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SAMHD1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DOCK8",
+    "mutation": "substitution",
+    "condition": "-"
+  },
+  {
+    "gene": "RP9",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HCFC1",
+    "mutation": "substitution",
+    "condition": "not specified|Methylmalonic acidemia with homocystinuria"
+  },
+  {
+    "gene": "ELP1",
+    "mutation": "substitution",
+    "condition": "Medulloblastoma|not provided|not specified|Medulloblastoma;Familial dysautonomia"
+  },
+  {
+    "gene": "FSIP2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CRTAP",
+    "mutation": "substitution",
+    "condition": "Osteogenesis imperfecta type 7"
+  },
+  {
+    "gene": "MEF2C",
+    "mutation": "substitution",
+    "condition": "Intellectual disability"
+  },
+  {
+    "gene": "DOCK6",
+    "mutation": "substitution",
+    "condition": "not provided|Inborn genetic diseases"
+  },
+  {
+    "gene": "SCN1A",
+    "mutation": "substitution",
+    "condition": "Early infantile epileptic encephalopathy with suppression bursts"
+  },
+  {
+    "gene": "FPR1",
+    "mutation": "substitution",
+    "condition": "Gingival disorder"
+  },
+  {
+    "gene": "MLLT6",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DHCR7;NADSYN1",
+    "mutation": "substitution",
+    "condition": "not specified|not provided|Smith-Lemli-Opitz syndrome|Inborn genetic diseases"
+  },
+  {
+    "gene": "TUB",
+    "mutation": "substitution",
+    "condition": "TUB-related disorder"
+  },
+  {
+    "gene": "SLC2A1",
+    "mutation": "substitution",
+    "condition": "GLUT1 deficiency syndrome 1"
+  },
+  {
+    "gene": "CDH1",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "VAPB",
+    "mutation": "substitution",
+    "condition": "Amyotrophic lateral sclerosis type 8;Adult-onset proximal spinal muscular atrophy"
+  },
+  {
+    "gene": "NIPA2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SLC25A22",
+    "mutation": "substitution",
+    "condition": "Early infantile epileptic encephalopathy with suppression bursts"
+  },
+  {
+    "gene": "LCLAT1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CSNK2A2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CCDC15",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MYL4",
+    "mutation": "substitution",
+    "condition": "Atrial fibrillation"
+  },
+  {
+    "gene": "TMC1",
+    "mutation": "substitution",
+    "condition": "not specified|Autosomal recessive nonsyndromic hearing loss 7|Autosomal dominant nonsyndromic hearing loss 36|not provided"
+  },
+  {
+    "gene": "CACNA1S",
+    "mutation": "substitution",
+    "condition": "Malignant hyperthermia"
+  },
+  {
+    "gene": "MPDZ",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MSN",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "EGR2",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease"
+  },
+  {
+    "gene": "KCNE1",
+    "mutation": "substitution",
+    "condition": "Long QT syndrome 5"
+  },
+  {
+    "gene": "FLT3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GABRB2",
+    "mutation": "substitution",
+    "condition": "GABRB2-related neurodevelopmental disorders"
+  },
+  {
+    "gene": "ATR",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "SIGLEC1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ACTN2",
+    "mutation": "substitution",
+    "condition": "Primary familial hypertrophic cardiomyopathy;Dilated cardiomyopathy 1AA"
+  },
+  {
+    "gene": "WDR45",
+    "mutation": "substitution",
+    "condition": "not provided|Neurodegeneration with brain iron accumulation 5"
+  },
+  {
+    "gene": "LYN",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ZNF232",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CRAT",
+    "mutation": "substitution",
+    "condition": "not provided|not specified"
+  },
+  {
+    "gene": "ZFHX2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ATR",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "PGM3",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency 23"
+  },
+  {
+    "gene": "VRK1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "VCAN",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NF2",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "AGRN",
+    "mutation": "substitution",
+    "condition": "Congenital myasthenic syndrome 8"
+  },
+  {
+    "gene": "ABCA3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CDCA7",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ENTREP1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ALPK3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ADCY5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CARD9",
+    "mutation": "substitution",
+    "condition": "Predisposition to invasive fungal disease due to CARD9 deficiency"
+  },
+  {
+    "gene": "NLRP12",
+    "mutation": "substitution",
+    "condition": "Familial cold autoinflammatory syndrome 2|NLRP12-related disorder"
+  },
+  {
+    "gene": "ATP7B",
+    "mutation": "substitution",
+    "condition": "Wilson disease"
+  },
+  {
+    "gene": "SP110",
+    "mutation": "substitution",
+    "condition": "Hepatic veno-occlusive disease-immunodeficiency syndrome|not specified|not provided"
+  },
+  {
+    "gene": "NPC2",
+    "mutation": "substitution",
+    "condition": "Niemann-Pick disease"
+  },
+  {
+    "gene": "MECP2",
+    "mutation": "substitution",
+    "condition": "Severe neonatal-onset encephalopathy with microcephaly|not provided"
+  },
+  {
+    "gene": "TMEM121B",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SPTBN5",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "EVC2",
+    "mutation": "substitution",
+    "condition": "Ellis-van Creveld syndrome;Curry-Hall syndrome"
+  },
+  {
+    "gene": "SIPA1L2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SERPINI1",
+    "mutation": "substitution",
+    "condition": "Familial encephalopathy with neuroserpin inclusion bodies"
+  },
+  {
+    "gene": "CNNM4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MIS18BP1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "KMT2D",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ALG9",
+    "mutation": "substitution",
+    "condition": "ALG9 congenital disorder of glycosylation|not provided"
+  },
+  {
+    "gene": "PRRT2",
+    "mutation": "substitution",
+    "condition": "Episodic kinesigenic dyskinesia"
+  },
+  {
+    "gene": "TCF4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NF1",
+    "mutation": "substitution",
+    "condition": "not provided|NF1-related disorder|Neurofibromatosis"
+  },
+  {
+    "gene": "COL5A1",
+    "mutation": "substitution",
+    "condition": "Ehlers-Danlos syndrome"
+  },
+  {
+    "gene": "POLE",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "NRP2",
+    "mutation": "substitution",
+    "condition": "NRP2-related disorder"
+  },
+  {
+    "gene": "NFKB1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PCDH19",
+    "mutation": "substitution",
+    "condition": "Developmental and epileptic encephalopathy"
+  },
+  {
+    "gene": "KIF11",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SMN1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "GPR179",
+    "mutation": "substitution",
+    "condition": "not provided|Congenital stationary night blindness 1E|not specified"
+  },
+  {
+    "gene": "ERCC2",
+    "mutation": "substitution",
+    "condition": "Xeroderma pigmentosum"
+  },
+  {
+    "gene": "MUC5B",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "LRIT3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ANXA1",
+    "mutation": "substitution",
+    "condition": "ANXA1-related disorder"
+  },
+  {
+    "gene": "TRIM37",
+    "mutation": "substitution",
+    "condition": "Mulibrey nanism syndrome|not provided"
+  },
+  {
+    "gene": "PIK3CA",
+    "mutation": "substitution",
+    "condition": "Cowden syndrome"
+  },
+  {
+    "gene": "CENPF",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "DNAH17",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CHD8",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TFE3",
+    "mutation": "substitution",
+    "condition": "TFE3-related disorder"
+  },
+  {
+    "gene": "ADGRV1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "JMJD1C",
+    "mutation": "substitution",
+    "condition": "Early myoclonic encephalopathy"
+  },
+  {
+    "gene": "CDC16",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NFIX",
+    "mutation": "substitution",
+    "condition": "Malan overgrowth syndrome|not provided"
+  },
+  {
+    "gene": "NEB",
+    "mutation": "substitution",
+    "condition": "Nemaline myopathy 2"
+  },
+  {
+    "gene": "ATM",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|not provided|Ataxia-telangiectasia syndrome|Familial cancer of breast"
+  },
+  {
+    "gene": "RYR2",
+    "mutation": "substitution",
+    "condition": "Catecholaminergic polymorphic ventricular tachycardia 1"
+  },
+  {
+    "gene": "PDE6B",
+    "mutation": "substitution",
+    "condition": "not provided|Retinal dystrophy"
+  },
+  {
+    "gene": "COL4A4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "AMN",
+    "mutation": "substitution",
+    "condition": "Imerslund-Grasbeck syndrome|Imerslund-Grasbeck syndrome type 2"
+  },
+  {
+    "gene": "SYNJ1",
+    "mutation": "substitution",
+    "condition": "Early-onset Parkinson disease 20;Developmental and epileptic encephalopathy"
+  },
+  {
+    "gene": "GLA",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "EPX",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SMARCAL1",
+    "mutation": "substitution",
+    "condition": "not specified|Schimke immuno-osseous dysplasia"
+  },
+  {
+    "gene": "INPP5E",
+    "mutation": "substitution",
+    "condition": "INPP5E-related disorder"
+  },
+  {
+    "gene": "SLC22A5",
+    "mutation": "substitution",
+    "condition": "Renal carnitine transport defect|Decreased circulating carnitine concentration"
+  },
+  {
+    "gene": "PNPT1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ACADM",
+    "mutation": "substitution",
+    "condition": "Medium-chain acyl-coenzyme A dehydrogenase deficiency"
+  },
+  {
+    "gene": "CDH1",
+    "mutation": "substitution",
+    "condition": "Hereditary diffuse gastric adenocarcinoma"
+  },
+  {
+    "gene": "LMTK2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SAMD9",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ASAP3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SZT2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "IL17RA",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency 51"
+  },
+  {
+    "gene": "NACA",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DDRGK1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CNTN4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HID1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PRKAG2",
+    "mutation": "substitution",
+    "condition": "Lethal congenital glycogen storage disease of heart"
+  },
+  {
+    "gene": "IDS",
+    "mutation": "substitution",
+    "condition": "Mucopolysaccharidosis"
+  },
+  {
+    "gene": "NODAL",
+    "mutation": "substitution",
+    "condition": "Heterotaxy"
+  },
+  {
+    "gene": "TSC2",
+    "mutation": "substitution",
+    "condition": "Tuberous sclerosis syndrome"
+  },
+  {
+    "gene": "RYR2",
+    "mutation": "substitution",
+    "condition": "Diastolic dysfunction|Cardiomyopathy|Cardiovascular phenotype|Catecholaminergic polymorphic ventricular tachycardia 1|Catecholaminergic polymorphic ventricular tachycardia"
+  },
+  {
+    "gene": "WASHC5",
+    "mutation": "substitution",
+    "condition": "Hereditary spastic paraplegia 8;Ritscher-Schinzel syndrome"
+  },
+  {
+    "gene": "PRKAR1A",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "PCCA",
+    "mutation": "substitution",
+    "condition": "Propionic acidemia"
+  },
+  {
+    "gene": "AXIN2",
+    "mutation": "substitution",
+    "condition": "Oligodontia-cancer predisposition syndrome"
+  },
+  {
+    "gene": "LONP2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "OSBPL2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DNAJC6",
+    "mutation": "substitution",
+    "condition": "not provided|Juvenile onset Parkinson disease 19A|Inborn genetic diseases"
+  },
+  {
+    "gene": "IMPG2",
+    "mutation": "substitution",
+    "condition": "Retinal dystrophy|IMPG2-related disorder"
+  },
+  {
+    "gene": "LHFPL7",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TELO2",
+    "mutation": "substitution",
+    "condition": "not provided|TELO2-related intellectual disability-neurodevelopmental disorder"
+  },
+  {
+    "gene": "POC5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NF1",
+    "mutation": "substitution",
+    "condition": "Neurofibromatosis"
+  },
+  {
+    "gene": "ATP8B1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ITGA3",
+    "mutation": "substitution",
+    "condition": "not provided|Epidermolysis bullosa"
+  },
+  {
+    "gene": "TMEM185B",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ITPR3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DNAH14",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ALMS1",
+    "mutation": "substitution",
+    "condition": "Alstrom syndrome"
+  },
+  {
+    "gene": "CHRNE",
+    "mutation": "substitution",
+    "condition": "Congenital myasthenic syndrome 4A"
+  },
+  {
+    "gene": "IGF1",
+    "mutation": "substitution",
+    "condition": "Growth delay due to insulin-like growth factor type 1 deficiency"
+  },
+  {
+    "gene": "NAGA",
+    "mutation": "substitution",
+    "condition": "Alpha-N-acetylgalactosaminidase deficiency type 1"
+  },
+  {
+    "gene": "MUC16",
+    "mutation": "substitution",
+    "condition": "MUC16-related disorder"
+  },
+  {
+    "gene": "FANCC",
+    "mutation": "substitution",
+    "condition": "Malignant tumor of breast|Fanconi anemia"
+  },
+  {
+    "gene": "TCF4",
+    "mutation": "substitution",
+    "condition": "TCF4-related disorder"
+  },
+  {
+    "gene": "MUTYH",
+    "mutation": "substitution",
+    "condition": "Familial adenomatous polyposis 2|not provided"
+  },
+  {
+    "gene": "ESRRB",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KRTAP12-3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "GLI1",
+    "mutation": "substitution",
+    "condition": "GLI1-related disorder"
+  },
+  {
+    "gene": "NRP1",
+    "mutation": "substitution",
+    "condition": "NRP1-related disorder"
+  },
+  {
+    "gene": "RYR1",
+    "mutation": "substitution",
+    "condition": "not provided|Malignant hyperthermia"
+  },
+  {
+    "gene": "CTNNA1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "LZTR1",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype;Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "RECQL4",
+    "mutation": "substitution",
+    "condition": "Baller-Gerold syndrome"
+  },
+  {
+    "gene": "MYO3A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SACS",
+    "mutation": "substitution",
+    "condition": "Spastic paraplegia"
+  },
+  {
+    "gene": "PCNT",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HMOX1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KMT2D",
+    "mutation": "substitution",
+    "condition": "Kabuki syndrome|Kabuki syndrome 1"
+  },
+  {
+    "gene": "DTX3L",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "LOXHD1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CCAR2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PET100",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TRIO",
+    "mutation": "substitution",
+    "condition": "Micrognathia-recurrent infections-behavioral abnormalities-mild intellectual disability syndrome"
+  },
+  {
+    "gene": "PCDHA9",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "FAT4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "IL17RE",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "KCNQ2",
+    "mutation": "substitution",
+    "condition": "Early infantile epileptic encephalopathy with suppression bursts"
+  },
+  {
+    "gene": "SRCAP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PPP2R3C",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "IFI16",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ZNF644",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ANKFY1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CHEK2",
+    "mutation": "substitution",
+    "condition": "Familial cancer of breast"
+  },
+  {
+    "gene": "CSPP1",
+    "mutation": "substitution",
+    "condition": "Joubert syndrome 21"
+  },
+  {
+    "gene": "POLE",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ABCD4",
+    "mutation": "substitution",
+    "condition": "Methylmalonic acidemia with homocystinuria"
+  },
+  {
+    "gene": "PTP4A3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "LAMA2",
+    "mutation": "substitution",
+    "condition": "LAMA2-related muscular dystrophy"
+  },
+  {
+    "gene": "POC1B",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TSHR",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "BTBD6",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PRDM6",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "TNFRSF11A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NEB",
+    "mutation": "substitution",
+    "condition": "not provided|Nemaline myopathy 2|Inborn genetic diseases"
+  },
+  {
+    "gene": "AXIN2",
+    "mutation": "substitution",
+    "condition": "Oligodontia-cancer predisposition syndrome"
+  },
+  {
+    "gene": "SYNJ1",
+    "mutation": "substitution",
+    "condition": "SYNJ1-related disorder"
+  },
+  {
+    "gene": "CYB5R3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CYBB",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CASZ1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "IFT122",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MYBPC3",
+    "mutation": "substitution",
+    "condition": "not provided|Cardiomyopathy|Cardiovascular phenotype|Hypertrophic cardiomyopathy 4;Left ventricular noncompaction 10|Hypertrophic cardiomyopathy"
+  },
+  {
+    "gene": "LAMA2",
+    "mutation": "substitution",
+    "condition": "Congenital muscular dystrophy due to partial LAMA2 deficiency"
+  },
+  {
+    "gene": "NFASC",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TNRC18",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ADAMTS2",
+    "mutation": "substitution",
+    "condition": "Ehlers-Danlos syndrome"
+  },
+  {
+    "gene": "CSMD3",
+    "mutation": "substitution",
+    "condition": "CSMD3-related disorder"
+  },
+  {
+    "gene": "LMF1",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype|LMF1-related disorder|not provided"
+  },
+  {
+    "gene": "PRKDC",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MYL10",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SBNO2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SYNE1",
+    "mutation": "substitution",
+    "condition": "not specified|Emery-Dreifuss muscular dystrophy 4"
+  },
+  {
+    "gene": "FGFR2",
+    "mutation": "substitution",
+    "condition": "FGFR2-related craniosynostosis"
+  },
+  {
+    "gene": "OTUD7A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NDRG1",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease type 4|Charcot-Marie-Tooth disease type 4D"
+  },
+  {
+    "gene": "MYH11",
+    "mutation": "substitution",
+    "condition": "Aortic aneurysm"
+  },
+  {
+    "gene": "DAG1",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2P;Muscular dystrophy-dystroglycanopathy (congenital with brain and eye anomalies)"
+  },
+  {
+    "gene": "BROX",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ACTG1",
+    "mutation": "substitution",
+    "condition": "ACTG1-related disorder"
+  },
+  {
+    "gene": "LRRC52",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CHRNA2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DCTN1",
+    "mutation": "substitution",
+    "condition": "Amyotrophic lateral sclerosis type 1;Neuronopathy"
+  },
+  {
+    "gene": "MOCOS",
+    "mutation": "substitution",
+    "condition": "Xanthinuria type II"
+  },
+  {
+    "gene": "NTRK1",
+    "mutation": "substitution",
+    "condition": "Hereditary insensitivity to pain with anhidrosis|not specified|not provided|NTRK1-related disorder"
+  },
+  {
+    "gene": "NHSL3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NF1",
+    "mutation": "substitution",
+    "condition": "Neurofibromatosis"
+  },
+  {
+    "gene": "CDK4",
+    "mutation": "substitution",
+    "condition": "Familial melanoma|not provided|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "MOCS1",
+    "mutation": "substitution",
+    "condition": "Sulfite oxidase deficiency due to molybdenum cofactor deficiency type A"
+  },
+  {
+    "gene": "ATP6V1B1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NFKB2",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency"
+  },
+  {
+    "gene": "CARNS1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "RYR2",
+    "mutation": "substitution",
+    "condition": "Catecholaminergic polymorphic ventricular tachycardia 1|Cardiovascular phenotype"
+  },
+  {
+    "gene": "FGFR1",
+    "mutation": "substitution",
+    "condition": "Hypogonadotropic hypogonadism 2 with or without anosmia|not provided"
+  },
+  {
+    "gene": "COL2A1",
+    "mutation": "substitution",
+    "condition": "Connective tissue disorder"
+  },
+  {
+    "gene": "KL",
+    "mutation": "substitution",
+    "condition": "not provided|not specified"
+  },
+  {
+    "gene": "CUZD1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DICER1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "COL5A1",
+    "mutation": "substitution",
+    "condition": "Ehlers-Danlos syndrome"
+  },
+  {
+    "gene": "DST",
+    "mutation": "substitution",
+    "condition": "Epidermolysis bullosa simplex 3"
+  },
+  {
+    "gene": "CR2",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency"
+  },
+  {
+    "gene": "GPAA1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SLC7A7",
+    "mutation": "substitution",
+    "condition": "Lysinuric protein intolerance"
+  },
+  {
+    "gene": "PLA1A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SPC25",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "LAMC3",
+    "mutation": "substitution",
+    "condition": "not provided|Inborn genetic diseases"
+  },
+  {
+    "gene": "HMGCS2",
+    "mutation": "substitution",
+    "condition": "3-hydroxy-3-methylglutaryl-CoA synthase deficiency"
+  },
+  {
+    "gene": "CENPF",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "ATM",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|Ataxia-telangiectasia syndrome|Familial cancer of breast"
+  },
+  {
+    "gene": "CNTNAP2",
+    "mutation": "substitution",
+    "condition": "not provided|Cortical dysplasia-focal epilepsy syndrome|Inborn genetic diseases"
+  },
+  {
+    "gene": "FANCC",
+    "mutation": "substitution",
+    "condition": "Fanconi anemia"
+  },
+  {
+    "gene": "COL17A1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2J;Dilated cardiomyopathy 1G"
+  },
+  {
+    "gene": "TTC8",
+    "mutation": "substitution",
+    "condition": "Bardet-Biedl syndrome"
+  },
+  {
+    "gene": "CDH1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "P3H2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PON3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ARHGEF2",
+    "mutation": "substitution",
+    "condition": "ARHGEF2-related disorder"
+  },
+  {
+    "gene": "ITK",
+    "mutation": "substitution",
+    "condition": "Lymphoproliferative syndrome 1|ITK-related disorder"
+  },
+  {
+    "gene": "TSC1",
+    "mutation": "substitution",
+    "condition": "Tuberous sclerosis 1"
+  },
+  {
+    "gene": "SMAD9",
+    "mutation": "substitution",
+    "condition": "not specified|Pulmonary hypertension"
+  },
+  {
+    "gene": "COG5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DLX2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MEP1A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ARHGEF1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SCN10A",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype|Brugada syndrome"
+  },
+  {
+    "gene": "SETD5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ZFYVE26",
+    "mutation": "substitution",
+    "condition": "Spastic paraplegia"
+  },
+  {
+    "gene": "HAX1",
+    "mutation": "substitution",
+    "condition": "Kostmann syndrome"
+  },
+  {
+    "gene": "XIRP1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NLGN1",
+    "mutation": "substitution",
+    "condition": "NLGN1-related disorder"
+  },
+  {
+    "gene": "AFF4",
+    "mutation": "substitution",
+    "condition": "not provided|Inborn genetic diseases"
+  },
+  {
+    "gene": "ZNF219",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PTEN",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ATP13A2",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive spastic paraplegia type 78;Kufor-Rakeb syndrome|Inborn genetic diseases"
+  },
+  {
+    "gene": "BCS1L",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ARSH",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CD74",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NEDD4L",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ZBTB44",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "LRP2",
+    "mutation": "substitution",
+    "condition": "Donnai-Barrow syndrome|not provided"
+  },
+  {
+    "gene": "GSX2",
+    "mutation": "substitution",
+    "condition": "Diencephalic-mesencephalic junction dysplasia syndrome 2"
+  },
+  {
+    "gene": "NTMT2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "QARS1",
+    "mutation": "substitution",
+    "condition": "Diffuse cerebral and cerebellar atrophy - intractable seizures - progressive microcephaly syndrome|not provided"
+  },
+  {
+    "gene": "ALPL",
+    "mutation": "substitution",
+    "condition": "Hypophosphatasia"
+  },
+  {
+    "gene": "TSC2",
+    "mutation": "substitution",
+    "condition": "Tuberous sclerosis 2"
+  },
+  {
+    "gene": "ADAMTSL1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "KCNQ2",
+    "mutation": "substitution",
+    "condition": "Developmental and epileptic encephalopathy"
+  },
+  {
+    "gene": "RPGR",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DNAH2",
+    "mutation": "substitution",
+    "condition": "DNAH2-related disorder"
+  },
+  {
+    "gene": "GTF3C1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CYP11A1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "POLR3D",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "STAR",
+    "mutation": "substitution",
+    "condition": "STAR-related disorder"
+  },
+  {
+    "gene": "JARID2",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "TGFBR2",
+    "mutation": "substitution",
+    "condition": "Familial thoracic aortic aneurysm and aortic dissection|Isolated thoracic aortic aneurysm|not provided|Loeys-Dietz syndrome 2"
+  },
+  {
+    "gene": "NUCB1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "KIF7",
+    "mutation": "substitution",
+    "condition": "Acrocallosal syndrome"
+  },
+  {
+    "gene": "KCNQ1",
+    "mutation": "substitution",
+    "condition": "Long QT syndrome"
+  },
+  {
+    "gene": "STRA6",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "IL17RA",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency 51"
+  },
+  {
+    "gene": "ACADM",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "IGHMBP2",
+    "mutation": "substitution",
+    "condition": "7 conditions|Charcot-Marie-Tooth disease axonal type 2S;Autosomal recessive distal spinal muscular atrophy 1"
+  },
+  {
+    "gene": "TBC1D31",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SRCAP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PCNT",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CD109",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "RTTN",
+    "mutation": "substitution",
+    "condition": "not provided|RTTN-related disorder"
+  },
+  {
+    "gene": "ATP7A",
+    "mutation": "substitution",
+    "condition": "Menkes kinky-hair syndrome;Cutis laxa"
+  },
+  {
+    "gene": "AGRN",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "GP1BB",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ACO2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MYH15",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PRPF8",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ARID1A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CYP11B2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "OSTM1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SCN2A",
+    "mutation": "substitution",
+    "condition": "Seizures"
+  },
+  {
+    "gene": "GUCY2D",
+    "mutation": "substitution",
+    "condition": "Leber congenital amaurosis 1;Cone-rod dystrophy 6"
+  },
+  {
+    "gene": "PMP22",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "IARS1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "FYB1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "AP3B2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DIS3L",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SLC24A5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MSH2",
+    "mutation": "substitution",
+    "condition": "Lynch syndrome 1|not provided|Hereditary cancer-predisposing syndrome|Hereditary nonpolyposis colorectal neoplasms|Carcinoma of colon|not specified"
+  },
+  {
+    "gene": "ZNF791",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ATP1A2",
+    "mutation": "substitution",
+    "condition": "Familial hemiplegic migraine"
+  },
+  {
+    "gene": "SCN9A",
+    "mutation": "substitution",
+    "condition": "Neuropathy"
+  },
+  {
+    "gene": "DIS3L2",
+    "mutation": "substitution",
+    "condition": "Perlman syndrome"
+  },
+  {
+    "gene": "HACD1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MYH9",
+    "mutation": "substitution",
+    "condition": "Autosomal dominant nonsyndromic hearing loss 17;Macrothrombocytopenia and granulocyte inclusions with or without nephritis or sensorineural hearing loss"
+  },
+  {
+    "gene": "RBBP8",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "FGFR2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ENPP2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PRKDC",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "GPHN",
+    "mutation": "substitution",
+    "condition": "Sulfite oxidase deficiency due to molybdenum cofactor deficiency type C"
+  },
+  {
+    "gene": "ALK",
+    "mutation": "substitution",
+    "condition": "Neuroblastoma"
+  },
+  {
+    "gene": "DNA2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ZNF423",
+    "mutation": "substitution",
+    "condition": "Nephronophthisis 14"
+  },
+  {
+    "gene": "WASHC5",
+    "mutation": "substitution",
+    "condition": "not provided|Hereditary spastic paraplegia 8;Ritscher-Schinzel syndrome"
+  },
+  {
+    "gene": "COQ10A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SUFU",
+    "mutation": "substitution",
+    "condition": "Gorlin syndrome;Medulloblastoma"
+  },
+  {
+    "gene": "INPPL1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "RECQL4",
+    "mutation": "substitution",
+    "condition": "Baller-Gerold syndrome"
+  },
+  {
+    "gene": "HEXA",
+    "mutation": "substitution",
+    "condition": "Tay-Sachs disease"
+  },
+  {
+    "gene": "ZEB2",
+    "mutation": "substitution",
+    "condition": "Mowat-Wilson syndrome"
+  },
+  {
+    "gene": "CIITA",
+    "mutation": "substitution",
+    "condition": "MHC class II deficiency"
+  },
+  {
+    "gene": "BRAT1",
+    "mutation": "substitution",
+    "condition": "Neonatal-onset encephalopathy with rigidity and seizures"
+  },
+  {
+    "gene": "MCEE",
+    "mutation": "substitution",
+    "condition": "Methylmalonic acidemia due to methylmalonyl-CoA epimerase deficiency"
+  },
+  {
+    "gene": "NF1",
+    "mutation": "substitution",
+    "condition": "Neurofibromatosis"
+  },
+  {
+    "gene": "TGM1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TBCK",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "IGHMBP2",
+    "mutation": "substitution",
+    "condition": "not provided|Autosomal recessive distal spinal muscular atrophy 1;Charcot-Marie-Tooth disease axonal type 2S"
+  },
+  {
+    "gene": "MUC5B",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "KBTBD11",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "GNB1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KBTBD13",
+    "mutation": "substitution",
+    "condition": "Nemaline myopathy 6|Inborn genetic diseases"
+  },
+  {
+    "gene": "APOB",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype"
+  },
+  {
+    "gene": "TGM1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "WDR19",
+    "mutation": "substitution",
+    "condition": "Senior-Loken syndrome 8;Asphyxiating thoracic dystrophy 5"
+  },
+  {
+    "gene": "CDC73",
+    "mutation": "substitution",
+    "condition": "Parathyroid carcinoma|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "PACS2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "APC",
+    "mutation": "substitution",
+    "condition": "Familial colorectal cancer"
+  },
+  {
+    "gene": "KCNJ2",
+    "mutation": "substitution",
+    "condition": "Andersen Tawil syndrome;Short QT syndrome type 3"
+  },
+  {
+    "gene": "GNPTG",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PTPRQ",
+    "mutation": "substitution",
+    "condition": "PTPRQ-related disorder"
+  },
+  {
+    "gene": "PLEC",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2Q;Epidermolysis bullosa simplex"
+  },
+  {
+    "gene": "POLE",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|not provided"
+  },
+  {
+    "gene": "ITGB3",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "GATM",
+    "mutation": "substitution",
+    "condition": "Arginine:glycine amidinotransferase deficiency"
+  },
+  {
+    "gene": "LMNA",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease type 2|not specified|Cardiovascular phenotype|not provided|Cardiomyopathy"
+  },
+  {
+    "gene": "SGCA",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2D"
+  },
+  {
+    "gene": "GDI2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "RIPK1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "C6",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PIGH",
+    "mutation": "substitution",
+    "condition": "Glycosylphosphatidylinositol biosynthesis defect 17"
+  },
+  {
+    "gene": "CLN3",
+    "mutation": "substitution",
+    "condition": "Neuronal ceroid lipofuscinosis"
+  },
+  {
+    "gene": "FCGBP",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1G;Autosomal recessive limb-girdle muscular dystrophy type 2J"
+  },
+  {
+    "gene": "CAD",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NHLRC1",
+    "mutation": "substitution",
+    "condition": "Lafora disease"
+  },
+  {
+    "gene": "TBL2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SMARCA4",
+    "mutation": "substitution",
+    "condition": "Rhabdoid tumor predisposition syndrome 2"
+  },
+  {
+    "gene": "NF2",
+    "mutation": "substitution",
+    "condition": "Neurofibromatosis"
+  },
+  {
+    "gene": "EGLN1",
+    "mutation": "substitution",
+    "condition": "Erythrocytosis"
+  },
+  {
+    "gene": "GLB1",
+    "mutation": "substitution",
+    "condition": "Mucopolysaccharidosis"
+  },
+  {
+    "gene": "ACADVL",
+    "mutation": "substitution",
+    "condition": "Very long chain acyl-CoA dehydrogenase deficiency|not specified"
+  },
+  {
+    "gene": "PDGFRA",
+    "mutation": "substitution",
+    "condition": "Gastrointestinal stromal tumor|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "ALDH7A1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "FGFR3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CACNA1H",
+    "mutation": "substitution",
+    "condition": "Hyperaldosteronism"
+  },
+  {
+    "gene": "MIPOL1",
+    "mutation": "substitution",
+    "condition": "MIPOL1-related disorder"
+  },
+  {
+    "gene": "NEBL",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CHD7",
+    "mutation": "substitution",
+    "condition": "CHARGE syndrome"
+  },
+  {
+    "gene": "SZT2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "EFHC1",
+    "mutation": "substitution",
+    "condition": "not provided|Myoclonic epilepsy"
+  },
+  {
+    "gene": "ITGB4",
+    "mutation": "substitution",
+    "condition": "Junctional epidermolysis bullosa with pyloric atresia"
+  },
+  {
+    "gene": "TRDN",
+    "mutation": "substitution",
+    "condition": "not specified|Cardiovascular phenotype|Catecholaminergic polymorphic ventricular tachycardia 1|Catecholaminergic polymorphic ventricular tachycardia 5"
+  },
+  {
+    "gene": "MT-CYB",
+    "mutation": "substitution",
+    "condition": "Familial cancer of breast|not specified"
+  },
+  {
+    "gene": "MTOR",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "THADA",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DGKD",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ACSL4",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "NIPAL4",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive congenital ichthyosis 6"
+  },
+  {
+    "gene": "RTEL1",
+    "mutation": "substitution",
+    "condition": "Dyskeratosis congenita"
+  },
+  {
+    "gene": "NEB",
+    "mutation": "substitution",
+    "condition": "Nemaline myopathy 2"
+  },
+  {
+    "gene": "GATA2",
+    "mutation": "substitution",
+    "condition": "Deafness-lymphedema-leukemia syndrome;Monocytopenia with susceptibility to infections"
+  },
+  {
+    "gene": "BRCA1",
+    "mutation": "substitution",
+    "condition": "Hereditary breast ovarian cancer syndrome|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "POLE",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PRDM13",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HADHA",
+    "mutation": "substitution",
+    "condition": "Mitochondrial trifunctional protein deficiency;Long chain 3-hydroxyacyl-CoA dehydrogenase deficiency"
+  },
+  {
+    "gene": "ABCA4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PCDHGA5",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "KCNA2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ASXL1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CYP4F22",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive congenital ichthyosis 5"
+  },
+  {
+    "gene": "SCARB2",
+    "mutation": "substitution",
+    "condition": "Progressive myoclonic epilepsy"
+  },
+  {
+    "gene": "APC",
+    "mutation": "substitution",
+    "condition": "not provided|Familial adenomatous polyposis 1"
+  },
+  {
+    "gene": "PDGFRA",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "IRAK4",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency 67"
+  },
+  {
+    "gene": "ITPR1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HLCS",
+    "mutation": "substitution",
+    "condition": "Holocarboxylase synthetase deficiency"
+  },
+  {
+    "gene": "ROBO1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ACSM5",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MAN1B1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "TSC2",
+    "mutation": "substitution",
+    "condition": "Tuberous sclerosis syndrome"
+  },
+  {
+    "gene": "OR5K4",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CFHR4",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CAMSAP3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PXDN",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DMRTC2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MUTYH",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "PLEKHM2",
+    "mutation": "substitution",
+    "condition": "Dilated Cardiomyopathy"
+  },
+  {
+    "gene": "ARX",
+    "mutation": "substitution",
+    "condition": "Intellectual disability"
+  },
+  {
+    "gene": "MUTYH",
+    "mutation": "substitution",
+    "condition": "Familial adenomatous polyposis 2"
+  },
+  {
+    "gene": "PKHD1",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive polycystic kidney disease|not provided|Polycystic kidney disease 4|PKHD1-related disorder"
+  },
+  {
+    "gene": "SIPA1L1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "USH2A",
+    "mutation": "substitution",
+    "condition": "Retinitis pigmentosa|Usher syndrome type 2A"
+  },
+  {
+    "gene": "TTLL5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TP63",
+    "mutation": "substitution",
+    "condition": "TP63-Related Spectrum Disorders"
+  },
+  {
+    "gene": "DPM2",
+    "mutation": "substitution",
+    "condition": "Congenital muscular dystrophy with intellectual disability and severe epilepsy"
+  },
+  {
+    "gene": "ECH1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SLC12A1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "IL1RAPL1",
+    "mutation": "substitution",
+    "condition": "Intellectual disability"
+  },
+  {
+    "gene": "AHNAK",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NPHP4",
+    "mutation": "substitution",
+    "condition": "NPHP4-related disorder"
+  },
+  {
+    "gene": "KRT5",
+    "mutation": "substitution",
+    "condition": "not provided|Epidermolysis bullosa simplex 2A"
+  },
+  {
+    "gene": "NPHP3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PDGFRA",
+    "mutation": "substitution",
+    "condition": "Gastrointestinal stromal tumor"
+  },
+  {
+    "gene": "EDAR",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NPC1",
+    "mutation": "substitution",
+    "condition": "not specified|Niemann-Pick disease"
+  },
+  {
+    "gene": "CAPN1",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive spastic paraplegia type 76"
+  },
+  {
+    "gene": "DYM",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "DST",
+    "mutation": "substitution",
+    "condition": "Hereditary sensory and autonomic neuropathy type 6;Epidermolysis bullosa simplex 3"
+  },
+  {
+    "gene": "GCDH",
+    "mutation": "substitution",
+    "condition": "Glutaric aciduria"
+  },
+  {
+    "gene": "BAP1",
+    "mutation": "substitution",
+    "condition": "BAP1-related tumor predisposition syndrome"
+  },
+  {
+    "gene": "TFG",
+    "mutation": "substitution",
+    "condition": "Hereditary motor and sensory neuropathy"
+  },
+  {
+    "gene": "POU3F3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "AMZ1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DEPDC5",
+    "mutation": "substitution",
+    "condition": "Familial focal epilepsy with variable foci"
+  },
+  {
+    "gene": "DDX3X",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "RYR2",
+    "mutation": "substitution",
+    "condition": "Catecholaminergic polymorphic ventricular tachycardia 1"
+  },
+  {
+    "gene": "PDCL",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "COL3A1",
+    "mutation": "substitution",
+    "condition": "Familial thoracic aortic aneurysm and aortic dissection|Ehlers-Danlos syndrome"
+  },
+  {
+    "gene": "GARS1",
+    "mutation": "substitution",
+    "condition": "Neuronopathy"
+  },
+  {
+    "gene": "ORC1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "STAP1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MCM3AP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "EPHA6",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MED25",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PHRF1",
+    "mutation": "substitution",
+    "condition": "not provided|PHRF1-related disorder"
+  },
+  {
+    "gene": "CNGB1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TBC1D23",
+    "mutation": "substitution",
+    "condition": "Pontocerebellar hypoplasia"
+  },
+  {
+    "gene": "AIP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "UPF1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ATR",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "GUCY2C",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ATP13A1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ZNF618",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TPI1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NR5A1",
+    "mutation": "substitution",
+    "condition": "Oligosynaptic infertility;46"
+  },
+  {
+    "gene": "EYA4",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1J"
+  },
+  {
+    "gene": "ATM",
+    "mutation": "substitution",
+    "condition": "Ataxia-telangiectasia syndrome|not provided|Hereditary cancer-predisposing syndrome|not specified"
+  },
+  {
+    "gene": "WNK2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "FBXO33",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CEP57",
+    "mutation": "substitution",
+    "condition": "Mosaic variegated aneuploidy syndrome 2"
+  },
+  {
+    "gene": "ATP7B",
+    "mutation": "substitution",
+    "condition": "Wilson disease"
+  },
+  {
+    "gene": "ALG1",
+    "mutation": "substitution",
+    "condition": "ALG1-congenital disorder of glycosylation"
+  },
+  {
+    "gene": "ASPM",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "FBN2",
+    "mutation": "substitution",
+    "condition": "Congenital contractural arachnodactyly"
+  },
+  {
+    "gene": "C7",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PLEC",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PRPF8",
+    "mutation": "substitution",
+    "condition": "Retinitis pigmentosa|not provided"
+  },
+  {
+    "gene": "CRPPA",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2U;Muscular dystrophy-dystroglycanopathy (congenital with brain and eye anomalies)"
+  },
+  {
+    "gene": "DISP2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CLDN20",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "VWC2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NGF",
+    "mutation": "substitution",
+    "condition": "Congenital sensory neuropathy with selective loss of small myelinated fibers"
+  },
+  {
+    "gene": "WDR19",
+    "mutation": "substitution",
+    "condition": "Senior-Loken syndrome 8;Asphyxiating thoracic dystrophy 5|Senior-Loken syndrome 8;Asphyxiating thoracic dystrophy 5;Nephronophthisis 13;Cranioectodermal dysplasia 4;Spermatogenic failure 72"
+  },
+  {
+    "gene": "FANCI",
+    "mutation": "substitution",
+    "condition": "Fanconi anemia complementation group I"
+  },
+  {
+    "gene": "EXOC7",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "POLE",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "AP3B2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MPG",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ARHGEF1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "VENTX",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "POT1",
+    "mutation": "substitution",
+    "condition": "Tumor predisposition syndrome 3"
+  },
+  {
+    "gene": "ANK1",
+    "mutation": "substitution",
+    "condition": "Hereditary spherocytosis type 1|not provided|Spherocytosis"
+  },
+  {
+    "gene": "ARPC1B",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TSEN54",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SH3TC2",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease type 4"
+  },
+  {
+    "gene": "GPI",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "LCA5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MCM3AP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "BBS9",
+    "mutation": "substitution",
+    "condition": "Bardet-Biedl syndrome|Bardet-Biedl syndrome 9"
+  },
+  {
+    "gene": "CFTR",
+    "mutation": "substitution",
+    "condition": "Cystic fibrosis"
+  },
+  {
+    "gene": "UQCC2",
+    "mutation": "substitution",
+    "condition": "-"
+  },
+  {
+    "gene": "SCN2A",
+    "mutation": "substitution",
+    "condition": "not provided|Seizures"
+  },
+  {
+    "gene": "ERCC6L2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HS6ST1",
+    "mutation": "substitution",
+    "condition": "not provided|not specified"
+  },
+  {
+    "gene": "SLC12A2",
+    "mutation": "substitution",
+    "condition": "not provided|Kilquist syndrome|Inborn genetic diseases"
+  },
+  {
+    "gene": "ADGRV1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "SCN1A",
+    "mutation": "substitution",
+    "condition": "Early infantile epileptic encephalopathy with suppression bursts"
+  },
+  {
+    "gene": "FGD1",
+    "mutation": "substitution",
+    "condition": "Aarskog syndrome"
+  },
+  {
+    "gene": "NOTCH1",
+    "mutation": "substitution",
+    "condition": "Adams-Oliver syndrome 5|Thoracic aortic aneurysm"
+  },
+  {
+    "gene": "LIG1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GDF10",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CCNF",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GLI2",
+    "mutation": "substitution",
+    "condition": "Holoprosencephaly 9"
+  },
+  {
+    "gene": "MSH6",
+    "mutation": "substitution",
+    "condition": "Hereditary nonpolyposis colorectal neoplasms|Hereditary cancer-predisposing syndrome|Lynch syndrome"
+  },
+  {
+    "gene": "LDLR",
+    "mutation": "substitution",
+    "condition": "Hypercholesterolemia"
+  },
+  {
+    "gene": "ARHGEF1",
+    "mutation": "substitution",
+    "condition": "not provided|not specified"
+  },
+  {
+    "gene": "RECQL4",
+    "mutation": "substitution",
+    "condition": "Baller-Gerold syndrome"
+  },
+  {
+    "gene": "AGK",
+    "mutation": "substitution",
+    "condition": "AGK-related disorder"
+  },
+  {
+    "gene": "DCLRE1C",
+    "mutation": "substitution",
+    "condition": "Histiocytic medullary reticulosis|Severe combined immunodeficiency due to DCLRE1C deficiency"
+  },
+  {
+    "gene": "DNAH8",
+    "mutation": "substitution",
+    "condition": "Primary ciliary dyskinesia"
+  },
+  {
+    "gene": "HOGA1",
+    "mutation": "substitution",
+    "condition": "not provided|Primary hyperoxaluria type 3"
+  },
+  {
+    "gene": "SGSH",
+    "mutation": "substitution",
+    "condition": "Mucopolysaccharidosis"
+  },
+  {
+    "gene": "DSP",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype|Arrhythmogenic cardiomyopathy with wooly hair and keratoderma;Arrhythmogenic right ventricular dysplasia 8"
+  },
+  {
+    "gene": "DOT1L",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "BRCA1",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "CGAS",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "LRP4;LRP4-AS1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GALNS",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TLR5",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "OPN1SW",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HADHA",
+    "mutation": "substitution",
+    "condition": "Mitochondrial trifunctional protein deficiency;Long chain 3-hydroxyacyl-CoA dehydrogenase deficiency"
+  },
+  {
+    "gene": "DNAH17",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "KAT6B",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "CYP11A1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DHCR7",
+    "mutation": "substitution",
+    "condition": "not provided|DHCR7-related disorder"
+  },
+  {
+    "gene": "ABCC6",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PIK3CA",
+    "mutation": "substitution",
+    "condition": "Cowden syndrome"
+  },
+  {
+    "gene": "NDRG1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "COQ7",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SCN1A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MAP1B",
+    "mutation": "substitution",
+    "condition": "Periventricular nodular heterotopia 9"
+  },
+  {
+    "gene": "RMRP",
+    "mutation": "substitution",
+    "condition": "Anauxetic dysplasia|Metaphyseal chondrodysplasia"
+  },
+  {
+    "gene": "COL12A1",
+    "mutation": "substitution",
+    "condition": "Ullrich congenital muscular dystrophy 2;Bethlem myopathy 2"
+  },
+  {
+    "gene": "CAPN3",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2A"
+  },
+  {
+    "gene": "OMP",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ZNF671",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PSORS1C1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TRIP11",
+    "mutation": "substitution",
+    "condition": "Achondrogenesis"
+  },
+  {
+    "gene": "SYN1",
+    "mutation": "substitution",
+    "condition": "Epilepsy"
+  },
+  {
+    "gene": "LRP2",
+    "mutation": "substitution",
+    "condition": "Donnai-Barrow syndrome"
+  },
+  {
+    "gene": "BBS1",
+    "mutation": "substitution",
+    "condition": "Bardet-Biedl syndrome 1"
+  },
+  {
+    "gene": "EYS",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SYNE1",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive ataxia"
+  },
+  {
+    "gene": "SLC46A1",
+    "mutation": "substitution",
+    "condition": "not provided|Inborn genetic diseases"
+  },
+  {
+    "gene": "UBQLNL",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CPS1",
+    "mutation": "substitution",
+    "condition": "Congenital hyperammonemia"
+  },
+  {
+    "gene": "LAMB1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "MLH1",
+    "mutation": "substitution",
+    "condition": "Hereditary nonpolyposis colorectal neoplasms|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "DICER1",
+    "mutation": "substitution",
+    "condition": "DICER1-related tumor predisposition|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "ASCL1",
+    "mutation": "substitution",
+    "condition": "not specified|not provided"
+  },
+  {
+    "gene": "BCAS3",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "NLRC4",
+    "mutation": "substitution",
+    "condition": "Periodic fever-infantile enterocolitis-autoinflammatory syndrome;Familial cold autoinflammatory syndrome 4"
+  },
+  {
+    "gene": "KCNC3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ITPR1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "FAH",
+    "mutation": "substitution",
+    "condition": "Tyrosinemia type I"
+  },
+  {
+    "gene": "COL6A1",
+    "mutation": "substitution",
+    "condition": "not provided|Bethlem myopathy 1A"
+  },
+  {
+    "gene": "RIPOR3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ZNF546",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CD244",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NEB",
+    "mutation": "substitution",
+    "condition": "Nemaline myopathy 2"
+  },
+  {
+    "gene": "HK1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PCDHB1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "USH2A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ALS2",
+    "mutation": "substitution",
+    "condition": "Infantile-onset ascending hereditary spastic paralysis"
+  },
+  {
+    "gene": "ACTN2",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1AA;Primary familial hypertrophic cardiomyopathy|Cardiovascular phenotype"
+  },
+  {
+    "gene": "RYR3",
+    "mutation": "substitution",
+    "condition": "Epileptic encephalopathy"
+  },
+  {
+    "gene": "GRM1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ANLN",
+    "mutation": "substitution",
+    "condition": "not provided|Focal segmental glomerulosclerosis 8"
+  },
+  {
+    "gene": "CELF2",
+    "mutation": "substitution",
+    "condition": "Developmental and epileptic encephalopathy 97"
+  },
+  {
+    "gene": "STXBP2",
+    "mutation": "substitution",
+    "condition": "Familial hemophagocytic lymphohistiocytosis 5"
+  },
+  {
+    "gene": "ARSB",
+    "mutation": "substitution",
+    "condition": "Mucopolysaccharidosis type 6"
+  },
+  {
+    "gene": "RAG2",
+    "mutation": "substitution",
+    "condition": "Combined immunodeficiency with skin granulomas;Severe combined immunodeficiency"
+  },
+  {
+    "gene": "ABCA1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TREX1",
+    "mutation": "substitution",
+    "condition": "Aicardi-Goutieres syndrome 1;Chilblain lupus 1;Retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations"
+  },
+  {
+    "gene": "NEDD4L",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DNM2;LOC130063529",
+    "mutation": "substitution",
+    "condition": "Autosomal dominant centronuclear myopathy"
+  },
+  {
+    "gene": "CIITA",
+    "mutation": "substitution",
+    "condition": "MHC class II deficiency"
+  },
+  {
+    "gene": "SCN8A",
+    "mutation": "substitution",
+    "condition": "Early infantile epileptic encephalopathy with suppression bursts"
+  },
+  {
+    "gene": "SLC26A8",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PRKCG",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MTHFD1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ANO5",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2L;Gnathodiaphyseal dysplasia"
+  },
+  {
+    "gene": "ZNF780B",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "HUWE1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ZNF440",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NEB",
+    "mutation": "substitution",
+    "condition": "Nemaline myopathy 2"
+  },
+  {
+    "gene": "ALMS1",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype"
+  },
+  {
+    "gene": "PDE2A",
+    "mutation": "substitution",
+    "condition": "Intellectual developmental disorder with paroxysmal dyskinesia or seizures"
+  },
+  {
+    "gene": "COL6A3",
+    "mutation": "substitution",
+    "condition": "Bethlem myopathy 1A"
+  },
+  {
+    "gene": "SPTBN2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NAALADL2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ADAMTS18",
+    "mutation": "substitution",
+    "condition": "ADAMTS18-related disorder|not provided"
+  },
+  {
+    "gene": "DELE1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DNAH8",
+    "mutation": "substitution",
+    "condition": "Primary ciliary dyskinesia"
+  },
+  {
+    "gene": "CEACAM21",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CYFIP2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ASAH1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CNTN1",
+    "mutation": "substitution",
+    "condition": "Compton-North congenital myopathy|Inborn genetic diseases"
+  },
+  {
+    "gene": "STXBP2",
+    "mutation": "substitution",
+    "condition": "Familial hemophagocytic lymphohistiocytosis 5"
+  },
+  {
+    "gene": "LRRK1",
+    "mutation": "substitution",
+    "condition": "not provided|LRRK1-related disorder"
+  },
+  {
+    "gene": "HELB",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "COG7",
+    "mutation": "substitution",
+    "condition": "not specified|not provided|COG7 congenital disorder of glycosylation"
+  },
+  {
+    "gene": "PCYOX1L",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "COG5",
+    "mutation": "substitution",
+    "condition": "COG5-congenital disorder of glycosylation"
+  },
+  {
+    "gene": "GLE1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "APC",
+    "mutation": "substitution",
+    "condition": "Familial adenomatous polyposis 1"
+  },
+  {
+    "gene": "TMEM43",
+    "mutation": "substitution",
+    "condition": "not specified|Arrhythmogenic right ventricular dysplasia 5|Cardiomyopathy|not provided|Cardiovascular phenotype"
+  },
+  {
+    "gene": "ITGB3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KIF5A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NF1",
+    "mutation": "substitution",
+    "condition": "Neurofibromatosis"
+  },
+  {
+    "gene": "PAX1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CNOT3",
+    "mutation": "substitution",
+    "condition": "Intellectual developmental disorder with speech delay"
+  },
+  {
+    "gene": "ARFGEF3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NFRKB",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "IGF1R",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "COL2A1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GRIN1",
+    "mutation": "substitution",
+    "condition": "Intellectual disability"
+  },
+  {
+    "gene": "TDP1",
+    "mutation": "substitution",
+    "condition": "Spinocerebellar ataxia"
+  },
+  {
+    "gene": "CFTR",
+    "mutation": "substitution",
+    "condition": "Cystic fibrosis"
+  },
+  {
+    "gene": "DTHD1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DNM1L",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SPEN",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "SPATA19",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DHTKD1",
+    "mutation": "substitution",
+    "condition": "2-aminoadipic 2-oxoadipic aciduria|Inborn genetic diseases"
+  },
+  {
+    "gene": "CYFIP2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "AFF2",
+    "mutation": "substitution",
+    "condition": "not specified|FRAXE|not provided"
+  },
+  {
+    "gene": "HIVEP1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NPAT",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "VPS13B",
+    "mutation": "substitution",
+    "condition": "Cohen syndrome"
+  },
+  {
+    "gene": "LINGO1",
+    "mutation": "substitution",
+    "condition": "not provided|LINGO1-related disorder"
+  },
+  {
+    "gene": "RB1",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "TAS2R4",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "DCAF17",
+    "mutation": "substitution",
+    "condition": "Woodhouse-Sakati syndrome"
+  },
+  {
+    "gene": "SERGEF",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SYNE2",
+    "mutation": "substitution",
+    "condition": "Emery-Dreifuss muscular dystrophy 5"
+  },
+  {
+    "gene": "PIGV",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KCNK10",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CARD11",
+    "mutation": "substitution",
+    "condition": "Severe combined immunodeficiency due to CARD11 deficiency;BENTA disease"
+  },
+  {
+    "gene": "HUWE1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SPTLC2",
+    "mutation": "substitution",
+    "condition": "Neuropathy"
+  },
+  {
+    "gene": "KCNA1",
+    "mutation": "substitution",
+    "condition": "Episodic ataxia type 1"
+  },
+  {
+    "gene": "TYMP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "RYR2",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype|Catecholaminergic polymorphic ventricular tachycardia 1"
+  },
+  {
+    "gene": "WFS1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HSF2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "UBA1",
+    "mutation": "substitution",
+    "condition": "Infantile-onset X-linked spinal muscular atrophy"
+  },
+  {
+    "gene": "GATA2",
+    "mutation": "substitution",
+    "condition": "Deafness-lymphedema-leukemia syndrome;Monocytopenia with susceptibility to infections"
+  },
+  {
+    "gene": "GORAB",
+    "mutation": "substitution",
+    "condition": "Geroderma osteodysplastica"
+  },
+  {
+    "gene": "PSAP",
+    "mutation": "substitution",
+    "condition": "Sphingolipid activator protein 1 deficiency"
+  },
+  {
+    "gene": "GH1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "RAB7A",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease type 2B"
+  },
+  {
+    "gene": "SCN3A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SDHA",
+    "mutation": "substitution",
+    "condition": "Paragangliomas 5;Mitochondrial complex II deficiency"
+  },
+  {
+    "gene": "DSCAML1",
+    "mutation": "substitution",
+    "condition": "not provided|not specified"
+  },
+  {
+    "gene": "BACH2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PDE6B",
+    "mutation": "substitution",
+    "condition": "Retinitis pigmentosa 40"
+  },
+  {
+    "gene": "RANBP2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "BSN",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TMC1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SYT7",
+    "mutation": "substitution",
+    "condition": "Myoepithelial tumor"
+  },
+  {
+    "gene": "HERC1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases|not provided"
+  },
+  {
+    "gene": "OR6K2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SLC6A3",
+    "mutation": "substitution",
+    "condition": "Parkinsonism-dystonia"
+  },
+  {
+    "gene": "FBN2",
+    "mutation": "substitution",
+    "condition": "Congenital contractural arachnodactyly"
+  },
+  {
+    "gene": "BMP3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TRRAP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GAA",
+    "mutation": "substitution",
+    "condition": "Glycogen storage disease"
+  },
+  {
+    "gene": "RYR2",
+    "mutation": "substitution",
+    "condition": "not specified|Catecholaminergic polymorphic ventricular tachycardia 1|Cardiovascular phenotype|Catecholaminergic polymorphic ventricular tachycardia|Cardiomyopathy"
+  },
+  {
+    "gene": "BCKDHA",
+    "mutation": "substitution",
+    "condition": "Maple syrup urine disease"
+  },
+  {
+    "gene": "TENM4",
+    "mutation": "substitution",
+    "condition": "not provided|not specified"
+  },
+  {
+    "gene": "OAS1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TMC8",
+    "mutation": "substitution",
+    "condition": "Epidermodysplasia verruciformis"
+  },
+  {
+    "gene": "PTEN",
+    "mutation": "substitution",
+    "condition": "PTEN hamartoma tumor syndrome"
+  },
+  {
+    "gene": "PROS1",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "ACTN4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "VAV1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "HES5",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SACS",
+    "mutation": "substitution",
+    "condition": "Spastic paraplegia|not provided|Charlevoix-Saguenay spastic ataxia|SACS-related disorder"
+  },
+  {
+    "gene": "SELENON",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PLA2G6",
+    "mutation": "substitution",
+    "condition": "Infantile neuroaxonal dystrophy"
+  },
+  {
+    "gene": "SOBP",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TYSND1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "RELA",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "LCA5L",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SLC18A2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "NEK3",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PTPRS",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TMC6",
+    "mutation": "substitution",
+    "condition": "Epidermodysplasia verruciformis"
+  },
+  {
+    "gene": "ADAM20",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "GTPBP3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MFSD10",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MRTFA",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DHDDS",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ATP7A",
+    "mutation": "substitution",
+    "condition": "Cutis laxa"
+  },
+  {
+    "gene": "NOTCH2",
+    "mutation": "substitution",
+    "condition": "Hajdu-Cheney syndrome|Alagille syndrome due to a NOTCH2 point mutation;Hajdu-Cheney syndrome"
+  },
+  {
+    "gene": "NBN",
+    "mutation": "substitution",
+    "condition": "Microcephaly"
+  },
+  {
+    "gene": "TXLNA",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "VGF",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "RAB27A",
+    "mutation": "substitution",
+    "condition": "Griscelli syndrome type 2"
+  },
+  {
+    "gene": "MUC4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SREBF2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "LONP1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SEC16A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PCDH15",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1G;Autosomal recessive limb-girdle muscular dystrophy type 2J"
+  },
+  {
+    "gene": "GRIN1",
+    "mutation": "substitution",
+    "condition": "Intellectual disability"
+  },
+  {
+    "gene": "RECQL4",
+    "mutation": "substitution",
+    "condition": "Baller-Gerold syndrome|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "LZTR1",
+    "mutation": "substitution",
+    "condition": "Cardiovascular phenotype;Hereditary cancer-predisposing syndrome|not provided"
+  },
+  {
+    "gene": "CEP41",
+    "mutation": "substitution",
+    "condition": "Joubert syndrome 15"
+  },
+  {
+    "gene": "TYK2",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency 35"
+  },
+  {
+    "gene": "TERT",
+    "mutation": "substitution",
+    "condition": "Dyskeratosis congenita"
+  },
+  {
+    "gene": "TP63",
+    "mutation": "substitution",
+    "condition": "TP63-Related Spectrum Disorders"
+  },
+  {
+    "gene": "POT1",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "NCF2",
+    "mutation": "substitution",
+    "condition": "Granulomatous disease"
+  },
+  {
+    "gene": "POLG",
+    "mutation": "substitution",
+    "condition": "Progressive sclerosing poliodystrophy"
+  },
+  {
+    "gene": "XRCC2",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|not provided"
+  },
+  {
+    "gene": "STK36",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MYH7B",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "FAT4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "BARD1",
+    "mutation": "substitution",
+    "condition": "Familial cancer of breast|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "CRB1",
+    "mutation": "substitution",
+    "condition": "Retinitis pigmentosa 12;Leber congenital amaurosis 8"
+  },
+  {
+    "gene": "KIF5A",
+    "mutation": "substitution",
+    "condition": "Spastic paraplegia"
+  },
+  {
+    "gene": "RRAS",
+    "mutation": "substitution",
+    "condition": "Noonan syndrome"
+  },
+  {
+    "gene": "SMARCA4",
+    "mutation": "substitution",
+    "condition": "Rhabdoid tumor predisposition syndrome 2|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "C4A",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "IDH1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TRIP12",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "NBN",
+    "mutation": "substitution",
+    "condition": "Microcephaly"
+  },
+  {
+    "gene": "TRIM8",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "POC5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TASOR2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "BRCA2",
+    "mutation": "substitution",
+    "condition": "Breast-ovarian cancer"
+  },
+  {
+    "gene": "SYNJ1",
+    "mutation": "substitution",
+    "condition": "Developmental and epileptic encephalopathy"
+  },
+  {
+    "gene": "RASSF6",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PRSS12",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ITGAM",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TNC",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "AKAP11",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TMEM67",
+    "mutation": "substitution",
+    "condition": "RHYNS syndrome|Familial aplasia of the vermis;Meckel-Gruber syndrome"
+  },
+  {
+    "gene": "PIEZO2",
+    "mutation": "substitution",
+    "condition": "Arthrogryposis- oculomotor limitation-electroretinal anomalies syndrome"
+  },
+  {
+    "gene": "SNTG2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "IL1RAPL1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CELSR2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ZBTB45",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NEB",
+    "mutation": "substitution",
+    "condition": "Nemaline myopathy 2"
+  },
+  {
+    "gene": "GUCY2D",
+    "mutation": "substitution",
+    "condition": "Cone-rod dystrophy 6;Leber congenital amaurosis 1"
+  },
+  {
+    "gene": "ISL1",
+    "mutation": "substitution",
+    "condition": "ISL1-related disorder"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "not provided|Autosomal recessive limb-girdle muscular dystrophy type 2J;Dilated cardiomyopathy 1G|Cardiovascular phenotype"
+  },
+  {
+    "gene": "DNAI2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "USP7",
+    "mutation": "substitution",
+    "condition": "USP7-related disorder"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1G;Autosomal recessive limb-girdle muscular dystrophy type 2J"
+  },
+  {
+    "gene": "CACNA1A",
+    "mutation": "substitution",
+    "condition": "not specified|Episodic ataxia type 2;Developmental and epileptic encephalopathy"
+  },
+  {
+    "gene": "PLEKHG5",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease recessive intermediate C;Neuronopathy"
+  },
+  {
+    "gene": "GOLGA6L6",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "FAM124A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MSH2",
+    "mutation": "substitution",
+    "condition": "not provided|Hereditary cancer-predisposing syndrome|Hereditary nonpolyposis colorectal neoplasms|not specified|Lynch syndrome"
+  },
+  {
+    "gene": "SPTB",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TMPRSS5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "RAD51",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PIK3CD",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency 14"
+  },
+  {
+    "gene": "ACOX1",
+    "mutation": "substitution",
+    "condition": "Acyl-CoA oxidase deficiency|Inborn genetic diseases"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1G;Autosomal recessive limb-girdle muscular dystrophy type 2J|not specified|6 conditions|not provided"
+  },
+  {
+    "gene": "EHMT1",
+    "mutation": "substitution",
+    "condition": "Kleefstra syndrome 1"
+  },
+  {
+    "gene": "MFRP",
+    "mutation": "substitution",
+    "condition": "Isolated microphthalmia 5"
+  },
+  {
+    "gene": "CLPB",
+    "mutation": "substitution",
+    "condition": "3-methylglutaconic aciduria"
+  },
+  {
+    "gene": "TLN2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CDK12",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "IFT88",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ATP1A2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SIK1",
+    "mutation": "substitution",
+    "condition": "Developmental and epileptic encephalopathy"
+  },
+  {
+    "gene": "NRG1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "POLE",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SLC25A15",
+    "mutation": "substitution",
+    "condition": "Hyperornithinemia-hyperammonemia-homocitrullinuria syndrome"
+  },
+  {
+    "gene": "SLC4A11",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "OR6V1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "GALNS",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NUP107",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "BLM",
+    "mutation": "substitution",
+    "condition": "Bloom syndrome"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2J;Dilated cardiomyopathy 1G|not provided"
+  },
+  {
+    "gene": "FDXACB1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ARSA",
+    "mutation": "substitution",
+    "condition": "Metachromatic leukodystrophy|not provided"
+  },
+  {
+    "gene": "MCTP2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "P3H2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MSH6",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "KCNMA1",
+    "mutation": "substitution",
+    "condition": "Generalized epilepsy-paroxysmal dyskinesia syndrome"
+  },
+  {
+    "gene": "CTNNA1",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "IL12RB1",
+    "mutation": "substitution",
+    "condition": "Mendelian susceptibility to mycobacterial diseases due to complete IL12RB1 deficiency"
+  },
+  {
+    "gene": "PALB2",
+    "mutation": "substitution",
+    "condition": "Familial cancer of breast|Hereditary cancer-predisposing syndrome|not specified"
+  },
+  {
+    "gene": "CACNA1H",
+    "mutation": "substitution",
+    "condition": "Hyperaldosteronism"
+  },
+  {
+    "gene": "MYLK",
+    "mutation": "substitution",
+    "condition": "Aortic aneurysm"
+  },
+  {
+    "gene": "SRRM2",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "TRIM38",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CSPP1",
+    "mutation": "substitution",
+    "condition": "Joubert syndrome 21"
+  },
+  {
+    "gene": "SLC24A1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GLI3",
+    "mutation": "substitution",
+    "condition": "Greig cephalopolysyndactyly syndrome|Pallister-Hall syndrome|Polydactyly|not specified|Greig cephalopolysyndactyly syndrome;Pallister-Hall syndrome|Greig cephalopolysyndactyly syndrome;Polydactyly"
+  },
+  {
+    "gene": "TCIRG1",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive osteopetrosis 1"
+  },
+  {
+    "gene": "MRPL44",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "BARD1",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|Familial cancer of breast|not specified|not provided"
+  },
+  {
+    "gene": "KIT",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GLA",
+    "mutation": "substitution",
+    "condition": "Fabry disease"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2J;Dilated cardiomyopathy 1G"
+  },
+  {
+    "gene": "DNAJC22",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "IL17RA",
+    "mutation": "substitution",
+    "condition": "Immunodeficiency 51"
+  },
+  {
+    "gene": "KIF1A",
+    "mutation": "substitution",
+    "condition": "Neuropathy"
+  },
+  {
+    "gene": "LYZL4",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SAMHD1",
+    "mutation": "substitution",
+    "condition": "Aicardi-Goutieres syndrome 5"
+  },
+  {
+    "gene": "ALMS1",
+    "mutation": "substitution",
+    "condition": "Alstrom syndrome|Cardiovascular phenotype|not provided"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive limb-girdle muscular dystrophy type 2J;Dilated cardiomyopathy 1G|6 conditions|not provided"
+  },
+  {
+    "gene": "DENND4C",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PLEC",
+    "mutation": "substitution",
+    "condition": "Epidermolysis bullosa simplex 5C"
+  },
+  {
+    "gene": "ELOA2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ATM",
+    "mutation": "substitution",
+    "condition": "Ataxia-telangiectasia syndrome|Hereditary cancer-predisposing syndrome|not specified|not provided"
+  },
+  {
+    "gene": "AGO4",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MYH6",
+    "mutation": "substitution",
+    "condition": "Hypertrophic cardiomyopathy|Primary dilated cardiomyopathy;Hemiplegia;Migraine|not provided|Hypertrophic cardiomyopathy 14|not specified|Cardiovascular phenotype"
+  },
+  {
+    "gene": "CNTN4",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "POLG",
+    "mutation": "substitution",
+    "condition": "Progressive sclerosing poliodystrophy"
+  },
+  {
+    "gene": "DNAH11",
+    "mutation": "substitution",
+    "condition": "Primary ciliary dyskinesia"
+  },
+  {
+    "gene": "ATM",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "DPM2",
+    "mutation": "substitution",
+    "condition": "Congenital muscular dystrophy with intellectual disability and severe epilepsy"
+  },
+  {
+    "gene": "BRCA2",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "CHRNA2",
+    "mutation": "substitution",
+    "condition": "Autosomal dominant nocturnal frontal lobe epilepsy|not provided|Inborn genetic diseases"
+  },
+  {
+    "gene": "PEX6",
+    "mutation": "substitution",
+    "condition": "not provided|Peroxisome biogenesis disorder|not specified|Zellweger spectrum disorders"
+  },
+  {
+    "gene": "POU5F2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ANKRD26",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PCDHB8",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "IGHMBP2",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease axonal type 2S;Autosomal recessive distal spinal muscular atrophy 1"
+  },
+  {
+    "gene": "DYNC1H1",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease axonal type 2O"
+  },
+  {
+    "gene": "STPG1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TBCK",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CHEK2",
+    "mutation": "substitution",
+    "condition": "Familial cancer of breast|Hereditary cancer-predisposing syndrome"
+  },
+  {
+    "gene": "KRTAP1-1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "NPHS1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ELANE",
+    "mutation": "substitution",
+    "condition": "Cyclical neutropenia;Neutropenia"
+  },
+  {
+    "gene": "DOCK8",
+    "mutation": "substitution",
+    "condition": "-"
+  },
+  {
+    "gene": "TNNI3",
+    "mutation": "substitution",
+    "condition": "Hypertrophic cardiomyopathy"
+  },
+  {
+    "gene": "SUMF1",
+    "mutation": "substitution",
+    "condition": "Multiple sulfatase deficiency"
+  },
+  {
+    "gene": "MYH9",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "SBF2",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease type 4|Inborn genetic diseases"
+  },
+  {
+    "gene": "LRRC32",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "MYH7",
+    "mutation": "substitution",
+    "condition": "not specified|Dilated cardiomyopathy 1S|Cardiovascular phenotype|MYH7-related skeletal myopathy|Hypertrophic cardiomyopathy 1|Left ventricular noncompaction cardiomyopathy|Primary familial hypertrophic cardiomyopathy|Hypertrophic cardiomyopathy|Cardiomyopathy|not provided|Myosin storage myopathy"
+  },
+  {
+    "gene": "IGFN1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SCNN1A",
+    "mutation": "substitution",
+    "condition": "Pseudohypoaldosteronism"
+  },
+  {
+    "gene": "DMXL2",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "SEMA6B",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "C3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ABL1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "VPS45",
+    "mutation": "substitution",
+    "condition": "Congenital neutropenia-myelofibrosis-nephromegaly syndrome"
+  },
+  {
+    "gene": "STXBP1",
+    "mutation": "substitution",
+    "condition": "Early infantile epileptic encephalopathy with suppression bursts"
+  },
+  {
+    "gene": "ELOVL4",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "GALNS",
+    "mutation": "substitution",
+    "condition": "Mucopolysaccharidosis"
+  },
+  {
+    "gene": "NDUFA10",
+    "mutation": "substitution",
+    "condition": "Leigh syndrome|Mitochondrial complex I deficiency"
+  },
+  {
+    "gene": "NAGS",
+    "mutation": "substitution",
+    "condition": "Hyperammonemia"
+  },
+  {
+    "gene": "FANCI",
+    "mutation": "substitution",
+    "condition": "Fanconi anemia"
+  },
+  {
+    "gene": "ABCB11",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "CCDC88A",
+    "mutation": "substitution",
+    "condition": "not provided|not specified"
+  },
+  {
+    "gene": "ARHGEF18",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases"
+  },
+  {
+    "gene": "FAM184A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "BBS9",
+    "mutation": "substitution",
+    "condition": "Bardet-Biedl syndrome|BBS9-related disorder"
+  },
+  {
+    "gene": "CFI",
+    "mutation": "substitution",
+    "condition": "not provided|Atypical hemolytic-uremic syndrome with I factor anomaly;Factor I deficiency;Age related macular degeneration 13"
+  },
+  {
+    "gene": "EYA4",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1J"
+  },
+  {
+    "gene": "KMT2D",
+    "mutation": "substitution",
+    "condition": "Kabuki syndrome"
+  },
+  {
+    "gene": "APP",
+    "mutation": "substitution",
+    "condition": "Alzheimer disease"
+  },
+  {
+    "gene": "ATP9A",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "C3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "DMD",
+    "mutation": "substitution",
+    "condition": "Duchenne muscular dystrophy"
+  },
+  {
+    "gene": "COL5A1",
+    "mutation": "substitution",
+    "condition": "not provided|Ehlers-Danlos syndrome"
+  },
+  {
+    "gene": "INPPL1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PRKG1",
+    "mutation": "substitution",
+    "condition": "Aortic aneurysm"
+  },
+  {
+    "gene": "PNPLA8",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "WIPF1",
+    "mutation": "substitution",
+    "condition": "Wiskott-Aldrich syndrome 2"
+  },
+  {
+    "gene": "GALNT10",
+    "mutation": "substitution",
+    "condition": "not specified|not provided"
+  },
+  {
+    "gene": "ASPM",
+    "mutation": "substitution",
+    "condition": "Microcephaly 5"
+  },
+  {
+    "gene": "DOK7",
+    "mutation": "substitution",
+    "condition": "not specified|Congenital myasthenic syndrome 10;Fetal akinesia deformation sequence 1|Fetal akinesia deformation sequence 3|not provided"
+  },
+  {
+    "gene": "SBF2",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease type 4"
+  },
+  {
+    "gene": "ABCA1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KCNQ5",
+    "mutation": "substitution",
+    "condition": "not provided|KCNQ5-related disorder"
+  },
+  {
+    "gene": "MYO7A",
+    "mutation": "substitution",
+    "condition": "Autosomal recessive nonsyndromic hearing loss 2|not provided"
+  },
+  {
+    "gene": "BRCA2",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|Hereditary breast ovarian cancer syndrome"
+  },
+  {
+    "gene": "SHISAL2B",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "VENTX",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "PEPD",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "MYL4",
+    "mutation": "substitution",
+    "condition": "Atrial fibrillation"
+  },
+  {
+    "gene": "HYCC1",
+    "mutation": "substitution",
+    "condition": "not provided|Hypomyelination and Congenital Cataract"
+  },
+  {
+    "gene": "RB1",
+    "mutation": "substitution",
+    "condition": "Hereditary cancer-predisposing syndrome|Retinoblastoma"
+  },
+  {
+    "gene": "AMN1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SYNE2",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "KCNJ5",
+    "mutation": "substitution",
+    "condition": "not provided|Cardiovascular phenotype"
+  },
+  {
+    "gene": "PLCH2",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "SRSF11",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "COPB1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "CDH23",
+    "mutation": "substitution",
+    "condition": "not specified|not provided"
+  },
+  {
+    "gene": "CACNA1S",
+    "mutation": "substitution",
+    "condition": "Malignant hyperthermia"
+  },
+  {
+    "gene": "PRPS1",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "TMEM43",
+    "mutation": "substitution",
+    "condition": "not specified|Arrhythmogenic right ventricular dysplasia 5|Cardiovascular phenotype|Arrhythmogenic right ventricular cardiomyopathy|Cardiomyopathy|not provided|Arrhythmogenic right ventricular dysplasia 5;Emery-Dreifuss muscular dystrophy 7"
+  },
+  {
+    "gene": "GARS1",
+    "mutation": "substitution",
+    "condition": "Charcot-Marie-Tooth disease type 2"
+  },
+  {
+    "gene": "SACS",
+    "mutation": "substitution",
+    "condition": "Spastic paraplegia"
+  },
+  {
+    "gene": "PDE4D",
+    "mutation": "substitution",
+    "condition": "Inborn genetic diseases|not provided"
+  },
+  {
+    "gene": "GBA2",
+    "mutation": "substitution",
+    "condition": "Spastic paraplegia"
+  },
+  {
+    "gene": "SERPINI1",
+    "mutation": "substitution",
+    "condition": "Familial encephalopathy with neuroserpin inclusion bodies|not provided"
+  },
+  {
+    "gene": "MET",
+    "mutation": "substitution",
+    "condition": "Renal cell carcinoma"
+  },
+  {
+    "gene": "NIPBL",
+    "mutation": "substitution",
+    "condition": "Cornelia de Lange syndrome 1"
+  },
+  {
+    "gene": "MYH7",
+    "mutation": "substitution",
+    "condition": "Cardiomyopathy|Hypertrophic cardiomyopathy 1|Cardiovascular phenotype"
+  },
+  {
+    "gene": "CYP11B1",
+    "mutation": "substitution",
+    "condition": "Deficiency of steroid 11-beta-monooxygenase|Glucocorticoid-remediable aldosteronism"
+  },
+  {
+    "gene": "JPH3",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "COQ7",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "PPARGC1A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "TRMU",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "EFR3A",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "ATP7A",
+    "mutation": "substitution",
+    "condition": "Menkes kinky-hair syndrome"
+  },
+  {
+    "gene": "BBS10",
+    "mutation": "substitution",
+    "condition": "Bardet-Biedl syndrome"
+  },
+  {
+    "gene": "TTN",
+    "mutation": "substitution",
+    "condition": "Dilated cardiomyopathy 1G;Autosomal recessive limb-girdle muscular dystrophy type 2J"
+  },
+  {
+    "gene": "DHTKD1",
+    "mutation": "substitution",
+    "condition": "2-aminoadipic 2-oxoadipic aciduria"
+  },
+  {
+    "gene": "RRAS",
+    "mutation": "substitution",
+    "condition": "Noonan syndrome"
+  },
+  {
+    "gene": "GDF5",
+    "mutation": "substitution",
+    "condition": "not provided"
+  },
+  {
+    "gene": "ECE1",
+    "mutation": "substitution",
+    "condition": "not specified"
+  },
+  {
+    "gene": "USH2A",
+    "mutation": "substitution",
+    "condition": "not provided|Usher syndrome type 2A"
+  }
+]
