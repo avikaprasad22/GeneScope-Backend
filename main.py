@@ -31,7 +31,6 @@ from api.messages_api import messages_api # Adi added this, messages for his web
 from chatbot import DiseasePredictor
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
-
 from api.illumina import illumina_api
 
 from api.vote import vote_api
