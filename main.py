@@ -25,6 +25,7 @@ from api.section import section_api
 from api.student import student_api
 from api.nestPost import nestPost_api # Justin added this, custom format for his website
 from api.messages_api import messages_api # Adi added this, messages for his website
+from api.trivia import trivia_api
 from chatbot import DiseasePredictor
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
@@ -53,8 +54,7 @@ app.register_blueprint(student_api)
 app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
-app.register_blueprint(questions_api)
-app.register_blueprint(scoreboard_api)
+app.register_blueprint(trivia_api)
 
 
 # Tell Flask-Login the view function name of your login route
