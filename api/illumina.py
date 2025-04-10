@@ -3,19 +3,17 @@ import random
 import requests
 from flask import Blueprint, jsonify, request
 from flask_restful import Api, Resource
-from model.illumina import MutationQuiz 
-
+from model.illumina import MutationQuiz  # ✅ Add this for database interaction
 
 illumina_api = Blueprint("illumina_api", __name__, url_prefix="/api")
 api = Api(illumina_api)
 
-# Load preprocessed mutation data
+# Load the preprocessed mutation data
 with open("mutation_dataset.json") as f:
     mutation_data = json.load(f)
 
+# Ensembl API gene → sequence fetcher
 def fetch_sequence(gene_symbol):
-    """Try to fetch DNA sequence for a given gene symbol using Ensembl API"""
-    # Try common organisms in order (you can expand this list)
     for organism in ["homo_sapiens", "mus_musculus"]:
         try:
             lookup_url = f"https://rest.ensembl.org/xrefs/symbol/{organism}/{gene_symbol}?content-type=application/json"
@@ -28,13 +26,13 @@ def fetch_sequence(gene_symbol):
             seq_response = requests.get(seq_url)
 
             if seq_response.status_code == 200:
-                return organism, gene_id, seq_response.text.strip()
+                return seq_response.text.strip()
         except Exception as e:
-            print(f"[WARN] Ensembl fetch failed for {gene_symbol}: {e}")
+            print(f"[WARN] Failed to fetch sequence for {gene_symbol}: {e}")
             continue
+    return None
 
-    return None, None, None  # No valid sequence found
-
+# GET endpoint: fetch a quiz question
 class GetSequence(Resource):
     def get(self):
         tries = 0
@@ -44,10 +42,9 @@ class GetSequence(Resource):
             entry = random.choice(mutation_data)
             gene = entry["gene"]
 
-            _, _, sequence = fetch_sequence(gene)
+            sequence = fetch_sequence(gene)
             if sequence:
                 short_seq = sequence[:150] + "..." if len(sequence) > 150 else sequence
-
                 return jsonify({
                     "gene": gene,
                     "condition": entry["condition"],
@@ -56,42 +53,40 @@ class GetSequence(Resource):
                 })
 
             tries += 1
-            print(f"[INFO] Retry {tries}: no sequence found for {gene}")
+            print(f"[INFO] Retry {tries}: sequence not found for gene {gene}")
 
-        return jsonify({"error": "Could not find a gene with both mutation and sequence data."}), 500
+        return jsonify({"error": "❌ Could not find a gene with both mutation and sequence"}), 500
 
+# POST endpoint: receive guess and log result
 class CheckMutation(Resource):
     def post(self):
-        data = request.get_json()
-        guess = data.get("guess")
-        correct = data.get("correct")
+        try:
+            data = request.get_json()
+            guess = data.get("guess")
+            correct = data.get("correct")
+            gene = data.get("gene")
+            condition = data.get("condition")
+            mutation = data.get("mutation")
+            sequence = data.get("sequence")
 
-        message = "✅ Correct!" if guess == correct else f"❌ Incorrect. It was a {correct}."
-        return jsonify({"message": message})
+            is_correct = guess == correct
+            message = "✅ Correct!" if is_correct else f"❌ Incorrect. It was a {correct}."
 
-class CheckMutation(Resource):
-    def post(self):
-        data = request.get_json()
-        guess = data.get("guess")
-        correct = data.get("correct")
-        gene = data.get("gene")
-        condition = data.get("condition")
-        mutation = data.get("mutation")
-        sequence = data.get("sequence")
+            # Save to the database
+            attempt = MutationQuiz(
+                gene=gene,
+                condition=condition,
+                mutation=mutation,
+                sequence=sequence,
+                correct=is_correct
+            )
+            attempt.create()
 
-        is_correct = guess == correct
-        msg = "✅ Correct!" if is_correct else f"❌ Incorrect. It was a {correct}."
+            return jsonify({"message": message})
 
-        attempt = MutationQuiz(
-            gene=gene,
-            condition=condition,
-            mutation=mutation,
-            sequence=sequence,
-            correct=is_correct
-        )
-        attempt.create()
+        except Exception as e:
+            return jsonify({"error": f"Failed to save quiz attempt: {str(e)}"}), 500
 
-        return jsonify({"message": msg})
-
+# Register endpoints
 api.add_resource(GetSequence, "/get-sequence")
 api.add_resource(CheckMutation, "/check-mutation")

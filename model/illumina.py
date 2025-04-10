@@ -1,9 +1,6 @@
 from __init__ import db
 
 class MutationQuiz(db.Model):
-    """
-    Model for storing mutation quiz attempts.
-    """
     __tablename__ = 'mutation_quiz'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -27,7 +24,7 @@ class MutationQuiz(db.Model):
             return self
         except Exception as e:
             db.session.rollback()
-            print(f"Failed to create quiz attempt: {e}")
+            print(f"[DB ERROR] Could not save MutationQuiz: {e}")
             return None
 
     def read(self):
@@ -40,12 +37,9 @@ class MutationQuiz(db.Model):
             "correct": self.correct
         }
 
+# Optional function to initialize the table
 def initMutationQuiz():
     from __init__ import app
     with app.app_context():
         db.create_all()
         print("✅ mutation_quiz table created.")
-
-
-    def __str__(self):
-        return str(self.read())
