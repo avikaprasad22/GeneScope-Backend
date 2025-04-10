@@ -3,6 +3,8 @@ import random
 import requests
 from flask import Blueprint, jsonify, request
 from flask_restful import Api, Resource
+from model.illumina import MutationQuiz 
+
 
 illumina_api = Blueprint("illumina_api", __name__, url_prefix="/api")
 api = Api(illumina_api)
@@ -66,6 +68,30 @@ class CheckMutation(Resource):
 
         message = "✅ Correct!" if guess == correct else f"❌ Incorrect. It was a {correct}."
         return jsonify({"message": message})
+
+class CheckMutation(Resource):
+    def post(self):
+        data = request.get_json()
+        guess = data.get("guess")
+        correct = data.get("correct")
+        gene = data.get("gene")
+        condition = data.get("condition")
+        mutation = data.get("mutation")
+        sequence = data.get("sequence")
+
+        is_correct = guess == correct
+        msg = "✅ Correct!" if is_correct else f"❌ Incorrect. It was a {correct}."
+
+        attempt = MutationQuiz(
+            gene=gene,
+            condition=condition,
+            mutation=mutation,
+            sequence=sequence,
+            correct=is_correct
+        )
+        attempt.create()
+
+        return jsonify({"message": msg})
 
 api.add_resource(GetSequence, "/get-sequence")
 api.add_resource(CheckMutation, "/check-mutation")
