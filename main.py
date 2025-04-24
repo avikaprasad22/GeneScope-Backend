@@ -15,7 +15,11 @@ import shutil
 # import "objects" from "this" project
 from __init__ import app, db, login_manager  # Key Flask objects 
 from flask_cors import CORS
-CORS(app)
+CORS(
+    app,
+    supports_credentials=True,
+    origins=["http://127.0.0.1:4504"]
+)
 
 # API endpoints
 from api.user import user_api 
