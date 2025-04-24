@@ -36,6 +36,8 @@ from chatbot import DiseasePredictor
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 from api.illumina import illumina_api
+from api.dna_sequencing import dna_api  # adjust the import path if needed
+
 
 from api.vote import vote_api
 # database Initialization functions
@@ -62,8 +64,6 @@ app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
 app.register_blueprint(illumina_api)
-app.register_blueprint(questions_api)
-app.register_blueprint(scoreboard_api)
 
 
 # Tell Flask-Login the view function name of your login route
