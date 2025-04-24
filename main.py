@@ -24,35 +24,24 @@ CORS(
 # API endpoints
 from api.user import user_api 
 from api.pfp import pfp_api
-from api.nestImg import nestImg_api # Justin added this, custom format for his website
+from api.nestImg import nestImg_api  # Justin added this, custom format for his website
 from api.post import post_api
 from api.channel import channel_api
 from api.group import group_api
 from api.section import section_api
 from api.student import student_api
-from api.nestPost import nestPost_api # Justin added this, custom format for his website
-from api.messages_api import messages_api # Adi added this, messages for his website
+from api.nestPost import nestPost_api  # Justin added this, custom format for his website
+from api.messages_api import messages_api  # Adi added this, messages for his website
 from chatbot import DiseasePredictor
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 from api.illumina import illumina_api
-from api.dna_sequencing import dna_api  # adjust the import path if needed
-
-
+from api.dna_sequencing import dna_api
 from api.vote import vote_api
-# database Initialization functions
-from model.user import User, initUsers
-from model.section import Section, initSections
-from model.group import Group, initGroups
-from model.channel import Channel, initChannels
-from model.post import Post, initPosts
-from model.nestPost import NestPost, initNestPosts # Justin added this, custom format for his website
-from model.vote import Vote, initVotes
-
-
+from api.resource import resource_api  # ✅ Your new resource API
 
 # register URIs for api endpoints
-app.register_blueprint(messages_api) # Adi added this, messages for his website
+app.register_blueprint(messages_api)  # Adi added this, messages for his website
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api) 
 app.register_blueprint(post_api)
@@ -64,7 +53,7 @@ app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
 app.register_blueprint(illumina_api)
-
+app.register_blueprint(resource_api)  # ✅ Register your resource API
 
 # Tell Flask-Login the view function name of your login route
 login_manager.login_view = "login"
