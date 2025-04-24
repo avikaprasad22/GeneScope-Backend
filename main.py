@@ -58,6 +58,8 @@ app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
 app.register_blueprint(illumina_api)
+app.register_blueprint(questions_api)
+app.register_blueprint(scoreboard_api)
 
 
 # Tell Flask-Login the view function name of your login route
