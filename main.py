@@ -2,7 +2,7 @@
 import json
 import os
 from urllib.parse import urljoin, urlparse
-from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify  # import render_template from "public" flask libraries
+from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify
 from flask_login import current_user, login_user, logout_user
 from flask.cli import AppGroup
 from flask_login import current_user, login_required
@@ -10,16 +10,10 @@ from flask import current_app
 from werkzeug.security import generate_password_hash
 import shutil
 
-
-
-# import "objects" from "this" project
+# Flask setup
 from __init__ import app, db, login_manager  # Key Flask objects 
 from flask_cors import CORS
-CORS(
-    app,
-    supports_credentials=True,
-    origins=["http://127.0.0.1:4504"]
-)
+CORS(app, origins=["http://127.0.0.1:4504"], supports_credentials=True)
 
 # API endpoints
 from api.user import user_api 
@@ -73,6 +67,11 @@ app.register_blueprint(vote_api)
 app.register_blueprint(illumina_api)
 app.register_blueprint(resource_api)  
 app.register_blueprint(chatbot_api)
+
+# TESTING CORS
+@app.route("/test-cors")
+def test_cors():
+    return jsonify({"message": "CORS works!"})
 
 # Tell Flask-Login the view function name of your login route
 login_manager.login_view = "login"

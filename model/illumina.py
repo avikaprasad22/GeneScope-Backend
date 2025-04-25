@@ -1,8 +1,8 @@
 from __init__ import db
 
-class MutationQuiz(db.Model):
-    __tablename__ = 'mutation_quiz'
-
+class GeneRecord(db.Model):
+    __tablename__ = 'genes'  
+    
     id = db.Column(db.Integer, primary_key=True)
     gene = db.Column(db.String(64), nullable=False)
     condition = db.Column(db.String(255), nullable=False)
@@ -24,7 +24,7 @@ class MutationQuiz(db.Model):
             return self
         except Exception as e:
             db.session.rollback()
-            print(f"[DB ERROR] Could not save MutationQuiz: {e}")
+            print(f"[DB ERROR] Could not save GeneRecord: {e}")
             return None
 
     def read(self):
@@ -37,9 +37,9 @@ class MutationQuiz(db.Model):
             "correct": self.correct
         }
 
-# Optional function to initialize the table
-def initMutationQuiz():
+# ✅ Optional function to create the table if needed
+def initGeneRecord():
     from __init__ import app
     with app.app_context():
         db.create_all()
-        print("✅ mutation_quiz table created.")
+        print(" genes table created.")
