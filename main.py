@@ -11,7 +11,7 @@ from werkzeug.security import generate_password_hash
 # Flask app setup
 from __init__ import app, db, login_manager
 
-# ✅ CORS for frontend running on a different port
+#  CORS for frontend running on a different port
 from flask_cors import CORS
 CORS(app, supports_credentials=True, origins=["http://127.0.0.1:4504"])
 
@@ -30,8 +30,6 @@ from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 from api.vote import vote_api
 from api.resource import resource_api
-
-# ✅ Yours
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
 from api.chatbot import chatbot_api
@@ -51,8 +49,6 @@ app.register_blueprint(questions_api)
 app.register_blueprint(scoreboard_api)
 app.register_blueprint(vote_api)
 app.register_blueprint(resource_api)
-
-# ✅ Register yours
 app.register_blueprint(illumina_api)
 app.register_blueprint(dna_api)
 app.register_blueprint(chatbot_api)
@@ -235,6 +231,6 @@ def backup_database(src_uri, backup_uri):
         except Exception as e:
             print("Error backing up database file:", e)
 
-# ✅ Run Flask on port 8504
+# Run Flask on port 8504
 if __name__ == "__main__":
     app.run(debug=True, port=8504)
