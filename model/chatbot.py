@@ -3,13 +3,17 @@ from sklearn.ensemble import RandomForestClassifier
 from difflib import get_close_matches
 
 class DiseasePredictor:
-    def __init__(self, json_file):
+    def __init__(self, json_file="symptoms.json", csv_file="symbipredict_2024.csv"):
+        if not pd.io.common.file_exists(json_file):
+            print(f"⚠️ {json_file} not found. Generating from {csv_file}...")
+            df = pd.read_csv(csv_file)
+            df.to_json(json_file, orient="records")
         self.df = pd.read_json(json_file)
+
         self.symptom_columns = self.df.columns[:-1]
         self.label_column = self.df.columns[-1]
         self.diseases = self.df[self.label_column].unique().tolist()
 
-        # Train the model
         self.model = RandomForestClassifier()
         self.model.fit(self.df[self.symptom_columns], self.df[self.label_column])
 
@@ -32,7 +36,11 @@ class DiseasePredictor:
         return top_symptoms, matched_disease
 
     def predict(self, symptom_dict):
+        matched_disease = self.match_disease_name(symptom_dict["target_disease"])
+        if not matched_disease:
+            raise ValueError(f"'{symptom_dict['target_disease']}' not found in known diseases.")
+
         input_vector = [symptom_dict.get(symptom, 0) for symptom in self.symptom_columns]
         probabilities = self.model.predict_proba([input_vector])[0]
-        disease_index = self.model.classes_.tolist().index(symptom_dict["target_disease"])
+        disease_index = self.model.classes_.tolist().index(matched_disease)
         return probabilities[disease_index] * 100
