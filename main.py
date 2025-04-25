@@ -26,13 +26,12 @@ from api.group import group_api
 from api.section import section_api
 from api.student import student_api
 from api.nestPost import nestPost_api
-from api.messages_api import messages_api
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
 from api.vote import vote_api
-from api.resource import resource_api  
+from api.resource import resource_api  # ✅ Your new resource API
 
 # register URIs for api endpoints
 from api.chatbot import chatbot_api
@@ -50,7 +49,6 @@ from model.vote import Vote, initVotes
 
 
 # register URIs for api endpoints
-app.register_blueprint(messages_api)
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api)
 app.register_blueprint(post_api)
