@@ -2,7 +2,7 @@
 import json
 import os
 from urllib.parse import urljoin, urlparse
-from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify  # import render_template from "public" flask libraries
+from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify
 from flask_login import current_user, login_user, logout_user
 from flask.cli import AppGroup
 from flask_login import current_user, login_required
@@ -10,49 +10,49 @@ from flask import current_app
 from werkzeug.security import generate_password_hash
 import shutil
 
-
-
-# import "objects" from "this" project
+# Flask setup
 from __init__ import app, db, login_manager  # Key Flask objects 
 from flask_cors import CORS
-CORS(
-    app,
-    supports_credentials=True,
-    origins=["http://127.0.0.1:4504"]
-)
+CORS(app, supports_credentials=True, origins=["http://127.0.0.1:4504"])
 
 # API endpoints
-from api.user import user_api 
+from api.user import user_api
 from api.pfp import pfp_api
-from api.nestImg import nestImg_api # Justin added this, custom format for his website
+from api.nestImg import nestImg_api  # Justin added this, custom format for his website
+from api.nestImg import nestImg_api
 from api.post import post_api
 from api.channel import channel_api
 from api.group import group_api
 from api.section import section_api
 from api.student import student_api
-from api.nestPost import nestPost_api # Justin added this, custom format for his website
-from api.messages_api import messages_api # Adi added this, messages for his website
-from chatbot import DiseasePredictor
+from api.nestPost import nestPost_api
+from api.messages_api import messages_api
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 from api.illumina import illumina_api
-
+from api.dna_sequencing import dna_api
 from api.vote import vote_api
+from api.resource import resource_api  
+
+# register URIs for api endpoints
+from api.chatbot import chatbot_api
+from api.chatbot import DiseasePredictor
+
 # database Initialization functions
 from model.user import User, initUsers
 from model.section import Section, initSections
 from model.group import Group, initGroups
 from model.channel import Channel, initChannels
 from model.post import Post, initPosts
-from model.nestPost import NestPost, initNestPosts # Justin added this, custom format for his website
+from model.nestPost import NestPost, initNestPosts
 from model.vote import Vote, initVotes
 
 
 
 # register URIs for api endpoints
-app.register_blueprint(messages_api) # Adi added this, messages for his website
+app.register_blueprint(messages_api)
 app.register_blueprint(user_api)
-app.register_blueprint(pfp_api) 
+app.register_blueprint(pfp_api)
 app.register_blueprint(post_api)
 app.register_blueprint(channel_api)
 app.register_blueprint(group_api)
@@ -62,9 +62,12 @@ app.register_blueprint(nestPost_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(vote_api)
 app.register_blueprint(illumina_api)
-app.register_blueprint(questions_api)
-app.register_blueprint(scoreboard_api)
+app.register_blueprint(resource_api)  
 
+# TESTING CORS
+@app.route("/test-cors")
+def test_cors():
+    return jsonify({"message": "CORS works!"})
 
 # Tell Flask-Login the view function name of your login route
 login_manager.login_view = "login"
@@ -76,6 +79,7 @@ def unauthorized_callback():
 # register URIs for server pages
 @login_manager.user_loader
 def load_user(user_id):
+    from model.user import User
     return User.query.get(int(user_id))
 
 @app.context_processor
@@ -90,6 +94,7 @@ def is_safe_url(target):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    from model.user import User
     error = None
     next_page = request.args.get('next', '') or request.form.get('next', '')
     if request.method == 'POST':
@@ -102,18 +107,17 @@ def login():
         else:
             error = 'Invalid username or password.'
     return render_template("login.html", error=error, next=next_page)
-    
+
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
 
-@app.errorhandler(404)  # catch for URL not found
+@app.errorhandler(404)
 def page_not_found(e):
-    # note that we set the 404 status explicitly
     return render_template('404.html'), 404
 
-@app.route('/')  # connects default URL to index() function
+@app.route('/')
 def index():
     print("Home:", current_user)
     return render_template("index.html")
@@ -121,23 +125,25 @@ def index():
 @app.route('/users/table')
 @login_required
 def utable():
+    from model.user import User
     users = User.query.all()
     return render_template("utable.html", user_data=users)
 
 @app.route('/users/table2')
 @login_required
 def u2table():
+    from model.user import User
     users = User.query.all()
     return render_template("u2table.html", user_data=users)
 
-# Helper function to extract uploads for a user (ie PFP image)
 @app.route('/uploads/<path:filename>')
 def uploaded_file(filename):
     return send_from_directory(current_app.config['UPLOAD_FOLDER'], filename)
- 
+
 @app.route('/users/delete/<int:user_id>', methods=['DELETE'])
 @login_required
 def delete_user(user_id):
+    from model.user import User
     user = User.query.get(user_id)
     if user:
         user.delete()
@@ -147,24 +153,28 @@ def delete_user(user_id):
 @app.route('/users/reset_password/<int:user_id>', methods=['POST'])
 @login_required
 def reset_password(user_id):
+    from model.user import User
     if current_user.role != 'Admin':
         return jsonify({'error': 'Unauthorized'}), 403
-    
     user = User.query.get(user_id)
     if not user:
         return jsonify({'error': 'User not found'}), 404
-
-    # Set the new password
     if user.update({"password": app.config['DEFAULT_PASSWORD']}):
         return jsonify({'message': 'Password reset successfully'}), 200
     return jsonify({'error': 'Password reset failed'}), 500
 
-# Create an AppGroup for custom commands
+# Custom CLI commands
 custom_cli = AppGroup('custom', help='Custom commands')
 
-# Define a command to run the data generation functions
 @custom_cli.command('generate_data')
 def generate_data():
+    from model.user import initUsers
+    from model.section import initSections
+    from model.group import initGroups
+    from model.channel import initChannels
+    from model.post import initPosts
+    from model.nestPost import initNestPosts
+    from model.vote import initVotes
     initUsers()
     initSections()
     initGroups()
@@ -172,10 +182,8 @@ def generate_data():
     initPosts()
     initNestPosts()
     initVotes()
-    
-# Backup the old database
+
 def backup_database(db_uri, backup_uri):
-    """Backup the current database."""
     if backup_uri:
         db_path = db_uri.replace('sqlite:///', 'instance/')
         backup_path = backup_uri.replace('sqlite:///', 'instance/')
@@ -184,8 +192,12 @@ def backup_database(db_uri, backup_uri):
     else:
         print("Backup not supported for production database.")
 
-# Extract data from the existing database
 def extract_data():
+    from model.user import User
+    from model.section import Section
+    from model.group import Group
+    from model.channel import Channel
+    from model.post import Post
     data = {}
     with app.app_context():
         data['users'] = [user.read() for user in User.query.all()]
@@ -195,7 +207,6 @@ def extract_data():
         data['posts'] = [post.read() for post in Post.query.all()]
     return data
 
-# Save extracted data to JSON files
 def save_data_to_json(data, directory='backup'):
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -204,7 +215,6 @@ def save_data_to_json(data, directory='backup'):
             json.dump(records, f)
     print(f"Data backed up to {directory} directory.")
 
-# Load data from JSON files
 def load_data_from_json(directory='backup'):
     data = {}
     for table in ['users', 'sections', 'groups', 'channels']:
@@ -212,8 +222,11 @@ def load_data_from_json(directory='backup'):
             data[table] = json.load(f)
     return data
 
-# Restore data to the new database
 def restore_data(data):
+    from model.user import User
+    from model.section import Section
+    from model.group import Group
+    from model.channel import Channel
     with app.app_context():
         users = User.restore(data['users'])
         _ = Section.restore(data['sections'])
@@ -221,23 +234,20 @@ def restore_data(data):
         _ = Channel.restore(data['channels'])
     print("Data restored to the new database.")
 
-# Define a command to backup data
 @custom_cli.command('backup_data')
 def backup_data():
     data = extract_data()
     save_data_to_json(data)
     backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
 
-# Define a command to restore data
 @custom_cli.command('restore_data')
 def restore_data_command():
     data = load_data_from_json()
     restore_data(data)
-    
-# Register the custom command group with the Flask application
+
 app.cli.add_command(custom_cli)
-        
-# this runs the flask application on the development server
+
+# Entry point
 if __name__ == "__main__":
     # change name for testing
     app.run(debug=True, host="0.0.0.0", port="8504")
@@ -246,6 +256,9 @@ if __name__ == "__main__":
     # second number - 5
     # third + 4th - # of table
     # 8504
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port="8504")
 
 if __name__ == "__main__":
     predictor = DiseasePredictor("symbipredict_2024.csv")
