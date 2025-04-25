@@ -46,10 +46,13 @@ def add_score():
 def get_top_scores():
     """Retrieve the top 10 scores across all users."""
     top_scores = Scoreboard.query.order_by(Scoreboard.score.desc()).limit(10).all()
-    leaderboard = [{
-        "username": User.query.get(score.uid).username if User.query.get(score.uid) else "Unknown",
-        "score":    score.score,
-        "timestamp": score.timestamp.strftime('%Y-%m-%d %H:%M:%S')
-    } for score in top_scores]
+    leaderboard = []
+
+    for score in top_scores:
+        leaderboard.append({
+            "username":  score.uid,  # use the uid stored on the scoreboard entry
+            "score":     score.score,
+            "timestamp": score.timestamp.strftime('%Y-%m-%d %H:%M:%S')
+        })
 
     return jsonify(leaderboard)
