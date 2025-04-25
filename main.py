@@ -2,32 +2,17 @@
 import json
 import os
 import shutil
-<<<<<<< HEAD
 from urllib.parse import urljoin, urlparse
 from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify, current_app
 from flask_login import current_user, login_user, logout_user, login_required
 from flask.cli import AppGroup
 from werkzeug.security import generate_password_hash
-
 # Flask app setup
 from __init__ import app, db, login_manager
-
 #  CORS for frontend running on a different port
 from flask_cors import CORS
 CORS(app, supports_credentials=True, origins=["http://127.0.0.1:4504"])
-
 # API imports (teammate + yours)
-=======
-# import "objects" from "this" project
-from __init__ import app, db, login_manager  # Key Flask objects
-from flask_cors import CORS
-CORS(
-    app,
-    supports_credentials=True,
-    origins=["http://127.0.0.1:4504"]
-)
-# API endpoints
->>>>>>> 6d92449 (sdf)
 from api.user import user_api
 from api.pfp import pfp_api
 from api.nestImg import nestImg_api
@@ -44,22 +29,11 @@ from api.vote import vote_api
 from api.resource import resource_api
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
-<<<<<<< HEAD
 from api.chatbot import chatbot_api
-
 # Register all blueprints
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api)
 app.register_blueprint(nestImg_api)
-=======
-from api.vote import vote_api
-from api.resource import resource_api  # :white_check_mark: Your new resource API
-from api.dna_sequencing import dna_api
-# register URIs for api endpoints
-app.register_blueprint(messages_api)  # Adi added this, messages for his website
-app.register_blueprint(user_api)
-app.register_blueprint(pfp_api)
->>>>>>> 6d92449 (sdf)
 app.register_blueprint(post_api)
 app.register_blueprint(channel_api)
 app.register_blueprint(group_api)
@@ -73,23 +47,12 @@ app.register_blueprint(vote_api)
 app.register_blueprint(resource_api)
 app.register_blueprint(illumina_api)
 app.register_blueprint(dna_api)
-<<<<<<< HEAD
 app.register_blueprint(chatbot_api)
-
 # Login Manager
-=======
-app.register_blueprint(resource_api)  # :white_check_mark: Register your resource API
-# Tell Flask-Login the view function name of your login route
->>>>>>> 6d92449 (sdf)
 login_manager.login_view = "login"
 @login_manager.unauthorized_handler
 def unauthorized_callback():
     return redirect(url_for('login', next=request.path))
-<<<<<<< HEAD
-
-=======
-# register URIs for server pages
->>>>>>> 6d92449 (sdf)
 @login_manager.user_loader
 def load_user(user_id):
     from model.user import User
@@ -97,11 +60,6 @@ def load_user(user_id):
 @app.context_processor
 def inject_user():
     return dict(current_user=current_user)
-<<<<<<< HEAD
-
-=======
-# Helper function to check if the URL is safe for redirects
->>>>>>> 6d92449 (sdf)
 def is_safe_url(target):
     ref_url = urlparse(request.host_url)
     test_url = urlparse(urljoin(request.host_url, target))
@@ -121,28 +79,14 @@ def login():
         else:
             error = 'Invalid username or password.'
     return render_template("login.html", error=error, next=next_page)
-<<<<<<< HEAD
-
-=======
->>>>>>> 6d92449 (sdf)
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
-<<<<<<< HEAD
-
 @app.errorhandler(404)
-=======
-@app.errorhandler(404)  # catch for URL not found
->>>>>>> 6d92449 (sdf)
 def page_not_found(e):
     return render_template('404.html'), 404
-<<<<<<< HEAD
-
 @app.route('/')
-=======
-@app.route('/')  # connects default URL to index() function
->>>>>>> 6d92449 (sdf)
 def index():
     print("Home:", current_user)
     return render_template("index.html")
@@ -158,18 +102,9 @@ def u2table():
     from model.user import User
     users = User.query.all()
     return render_template("u2table.html", user_data=users)
-<<<<<<< HEAD
-
 @app.route('/uploads/<path:filename>')
 def uploaded_file(filename):
     return send_from_directory(current_app.config['UPLOAD_FOLDER'], filename)
-
-=======
-# Helper function to extract uploads for a user (ie PFP image)
-@app.route('/uploads/<path:filename>')
-def uploaded_file(filename):
-    return send_from_directory(current_app.config['UPLOAD_FOLDER'], filename)
->>>>>>> 6d92449 (sdf)
 @app.route('/users/delete/<int:user_id>', methods=['DELETE'])
 @login_required
 def delete_user(user_id):
@@ -188,23 +123,11 @@ def reset_password(user_id):
     user = User.query.get(user_id)
     if not user:
         return jsonify({'error': 'User not found'}), 404
-<<<<<<< HEAD
     if user.update({"password": app.config['DEFAULT_PASSWORD']}):
         return jsonify({'message': 'Password reset successfully'}), 200
     return jsonify({'error': 'Password reset failed'}), 500
-
 # CLI Setup
 custom_cli = AppGroup('custom', help='Custom commands')
-
-=======
-    # Set the new password
-    if user.update({"password": app.config['DEFAULT_PASSWORD']}):
-        return jsonify({'message': 'Password reset successfully'}), 200
-    return jsonify({'error': 'Password reset failed'}), 500
-# Create an AppGroup for custom commands
-custom_cli = AppGroup('custom', help='Custom commands')
-# Define a command to run the data generation functions
->>>>>>> 6d92449 (sdf)
 @custom_cli.command('generate_data')
 def generate_data():
     from model.user import initUsers
@@ -221,35 +144,17 @@ def generate_data():
     initPosts()
     initNestPosts()
     initVotes()
-<<<<<<< HEAD
-
 @custom_cli.command('backup_data')
 def backup_data():
     data = extract_data()
     save_data_to_json(data)
     backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
-
 @custom_cli.command('restore_data')
 def restore_data_command():
     data = load_data_from_json()
     restore_data(data)
-
 app.cli.add_command(custom_cli)
-
 # DB helpers
-=======
-# Backup the old database
-def backup_database(db_uri, backup_uri):
-    """Backup the current database."""
-    if backup_uri:
-        db_path = db_uri.replace('sqlite:///', 'instance/')
-        backup_path = backup_uri.replace('sqlite:///', 'instance/')
-        shutil.copyfile(db_path, backup_path)
-        print(f"Database backed up to {backup_path}")
-    else:
-        print("Backup not supported for production database.")
-# Extract data from the existing database
->>>>>>> 6d92449 (sdf)
 def extract_data():
     from model.user import User
     from model.section import Section
@@ -264,11 +169,6 @@ def extract_data():
         data['channels'] = [channel.read() for channel in Channel.query.all()]
         data['posts'] = [post.read() for post in Post.query.all()]
     return data
-<<<<<<< HEAD
-
-=======
-# Save extracted data to JSON files
->>>>>>> 6d92449 (sdf)
 def save_data_to_json(data, directory='backup'):
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -276,22 +176,12 @@ def save_data_to_json(data, directory='backup'):
         with open(os.path.join(directory, f'{table}.json'), 'w') as f:
             json.dump(records, f)
     print(f"Data backed up to {directory} directory.")
-<<<<<<< HEAD
-
-=======
-# Load data from JSON files
->>>>>>> 6d92449 (sdf)
 def load_data_from_json(directory='backup'):
     data = {}
     for table in ['users', 'sections', 'groups', 'channels']:
         with open(os.path.join(directory, f'{table}.json'), 'r') as f:
             data[table] = json.load(f)
     return data
-<<<<<<< HEAD
-
-=======
-# Restore data to the new database
->>>>>>> 6d92449 (sdf)
 def restore_data(data):
     from model.user import User
     from model.section import Section
@@ -303,8 +193,6 @@ def restore_data(data):
         _ = Group.restore(data['groups'], users)
         _ = Channel.restore(data['channels'])
     print("Data restored to the new database.")
-<<<<<<< HEAD
-
 def backup_database(src_uri, backup_uri):
     if src_uri.startswith("sqlite:///") and backup_uri.startswith("sqlite:///"):
         src_path = src_uri.replace("sqlite:///", "")
@@ -314,45 +202,6 @@ def backup_database(src_uri, backup_uri):
             print("Database file copied successfully.")
         except Exception as e:
             print("Error backing up database file:", e)
-
 # Run Flask on port 8504
 if __name__ == "__main__":
     app.run(debug=True, port=8504)
-=======
-# Define a command to backup data
-@custom_cli.command('backup_data')
-def backup_data():
-    data = extract_data()
-    save_data_to_json(data)
-    backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
-# Define a command to restore data
-@custom_cli.command('restore_data')
-def restore_data_command():
-    data = load_data_from_json()
-    restore_data(data)
-# Register the custom command group with the Flask application
-app.cli.add_command(custom_cli)
-# this runs the flask application on the development server
-if __name__ == "__main__":
-    # change name for testing
-    app.run(debug=True, host="0.0.0.0", port="8504")
-    # first number - 8
-    # second number - 5
-    # third + 4th - # of table
-    # 8504
-if __name__ == "__main__":
-    predictor = DiseasePredictor("symbipredict_2024.csv")
-    print("Welcome to the Disease Risk Predictor!")
-    disease = input("Enter a disease name: ").strip()
-    symptoms = predictor.get_symptoms_for_disease(disease)
-    if not symptoms:
-        print("Sorry, disease not found.")
-    else:
-        user_input = {}
-        print("\nPlease answer the following symptom questions (yes/no):")
-        for symptom in symptoms:
-            answer = input(f"Do you have {symptom.replace('_', ' ')}? ").strip().lower()
-            user_input[symptom] = 1 if answer in ["yes", "y"] else 0
-        probability = predictor.predict(user_input, disease)
-        print(f"\nEstimated likelihood of having {disease}: {probability:.2f}%")
->>>>>>> 6d92449 (sdf)
