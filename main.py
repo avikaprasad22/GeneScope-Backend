@@ -30,6 +30,9 @@ from api.resource import resource_api
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
 from api.chatbot import chatbot_api
+from api.dnabot import dnabot_api
+
+
 # Register all blueprints
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api)
@@ -48,6 +51,9 @@ app.register_blueprint(resource_api)
 app.register_blueprint(illumina_api)
 app.register_blueprint(dna_api)
 app.register_blueprint(chatbot_api)
+app.register_blueprint(dnabot_api)
+
+
 # Login Manager
 login_manager.login_view = "login"
 @login_manager.unauthorized_handler
