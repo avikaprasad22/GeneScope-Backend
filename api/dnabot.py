@@ -1,8 +1,10 @@
+# api/giftbot.py
+
 import os
 import google.generativeai as genai
+from flask import Blueprint, request, jsonify
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
 # Configure Gemini
@@ -16,7 +18,6 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-# Set up the model
 model = genai.GenerativeModel(
     model_name="gemini-1.5-pro",
     generation_config=generation_config,
@@ -24,27 +25,19 @@ model = genai.GenerativeModel(
         "You are an expert in suggesting gifts for people. Your task is to engage "
         "in conversations about gift-giving and provide thoughtful suggestions. "
         "Understand the user's preferences, occasion, and budget to offer personalized "
-        "gift ideas. Use relatable examples, humor, and creativity to make the interaction "
-        "enjoyable. Ask clarifying questions to better understand the recipient's personality "
-        "and interests. Offer practical tips for wrapping, presenting, or adding a personal touch "
-        "to the gift. Tailor suggestions to fit a range of scenarios, from simple and inexpensive "
-        "to elaborate and luxurious. Also when giving suggestions, provide some trending product "
-        "descriptions, prices, customer ratings, and where to find the item."
+        "gift ideas. Use relatable examples, humor, and creativity to make the interaction enjoyable."
     ),
 )
 
-# Start a conversation session
-chat_session = model.start_chat()
+# Flask Blueprint
+dnabot_api = Blueprint('dnabot_api', __name__, url_prefix='/dnabot')
 
-print("Welcome to GiftBot!")
-print("Type 'exit' to quit.\n")
+@dnabot_api.route('/chat', methods=['POST'])
+def chat():
+    user_input = request.json.get('user_input', '')
+    if not user_input:
+        return jsonify({"error": "No input provided"}), 400
 
-while True:
-    user_input = input("You: ")
-
-    if user_input.lower() in ['exit', 'quit']:
-        print("Goodbye!")
-        break
-
+    chat_session = model.start_chat()
     response = chat_session.send_message(user_input)
-    print(f"GiftBot: {response.text}\n")
+    return jsonify({"response": response.text})
