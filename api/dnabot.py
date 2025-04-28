@@ -1,14 +1,11 @@
-# api/giftbot.py  (new file name suggestion)
-
 import os
-from flask import Blueprint, request, jsonify
 import google.generativeai as genai
 from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
 
-# Configure AI model
+# Configure Gemini
 genai.configure(api_key=os.environ.get('API_KEY'))
 
 generation_config = {
@@ -19,6 +16,7 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
+# Set up the model
 model = genai.GenerativeModel(
     model_name="gemini-1.5-pro",
     generation_config=generation_config,
@@ -35,15 +33,18 @@ model = genai.GenerativeModel(
     ),
 )
 
-# Define a Blueprint
-dnabot_api = Blueprint('dnabot_api', __name__, url_prefix='/dnabot')
+# Start a conversation session
+chat_session = model.start_chat()
 
-@dnabot_api.route('/chat', methods=['POST'])
-def chat():
-    user_input = request.json.get('user_input', '')
-    if not user_input:
-        return jsonify({"error": "No input provided"}), 400
+print("Welcome to GiftBot!")
+print("Type 'exit' to quit.\n")
 
-    chat_session = model.start_chat()
+while True:
+    user_input = input("You: ")
+
+    if user_input.lower() in ['exit', 'quit']:
+        print("Goodbye!")
+        break
+
     response = chat_session.send_message(user_input)
-    return jsonify({"response": response.text})
+    print(f"GiftBot: {response.text}\n")
