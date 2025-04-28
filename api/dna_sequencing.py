@@ -1,3 +1,5 @@
+# dna_api.py
+
 import os
 import requests
 from flask import Blueprint, request, jsonify
@@ -12,19 +14,8 @@ load_dotenv()
 dna_api = Blueprint('dna_api', __name__, url_prefix='/api')
 api = Api(dna_api)
 
-# Allow CORS for frontend (adjusting origins to match your frontend port)
-CORS(dna_api, resources={r"/api/sequence": {"origins": "http://127.0.0.1:4504"}}, supports_credentials=True)
-
-class DNAPreflight(Resource):
-    def options(self):
-        print("Preflight request received")
-        response = jsonify({'message': 'CORS preflight request success'})
-        # Add CORS headers for preflight
-        response.headers.add("Access-Control-Allow-Origin", "http://127.0.0.1:4504")
-        response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
-        response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
-        response.headers.add("Access-Control-Allow-Credentials", "true")
-        return response, 200
+# Correct CORS: allow frontend at 4504 to access everything under /api
+CORS(dna_api, resources={r"/*": {"origins": "http://127.0.0.1:4504"}}, supports_credentials=True)
 
 class DNAGene(Resource):
     def post(self):
@@ -70,6 +61,5 @@ class DNAGene(Resource):
             print(f"Error: {str(e)}")
             return jsonify({"error": str(e)}), 500
 
-# Register resources
-api.add_resource(DNAPreflight, '/sequence')
+# Register only this
 api.add_resource(DNAGene, '/sequence')
