@@ -10,14 +10,14 @@ illumina_api = Blueprint("illumina_api", __name__, url_prefix="/api")
 CORS(illumina_api, origins=["http://127.0.0.1:4504"])
 api = Api(illumina_api)
 
-# Load JSON files
+# Load local JSON data
 with open("mutation_dataset.json") as f:
     mutation_data = json.load(f)
 
 with open("ensembl_sequences.json") as f:
     gene_sequences = json.load(f)
 
-# Pull sequence from Ensembl API
+# Pull sequence from Ensembl API (optional fallback, not used in fixed version)
 def fetch_sequence_from_ensembl(gene_symbol):
     for organism in ["homo_sapiens", "mus_musculus"]:
         try:
@@ -37,35 +37,35 @@ def fetch_sequence_from_ensembl(gene_symbol):
             continue
     return None
 
-# GET: Choose gene (random or by name)
+# ✅ GET: Choose gene (random or named) and return 12-base sequence + condition
 class ChooseGene(Resource):
     def get(self):
         gene_name = request.args.get("name", "random").strip().lower()
-        selected_entry = None
+        valid_genes = [entry for entry in gene_sequences]
+        selected_gene = None
 
         if gene_name == "random":
-            selected_entry = random.choice(mutation_data)
+            selected_gene = random.choice(valid_genes)
         else:
-            for entry in mutation_data:
+            for entry in valid_genes:
                 if entry["gene"].lower() == gene_name:
-                    selected_entry = entry
+                    selected_gene = entry
                     break
 
-        if not selected_entry:
-            return jsonify({"error": f"No gene found for: {gene_name}"}), 404
+        if not selected_gene:
+            return jsonify({"error": f"Gene '{gene_name}' not found in sequence data."}), 404
 
-        gene = selected_entry["gene"]
-        condition = selected_entry.get("condition", "Unknown")
-
-        sequence = fetch_sequence_from_ensembl(gene)
-        if not sequence:
-            for record in gene_sequences:
-                if record["gene"].lower() == gene.lower():
-                    sequence = record.get("sequence", "")
-                    break
-
+        gene = selected_gene["gene"]
+        sequence = selected_gene.get("sequence", "")
         if not sequence or len(sequence) < 12:
-            return jsonify({"error": f"Sequence not found or too short for gene {gene}"}), 500
+            return jsonify({"error": f"Sequence for gene '{gene}' is missing or too short."}), 500
+
+        # Match to mutation data for condition
+        condition = "Unknown"
+        for record in mutation_data:
+            if record["gene"].lower() == gene.lower():
+                condition = record.get("condition", "Unknown")
+                break
 
         return jsonify({
             "gene": gene,
@@ -73,7 +73,16 @@ class ChooseGene(Resource):
             "sequence": sequence[:12]
         })
 
-# POST: Log mutation attempt
+# ✅ GET: Gene list for dropdown
+class GeneList(Resource):
+    def get(self):
+        try:
+            gene_names = sorted({entry["gene"] for entry in gene_sequences})
+            return jsonify({"genes": gene_names})
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+# ✅ POST: Log mutation attempt
 class CheckMutation(Resource):
     def post(self):
         try:
@@ -101,7 +110,7 @@ class CheckMutation(Resource):
         except Exception as e:
             return jsonify({"error": f"Failed to save quiz attempt: {str(e)}"}), 500
 
-# POST: Match 12-base sequence to gene
+# ✅ POST: Match a 12-base sequence to known genes
 class CheckSequence(Resource):
     def post(self):
         try:
@@ -142,7 +151,8 @@ class CheckSequence(Resource):
             print(f"[ERROR] CheckSequence failed: {e}")
             return jsonify({"error": str(e)}), 500
 
-# Register API routes
+# ✅ Register all endpoints
 api.add_resource(ChooseGene, "/choose-gene")
+api.add_resource(GeneList, "/gene-list")
 api.add_resource(CheckMutation, "/check-mutation")
 api.add_resource(CheckSequence, "/check-sequence")
