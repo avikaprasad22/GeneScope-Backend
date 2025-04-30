@@ -6,19 +6,18 @@ from flask_restful import Api, Resource
 from flask_cors import CORS
 from model.illumina import GeneRecord
 
-# ✅ Setup blueprint and CORS
 illumina_api = Blueprint("illumina_api", __name__, url_prefix="/api")
 CORS(illumina_api, origins=["http://127.0.0.1:4504"])
 api = Api(illumina_api)
 
-# Load data files
+# Load JSON files
 with open("mutation_dataset.json") as f:
     mutation_data = json.load(f)
 
 with open("ensembl_sequences.json") as f:
     gene_sequences = json.load(f)
 
-# Pull sequence live from Ensembl
+# Pull sequence from Ensembl API
 def fetch_sequence_from_ensembl(gene_symbol):
     for organism in ["homo_sapiens", "mus_musculus"]:
         try:
@@ -38,27 +37,43 @@ def fetch_sequence_from_ensembl(gene_symbol):
             continue
     return None
 
-# GET endpoint
-class GetSequence(Resource):
+# GET: Choose gene (random or by name)
+class ChooseGene(Resource):
     def get(self):
-        attempts = 0
-        while attempts < 20:
-            entry = random.choice(mutation_data)
-            gene = entry.get("gene")
-            sequence = fetch_sequence_from_ensembl(gene)
+        gene_name = request.args.get("name", "random").strip().lower()
+        selected_entry = None
 
-            if sequence and len(sequence) >= 12:
-                return jsonify({
-                    "gene": gene,
-                    "mutation": entry.get("mutation", "Unknown"),
-                    "condition": entry.get("condition", "Unknown"),
-                    "sequence": sequence[:12]
-                })
+        if gene_name == "random":
+            selected_entry = random.choice(mutation_data)
+        else:
+            for entry in mutation_data:
+                if entry["gene"].lower() == gene_name:
+                    selected_entry = entry
+                    break
 
-            attempts += 1
-        return jsonify({"error": "No valid Ensembl gene sequence found"}), 500
+        if not selected_entry:
+            return jsonify({"error": f"No gene found for: {gene_name}"}), 404
 
-# POST mutation logging
+        gene = selected_entry["gene"]
+        condition = selected_entry.get("condition", "Unknown")
+
+        sequence = fetch_sequence_from_ensembl(gene)
+        if not sequence:
+            for record in gene_sequences:
+                if record["gene"].lower() == gene.lower():
+                    sequence = record.get("sequence", "")
+                    break
+
+        if not sequence or len(sequence) < 12:
+            return jsonify({"error": f"Sequence not found or too short for gene {gene}"}), 500
+
+        return jsonify({
+            "gene": gene,
+            "condition": condition,
+            "sequence": sequence[:12]
+        })
+
+# POST: Log mutation attempt
 class CheckMutation(Resource):
     def post(self):
         try:
@@ -86,7 +101,7 @@ class CheckMutation(Resource):
         except Exception as e:
             return jsonify({"error": f"Failed to save quiz attempt: {str(e)}"}), 500
 
-# POST sequence checker
+# POST: Match 12-base sequence to gene
 class CheckSequence(Resource):
     def post(self):
         try:
@@ -97,7 +112,6 @@ class CheckSequence(Resource):
                 return jsonify({"error": "Sequence must be exactly 12 bases."}), 400
 
             matched_gene = None
-
             for entry in gene_sequences:
                 full_seq = entry["sequence"].upper()
                 for i in range(len(full_seq) - 11):
@@ -114,21 +128,21 @@ class CheckSequence(Resource):
                 if record["gene"].lower() == matched_gene.lower():
                     return jsonify({
                         "gene": matched_gene,
-                        "mutation": record.get("mutation", "Unknown"),
-                        "condition": record.get("condition", "Unknown")
+                        "condition": record.get("condition", "Unknown"),
+                        "mutation": "Unknown"
                     })
 
             return jsonify({
                 "gene": matched_gene,
-                "mutation": "Unknown",
-                "condition": "Unknown"
+                "condition": "Unknown",
+                "mutation": "Unknown"
             })
 
         except Exception as e:
             print(f"[ERROR] CheckSequence failed: {e}")
             return jsonify({"error": str(e)}), 500
 
-# Register endpoints
-api.add_resource(GetSequence, "/get-sequence")
+# Register API routes
+api.add_resource(ChooseGene, "/choose-gene")
 api.add_resource(CheckMutation, "/check-mutation")
 api.add_resource(CheckSequence, "/check-sequence")
