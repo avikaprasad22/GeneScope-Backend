@@ -47,7 +47,6 @@ from api.gene_resource import gene_resources_api
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api)
 app.register_blueprint(nestImg_api)
-app.register_blueprint(nestImg_api)
 app.register_blueprint(post_api)
 app.register_blueprint(channel_api)
 app.register_blueprint(group_api)
@@ -57,18 +56,11 @@ app.register_blueprint(nestPost_api)
 app.register_blueprint(messages_api)
 app.register_blueprint(questions_api)
 app.register_blueprint(scoreboard_api)
-app.register_blueprint(messages_api)
-app.register_blueprint(questions_api)
-app.register_blueprint(scoreboard_api)
 app.register_blueprint(vote_api)
 app.register_blueprint(resource_api)
 # :white_check_mark: Register yours
-app.register_blueprint(resource_api)
 app.register_blueprint(illumina_api)
-app.register_blueprint(dna_api)
-app.register_blueprint(chatbot_api)
-app.register_blueprint(dnabot_api)
-app.register_blueprint(college_api)  # <-- added line
+app.register_blueprint(college_api)
 
 # Login Manager
 app.register_blueprint(dna_api)
