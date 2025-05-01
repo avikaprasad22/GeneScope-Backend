@@ -10,13 +10,10 @@ from werkzeug.security import generate_password_hash
 
 # Flask app setup
 from __init__ import app, db, login_manager
-
 # CORS for frontend running on a different port
 # Flask app setup
 from __init__ import app, db, login_manager
 # :white_check_mark: CORS for frontend running on a different port
-from flask_cors import CORS
-CORS(app, supports_credentials=True, origins=["http://127.0.0.1:4504"])
 # API imports (teammate + yours)
 from api.user import user_api
 from api.pfp import pfp_api
