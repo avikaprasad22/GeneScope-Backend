@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify
 import requests, random, string
 
-questions_api = Blueprint('questions', __name__, url_prefix="/api")
+questions_api = Blueprint('questions_api', __name__, url_prefix="/api")
 
 GENE_API_URL = "https://clinicaltables.nlm.nih.gov/api/ncbi_genes/v3/search"
 
@@ -30,45 +30,50 @@ def get_questions():
     if len(all_records) < 20:
         return jsonify({"error": "Not enough gene data to generate questions."}), 404
 
-    sampled_records = random.sample(all_records, k=min(20, len(all_records)))  # Sample a variety of records
+    sampled_records = random.sample(all_records, k=min(20, len(all_records)))
     questions = []
 
     for record in sampled_records:
         chrom, symbol, desc, gene_type, gene_id = record
-        qtype = random.choice(['chromosome', 'gene_type', 'description', 'gene_id'])
+        qtype = random.choice(['chromosome', 'gene_type', 'description'])
 
+        # For chromosome-based questions
         if qtype == 'chromosome':
             correct_answer = chrom
-            options = {chrom}
-            options.update(rec[0] for rec in random.sample(all_records, k=10) if rec[0] != chrom)
-            options = list(options)[:4]
-            question = f"On which chromosome is the gene {symbol} ({desc}) located?"
+            # Focus on the location without raw numbers
+            chrom_description = f"Located on {chrom}" if chrom.isdigit() else f"Chromosome {chrom}"
+            all_other = list(set(rec[0] for rec in all_records if rec[0] != correct_answer))
+            sampled_incorrect = random.sample(all_other, k=min(3, len(all_other)))
+            question = f"Where is the gene {symbol} located?"
 
+        # For gene type questions
         elif qtype == 'gene_type':
             correct_answer = gene_type
-            options = {gene_type}
-            options.update(rec[3] for rec in random.sample(all_records, k=10) if rec[3] != gene_type)
-            options = list(options)[:4]
-            question = f"What type of gene is {symbol}?"
+            gene_type_descriptions = {
+                "protein-coding": "This gene makes proteins that your body uses.",
+                "pseudogene": "This gene is a 'broken' gene and doesn't make a useful protein.",
+                "ncRNA": "This gene doesn't make proteins, but helps control other genes.",
+                "tRNA": "This gene helps in the production of proteins in your body.",
+                "rRNA": "This gene helps make proteins in the ribosome, the cell's protein factory.",
+                "snRNA": "This gene is involved in the processing of other RNA.",
+                "miscRNA": "This gene makes RNA with various roles in the cell."
+            }
+            gene_type_desc = gene_type_descriptions.get(correct_answer, "A gene with a specific role in the cell.")
+            all_other = list(set(rec[3] for rec in all_records if rec[3] != correct_answer))
+            sampled_incorrect = random.sample(all_other, k=min(3, len(all_other)))
+            question = f"What type of gene is {symbol}? (Hint: {gene_type_desc})"
 
+        # For description-based questions
         elif qtype == 'description':
             correct_answer = desc
-            options = {desc}
-            options.update(rec[2] for rec in random.sample(all_records, k=10) if rec[2] != desc)
-            options = list(options)[:4]
-            question = f"Which description best matches the gene {symbol}?"
+            # Simplified descriptions for easier understanding
+            all_other = list(set(rec[2] for rec in all_records if rec[2] != correct_answer))
+            sampled_incorrect = random.sample(all_other, k=min(3, len(all_other)))
+            question = f"Which of these best describes the gene {symbol}?"
 
-        else:  # gene_id
-            correct_answer = gene_id
-            options = {gene_id}
-            options.update(rec[4] for rec in random.sample(all_records, k=10) if rec[4] != gene_id)
-            options = list(options)[:4]
-            question = f"What is the Gene ID for the gene {symbol}?"
-
-        if len(options) < 4:
-            continue  # Skip this question if not enough options
-
+        options = sampled_incorrect + [correct_answer]
         random.shuffle(options)
+
         questions.append({
             "question": question,
             "options": options,

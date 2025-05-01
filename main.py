@@ -1,24 +1,20 @@
 # imports from flask
 import json
 import os
-from urllib.parse import urljoin, urlparse
-from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify
-from flask_login import current_user, login_user, logout_user
-from flask.cli import AppGroup
-from flask_login import current_user, login_required
-from flask import current_app
-from werkzeug.security import generate_password_hash
 import shutil
-
-# Flask setup
-from __init__ import app, db, login_manager  # Key Flask objects 
+from urllib.parse import urljoin, urlparse
+from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify, current_app
+from flask_login import current_user, login_user, logout_user, login_required
+from flask.cli import AppGroup
+from werkzeug.security import generate_password_hash
+# Flask app setup
+from __init__ import app, db, login_manager
+# :white_check_mark: CORS for frontend running on a different port
 from flask_cors import CORS
 CORS(app, supports_credentials=True, origins=["http://127.0.0.1:4504"])
-
-# API endpoints
+# API imports (teammate + yours)
 from api.user import user_api
 from api.pfp import pfp_api
-from api.nestImg import nestImg_api  # Justin added this, custom format for his website
 from api.nestImg import nestImg_api
 from api.post import post_api
 from api.channel import channel_api
@@ -29,69 +25,49 @@ from api.nestPost import nestPost_api
 from api.messages_api import messages_api
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
+from api.vote import vote_api
+from api.resource import resource_api
+# :white_check_mark: Yours
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
-from api.vote import vote_api
-from api.resource import resource_api  
-
-# register URIs for api endpoints
 from api.chatbot import chatbot_api
-from api.chatbot import DiseasePredictor
-
-# database Initialization functions
-from model.user import User, initUsers
-from model.section import Section, initSections
-from model.group import Group, initGroups
-from model.channel import Channel, initChannels
-from model.post import Post, initPosts
-from model.nestPost import NestPost, initNestPosts
-from model.vote import Vote, initVotes
-
-
-
-# register URIs for api endpoints
-app.register_blueprint(messages_api)
+from api.gene_resource import gene_resources_api
+# Register all blueprints
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api)
+app.register_blueprint(nestImg_api)
 app.register_blueprint(post_api)
 app.register_blueprint(channel_api)
 app.register_blueprint(group_api)
 app.register_blueprint(section_api)
 app.register_blueprint(student_api)
 app.register_blueprint(nestPost_api)
-app.register_blueprint(nestImg_api)
+app.register_blueprint(messages_api)
+app.register_blueprint(questions_api)
+app.register_blueprint(scoreboard_api)
 app.register_blueprint(vote_api)
+app.register_blueprint(resource_api)
+# :white_check_mark: Register yours
 app.register_blueprint(illumina_api)
-app.register_blueprint(resource_api)  
-
-# TESTING CORS
-@app.route("/test-cors")
-def test_cors():
-    return jsonify({"message": "CORS works!"})
-
-# Tell Flask-Login the view function name of your login route
+app.register_blueprint(dna_api)
+app.register_blueprint(chatbot_api)
+app.register_blueprint(gene_resources_api)
+# Login Manager
 login_manager.login_view = "login"
-
 @login_manager.unauthorized_handler
 def unauthorized_callback():
     return redirect(url_for('login', next=request.path))
-
-# register URIs for server pages
 @login_manager.user_loader
 def load_user(user_id):
     from model.user import User
     return User.query.get(int(user_id))
-
 @app.context_processor
 def inject_user():
     return dict(current_user=current_user)
-
-# Helper function to check if the URL is safe for redirects
 def is_safe_url(target):
     ref_url = urlparse(request.host_url)
     test_url = urlparse(urljoin(request.host_url, target))
     return test_url.scheme in ('http', 'https') and ref_url.netloc == test_url.netloc
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     from model.user import User
@@ -107,39 +83,32 @@ def login():
         else:
             error = 'Invalid username or password.'
     return render_template("login.html", error=error, next=next_page)
-
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect(url_for('index'))
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
 @app.route('/')
 def index():
     print("Home:", current_user)
     return render_template("index.html")
-
 @app.route('/users/table')
 @login_required
 def utable():
     from model.user import User
     users = User.query.all()
     return render_template("utable.html", user_data=users)
-
 @app.route('/users/table2')
 @login_required
 def u2table():
     from model.user import User
     users = User.query.all()
     return render_template("u2table.html", user_data=users)
-
 @app.route('/uploads/<path:filename>')
 def uploaded_file(filename):
     return send_from_directory(current_app.config['UPLOAD_FOLDER'], filename)
-
 @app.route('/users/delete/<int:user_id>', methods=['DELETE'])
 @login_required
 def delete_user(user_id):
@@ -149,7 +118,6 @@ def delete_user(user_id):
         user.delete()
         return jsonify({'message': 'User deleted successfully'}), 200
     return jsonify({'error': 'User not found'}), 404
-
 @app.route('/users/reset_password/<int:user_id>', methods=['POST'])
 @login_required
 def reset_password(user_id):
@@ -162,10 +130,8 @@ def reset_password(user_id):
     if user.update({"password": app.config['DEFAULT_PASSWORD']}):
         return jsonify({'message': 'Password reset successfully'}), 200
     return jsonify({'error': 'Password reset failed'}), 500
-
-# Custom CLI commands
+# CLI Setup
 custom_cli = AppGroup('custom', help='Custom commands')
-
 @custom_cli.command('generate_data')
 def generate_data():
     from model.user import initUsers
@@ -175,6 +141,8 @@ def generate_data():
     from model.post import initPosts
     from model.nestPost import initNestPosts
     from model.vote import initVotes
+    from model.gene_resource import init_gene_resources
+    init_gene_resources()
     initUsers()
     initSections()
     initGroups()
@@ -182,16 +150,17 @@ def generate_data():
     initPosts()
     initNestPosts()
     initVotes()
-
-def backup_database(db_uri, backup_uri):
-    if backup_uri:
-        db_path = db_uri.replace('sqlite:///', 'instance/')
-        backup_path = backup_uri.replace('sqlite:///', 'instance/')
-        shutil.copyfile(db_path, backup_path)
-        print(f"Database backed up to {backup_path}")
-    else:
-        print("Backup not supported for production database.")
-
+@custom_cli.command('backup_data')
+def backup_data():
+    data = extract_data()
+    save_data_to_json(data)
+    backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
+@custom_cli.command('restore_data')
+def restore_data_command():
+    data = load_data_from_json()
+    restore_data(data)
+app.cli.add_command(custom_cli)
+# DB helpers
 def extract_data():
     from model.user import User
     from model.section import Section
@@ -206,7 +175,6 @@ def extract_data():
         data['channels'] = [channel.read() for channel in Channel.query.all()]
         data['posts'] = [post.read() for post in Post.query.all()]
     return data
-
 def save_data_to_json(data, directory='backup'):
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -214,14 +182,12 @@ def save_data_to_json(data, directory='backup'):
         with open(os.path.join(directory, f'{table}.json'), 'w') as f:
             json.dump(records, f)
     print(f"Data backed up to {directory} directory.")
-
 def load_data_from_json(directory='backup'):
     data = {}
     for table in ['users', 'sections', 'groups', 'channels']:
         with open(os.path.join(directory, f'{table}.json'), 'r') as f:
             data[table] = json.load(f)
     return data
-
 def restore_data(data):
     from model.user import User
     from model.section import Section
@@ -233,48 +199,15 @@ def restore_data(data):
         _ = Group.restore(data['groups'], users)
         _ = Channel.restore(data['channels'])
     print("Data restored to the new database.")
-
-@custom_cli.command('backup_data')
-def backup_data():
-    data = extract_data()
-    save_data_to_json(data)
-    backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
-
-@custom_cli.command('restore_data')
-def restore_data_command():
-    data = load_data_from_json()
-    restore_data(data)
-
-app.cli.add_command(custom_cli)
-
-# Entry point
+def backup_database(src_uri, backup_uri):
+    if src_uri.startswith("sqlite:///") and backup_uri.startswith("sqlite:///"):
+        src_path = src_uri.replace("sqlite:///", "")
+        backup_path = backup_uri.replace("sqlite:///", "")
+        try:
+            shutil.copy2(src_path, backup_path)
+            print("Database file copied successfully.")
+        except Exception as e:
+            print("Error backing up database file:", e)
+# :white_check_mark: Run Flask on port 8504
 if __name__ == "__main__":
-    # change name for testing
-    app.run(debug=True, host="0.0.0.0", port="8504")
-    
-    # first number - 8
-    # second number - 5
-    # third + 4th - # of table
-    # 8504
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port="8504")
-
-if __name__ == "__main__":
-    predictor = DiseasePredictor("symbipredict_2024.csv")
-
-    print("Welcome to the Disease Risk Predictor!")
-    disease = input("Enter a disease name: ").strip()
-    
-    symptoms = predictor.get_symptoms_for_disease(disease)
-    if not symptoms:
-        print("Sorry, disease not found.")
-    else:
-        user_input = {}
-        print("\nPlease answer the following symptom questions (yes/no):")
-        for symptom in symptoms:
-            answer = input(f"Do you have {symptom.replace('_', ' ')}? ").strip().lower()
-            user_input[symptom] = 1 if answer in ["yes", "y"] else 0
-        
-        probability = predictor.predict(user_input, disease)
-        print(f"\nEstimated likelihood of having {disease}: {probability:.2f}%")
+    app.run(debug=True, port=8504)
