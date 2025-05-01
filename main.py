@@ -3,10 +3,15 @@ import json
 import os
 import shutil
 from urllib.parse import urljoin, urlparse
-from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify, current_app
-from flask_login import current_user, login_user, logout_user, login_required
+from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify, current_app, current_app
+from flask_login import current_user, login_user, logout_user, login_required, login_required
 from flask.cli import AppGroup
 from werkzeug.security import generate_password_hash
+
+# Flask app setup
+from __init__ import app, db, login_manager
+
+# CORS for frontend running on a different port
 # Flask app setup
 from __init__ import app, db, login_manager
 # :white_check_mark: CORS for frontend running on a different port
@@ -28,13 +33,29 @@ from api.scoreboard import scoreboard_api
 from api.vote import vote_api
 from api.resource import resource_api
 # :white_check_mark: Yours
+from api.vote import vote_api
+from api.resource import resource_api
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
 from api.chatbot import chatbot_api
-from api.gene_resource import gene_resources_api
-# Register all blueprints
+from api.chatbot import DiseasePredictor
+
+# database Initialization functions
+from model.user import User, initUsers
+from model.section import Section, initSections
+from model.group import Group, initGroups
+from model.channel import Channel, initChannels
+from model.post import Post, initPosts
+from model.nestPost import NestPost, initNestPosts
+from model.vote import Vote, initVotes
+
+
+
+# register URIs for api endpoints
+app.register_blueprint(messages_api)
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api)
+app.register_blueprint(nestImg_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(post_api)
 app.register_blueprint(channel_api)
@@ -45,10 +66,20 @@ app.register_blueprint(nestPost_api)
 app.register_blueprint(messages_api)
 app.register_blueprint(questions_api)
 app.register_blueprint(scoreboard_api)
+app.register_blueprint(messages_api)
+app.register_blueprint(questions_api)
+app.register_blueprint(scoreboard_api)
 app.register_blueprint(vote_api)
 app.register_blueprint(resource_api)
 # :white_check_mark: Register yours
+app.register_blueprint(resource_api)
 app.register_blueprint(illumina_api)
+app.register_blueprint(dna_api)
+app.register_blueprint(chatbot_api)
+app.register_blueprint(dnabot_api)
+app.register_blueprint(college_api)  # <-- added line
+
+# Login Manager
 app.register_blueprint(dna_api)
 app.register_blueprint(chatbot_api)
 app.register_blueprint(gene_resources_api)
@@ -57,6 +88,8 @@ login_manager.login_view = "login"
 @login_manager.unauthorized_handler
 def unauthorized_callback():
     return redirect(url_for('login', next=request.path))
+
+# register URIs for server pages
 @login_manager.user_loader
 def load_user(user_id):
     from model.user import User
@@ -64,6 +97,8 @@ def load_user(user_id):
 @app.context_processor
 def inject_user():
     return dict(current_user=current_user)
+
+# Helper function to check if the URL is safe for redirects
 def is_safe_url(target):
     ref_url = urlparse(request.host_url)
     test_url = urlparse(urljoin(request.host_url, target))
@@ -130,7 +165,8 @@ def reset_password(user_id):
     if user.update({"password": app.config['DEFAULT_PASSWORD']}):
         return jsonify({'message': 'Password reset successfully'}), 200
     return jsonify({'error': 'Password reset failed'}), 500
-# CLI Setup
+
+# Custom CLI commands
 custom_cli = AppGroup('custom', help='Custom commands')
 @custom_cli.command('generate_data')
 def generate_data():
@@ -150,17 +186,16 @@ def generate_data():
     initPosts()
     initNestPosts()
     initVotes()
-@custom_cli.command('backup_data')
-def backup_data():
-    data = extract_data()
-    save_data_to_json(data)
-    backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
-@custom_cli.command('restore_data')
-def restore_data_command():
-    data = load_data_from_json()
-    restore_data(data)
-app.cli.add_command(custom_cli)
-# DB helpers
+
+def backup_database(db_uri, backup_uri):
+    if backup_uri:
+        db_path = db_uri.replace('sqlite:///', 'instance/')
+        backup_path = backup_uri.replace('sqlite:///', 'instance/')
+        shutil.copyfile(db_path, backup_path)
+        print(f"Database backed up to {backup_path}")
+    else:
+        print("Backup not supported for production database.")
+
 def extract_data():
     from model.user import User
     from model.section import Section
@@ -199,15 +234,48 @@ def restore_data(data):
         _ = Group.restore(data['groups'], users)
         _ = Channel.restore(data['channels'])
     print("Data restored to the new database.")
-def backup_database(src_uri, backup_uri):
-    if src_uri.startswith("sqlite:///") and backup_uri.startswith("sqlite:///"):
-        src_path = src_uri.replace("sqlite:///", "")
-        backup_path = backup_uri.replace("sqlite:///", "")
-        try:
-            shutil.copy2(src_path, backup_path)
-            print("Database file copied successfully.")
-        except Exception as e:
-            print("Error backing up database file:", e)
-# :white_check_mark: Run Flask on port 8504
+
+@custom_cli.command('backup_data')
+def backup_data():
+    data = extract_data()
+    save_data_to_json(data)
+    backup_database(app.config['SQLALCHEMY_DATABASE_URI'], app.config['SQLALCHEMY_BACKUP_URI'])
+
+@custom_cli.command('restore_data')
+def restore_data_command():
+    data = load_data_from_json()
+    restore_data(data)
+
+app.cli.add_command(custom_cli)
+
+# Entry point
 if __name__ == "__main__":
-    app.run(debug=True, port=8504)
+    # change name for testing
+    app.run(debug=True, host="0.0.0.0", port="8504")
+    
+    # first number - 8
+    # second number - 5
+    # third + 4th - # of table
+    # 8504
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port="8504")
+
+if __name__ == "__main__":
+    predictor = DiseasePredictor("symbipredict_2024.csv")
+
+    print("Welcome to the Disease Risk Predictor!")
+    disease = input("Enter a disease name: ").strip()
+    
+    symptoms = predictor.get_symptoms_for_disease(disease)
+    if not symptoms:
+        print("Sorry, disease not found.")
+    else:
+        user_input = {}
+        print("\nPlease answer the following symptom questions (yes/no):")
+        for symptom in symptoms:
+            answer = input(f"Do you have {symptom.replace('_', ' ')}? ").strip().lower()
+            user_input[symptom] = 1 if answer in ["yes", "y"] else 0
+        
+        probability = predictor.predict(user_input, disease)
+        print(f"\nEstimated likelihood of having {disease}: {probability:.2f}%")

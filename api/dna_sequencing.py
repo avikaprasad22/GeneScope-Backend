@@ -1,3 +1,5 @@
+# dna_api.py
+
 import os
 import requests
 from flask import Blueprint, request, jsonify
@@ -5,24 +7,15 @@ from flask_restful import Api, Resource
 from flask_cors import CORS
 from dotenv import load_dotenv
 
+# Load environment variables
 load_dotenv()
 
 # Create Blueprint
 dna_api = Blueprint('dna_api', __name__, url_prefix='/api')
 api = Api(dna_api)
 
-# Allow CORS for frontend
-CORS(dna_api, resources={r"/api/sequence": {"origins": "http://127.0.0.1:4504"}}, supports_credentials=True)
-
-class DNAPreflight(Resource):
-    def options(self):
-        print("Preflight request received")
-        response = jsonify({'message': 'CORS preflight request success'})
-        response.headers.add("Access-Control-Allow-Origin", "http://127.0.0.1:4504")
-        response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
-        response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
-        response.headers.add("Access-Control-Allow-Credentials", "true")
-        return response, 200
+# Correct CORS: allow frontend at 4504 to access everything under /api
+CORS(dna_api, resources={r"/*": {"origins": "http://127.0.0.1:4504"}}, supports_credentials=True)
 
 class DNAGene(Resource):
     def post(self):
@@ -49,17 +42,24 @@ class DNAGene(Resource):
             if seq_response.status_code != 200:
                 return jsonify({"error": "Failed to fetch sequence from Ensembl"}), 500
 
-            return jsonify({
+            # Prepare the response with sequence data (return only the first 30 characters)
+            response = jsonify({
                 "gene": gene_symbol,
                 "organism": organism,
                 "ensembl_id": gene_id,
-                "sequence": seq_response.text[:30]  # return only first 30 chars
+                "sequence": seq_response.text[:30]  # Only first 30 characters
             })
+
+            # Add CORS headers to the response
+            response.headers.add("Access-Control-Allow-Origin", "http://127.0.0.1:4504")
+            response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+            response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
+            response.headers.add("Access-Control-Allow-Credentials", "true")
+            return response
 
         except Exception as e:
             print(f"Error: {str(e)}")
             return jsonify({"error": str(e)}), 500
 
-# Register resources
-api.add_resource(DNAPreflight, '/sequence')
+# Register only this
 api.add_resource(DNAGene, '/sequence')

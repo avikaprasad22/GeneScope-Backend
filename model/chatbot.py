@@ -46,4 +46,17 @@ class DiseasePredictor:
 
     def predict(self, symptom_dict):
         symptoms = [symptom_dict.get(col, 0) for col in self.symptom_columns]
-        return self.model.predict([symptoms])[0]
+        probabilities = self.model.predict_proba([symptoms])[0]
+
+        # Normalize input to actual disease label
+        target_disease = symptom_dict.get("target_disease", "")
+        matched_disease = self.match_disease_name(target_disease)
+
+        if not matched_disease:
+            return 0.0
+
+        for i, cls in enumerate(self.model.classes_):
+            if cls == matched_disease:
+                return round(probabilities[i] * 100, 2)
+
+        return 0.0
