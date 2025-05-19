@@ -37,10 +37,12 @@ def fetch_sequence_from_ensembl(gene_symbol):
             continue
     return None
 
-# ✅ GET: Choose gene (random or named) and return 12-base sequence + condition
+# Choose gene (random or named) and return 12-base sequence + condition
 class ChooseGene(Resource):
     def get(self):
         gene_name = request.args.get("name", "random").strip().lower()
+        desired_length = int(request.args.get("length", 12))  # Default to 12 if not provided
+
         valid_genes = [entry for entry in gene_sequences]
         selected_gene = None
 
@@ -57,8 +59,8 @@ class ChooseGene(Resource):
 
         gene = selected_gene["gene"]
         sequence = selected_gene.get("sequence", "")
-        if not sequence or len(sequence) < 12:
-            return jsonify({"error": f"Sequence for gene '{gene}' is missing or too short."}), 500
+        if not sequence or len(sequence) < desired_length:
+            return jsonify({"error": f"Sequence for gene '{gene}' is too short for selected difficulty."}), 500
 
         # Match to mutation data for condition
         condition = "Unknown"
@@ -70,7 +72,7 @@ class ChooseGene(Resource):
         return jsonify({
             "gene": gene,
             "condition": condition,
-            "sequence": sequence[:12]
+            "sequence": sequence[:desired_length]
         })
 
 # ✅ GET: Gene list for dropdown
