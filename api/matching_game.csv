@@ -1,53 +1,53 @@
 term,definition,difficulty
-DNA,A molecule that carries the genetic instructions used in growth, development, and reproduction.,Beginner
-Gene,A segment of DNA that determines a specific trait or function.,Beginner
-Chromosome,A structure made of DNA and protein that contains many genes.,Beginner
-Genetic Engineering,The process of changing the DNA of an organism.,Intermediate
-Cloning,Creating an exact copy of an organism or cell.,Intermediate
-Mutation,A change in the DNA sequence of a gene.,Beginner
-Bacteria,Microscopic organisms often used in biotechnology to produce medicines like insulin.,Beginner
-Insulin,A hormone that helps control blood sugar, often made using genetically engineered bacteria.,Beginner
-Biotechnology,Using living organisms or systems to develop useful products.,Beginner
-Genome,All the genetic material in an organism.,Beginner
-PCR (Polymerase Chain Reaction),A technique used to make many copies of a DNA segment.,Intermediate
-Protein,A molecule made by cells that performs many functions in the body.,Beginner
-Enzyme,A type of protein that speeds up chemical reactions in cells.,Beginner
-Plasmid,A small circular piece of DNA found in bacteria, often used in genetic engineering.,Intermediate
-Recombinant DNA,DNA that is formed by combining DNA from two different sources.,Intermediate
-Transgenic Organism,An organism that contains genes from a different species.,Intermediate
-Stem Cell,A cell that can develop into many different types of cells.,Intermediate
-Bioreactor,A container used to grow organisms for use in industrial biotechnology.,Intermediate
-CRISPR,A modern gene-editing tool that can precisely change DNA.,Advanced
-Vaccine,A substance that helps the body develop protection against disease.,Beginner
-Antibody,A protein produced by the immune system that recognizes and binds to foreign substances.,Intermediate
-Vector,A vehicle (often a virus or plasmid) used to deliver genetic material into a cell.,Intermediate
-Gene Therapy,A technique that treats disease by inserting, altering, or removing genes within an individual's cells.,Advanced
-Electrophoresis,A lab technique used to separate DNA, RNA, or proteins based on size and charge.,Intermediate
-Gene Sequencing,The process of determining the order of nucleotides in a DNA molecule., Intermediate
-Gene Mapping,The process of determining the location of genes on a chromosome.,Intermediate
-DNA Sequencing,The process of determining the exact order of nucleotides in a DNA molecule.,Advanced
-Micropipette,A laboratory tool used to measure and transfer very small volumes of liquid.,Beginner
-Genotype,The genetic makeup of an organism.,Beginner
-Phenotype,The observable traits or characteristics of an organism resulting from its genotype.,Beginner
-Agarose Gel,A jelly-like substance used in electrophoresis to separate DNA fragments.,Intermediate
-Host Cell,A cell into which foreign DNA is introduced during genetic engineering.,Intermediate
-Genetic Marker,A gene or DNA sequence used to identify a particular sequence or trait.,Intermediate
-Hybridization,A process of combining two different genetic sequences to form a hybrid.,Advanced
-Knockout Gene,A gene that has been deliberately inactivated in a living organism.,Advanced
-Microarray,A tool used to detect the expression of thousands of genes at once.,Advanced
-DNA Ligase,An enzyme that joins DNA fragments together.,Advanced
-Restriction Enzyme,An enzyme that cuts DNA at specific sequences.,Advanced
-Model Organism,A non-human species used in research to understand biological processes.,Intermediate
-Biopharmaceutical,Medicines produced using biotechnology, often involving proteins or nucleic acids.,Intermediate
-Gene Cloning,The process of making multiple copies of a specific gene.,Intermediate
-Gene Pool,The total genetic diversity found within a population or species.,Intermediate
-Transcription,The process of copying a segment of DNA into RNA.,Intermediate
-Translation,The process of converting mRNA into a protein.,Intermediate
-Proteomics,The large-scale study of proteins, particularly their functions and structures.,Advanced
-Metabolite,A substance formed during metabolism (often measured in biotechnology studies).,Advanced
-Bioinformatics,The use of computer technology to manage and analyze biological data.,Advanced
-Pharmacogenomics,The study of how genes affect a person's response to drugs.,Advanced
-Synthetic Biology,An interdisciplinary field that involves designing and constructing new biological parts, devices, and systems.,Advanced
-Gene Expression,The process by which information from a gene is used to synthesize a functional gene product (usually protein).,Advanced
-Gene Silencing,A technique used to reduce or eliminate the expression of a specific gene.,Advanced
-Gene Editing,The process of making precise changes to the DNA of an organism.,Advanced
+DNA,"A molecule that carries the genetic instructions used in growth and development and reproduction.",beginner
+Gene,"A segment of DNA that determines a specific trait or function.",beginner
+Chromosome,"A structure made of DNA and protein that contains many genes.",beginner
+Genetic Engineering,"The process of changing the DNA of an organism.",intermediate
+Cloning,"Creating an exact copy of an organism or cell.",intermediate
+Mutation,"A change in the DNA sequence of a gene.",beginner
+Bacteria,"Microscopic organisms often used in biotechnology to produce medicines like insulin.",beginner
+Insulin,"A hormone that helps control blood sugar often made using genetically engineered bacteria.",beginner
+Biotechnology,"Using living organisms or systems to develop useful products.",beginner
+Genome,"All the genetic material in an organism.",beginner
+PCR (Polymerase Chain Reaction),"A technique used to make many copies of a DNA segment.",intermediate
+Protein,"A molecule made by cells that performs many functions in the body.",beginner
+Enzyme,"A type of protein that speeds up chemical reactions in cells.",beginner
+Plasmid,"A small circular piece of DNA found in bacteria often used in genetic engineering.",intermediate
+Recombinant DNA,"DNA that is formed by combining DNA from two different sources.",intermediate
+Transgenic Organism,"An organism that contains genes from a different species.",intermediate
+Stem Cell,"A cell that can develop into many different types of cells.",intermediate
+Bioreactor,"A container used to grow organisms for use in industrial biotechnology.",intermediate
+CRISPR,"A modern gene-editing tool that can precisely change DNA.",advanced
+Vaccine,"A substance that helps the body develop protection against disease.",beginner
+Antibody,"A protein produced by the immune system that recognizes and binds to foreign substances.",intermediate
+Vector,"A vehicle (often a virus or plasmid) used to deliver genetic material into a cell.",intermediate
+Gene Therapy,"A technique that treats disease by inserting or altering or removing genes within an individual's cells.",advanced
+Electrophoresis,"A lab technique used to separate DNA or RNA or proteins based on size and charge.",intermediate
+Gene Sequencing,"The process of determining the order of nucleotides in a DNA molecule.",intermediate
+Gene Mapping,"The process of determining the location of genes on a chromosome.",intermediate
+DNA Sequencing,"The process of determining the exact order of nucleotides in a DNA molecule.",advanced
+Micropipette,"A laboratory tool used to measure and transfer very small volumes of liquid.",beginner
+Genotype,"The genetic makeup of an organism.",beginner
+Phenotype,"The observable traits or characteristics of an organism resulting from its genotype.",beginner
+Agarose Gel,"A jelly-like substance used in electrophoresis to separate DNA fragments.",intermediate
+Host Cell,"A cell into which foreign DNA is introduced during genetic engineering.",intermediate
+Genetic Marker,"A gene or DNA sequence used to identify a particular sequence or trait.",intermediate
+Hybridization,"A process of combining two different genetic sequences to form a hybrid.",advanced
+Knockout Gene,"A gene that has been deliberately inactivated in a living organism.",advanced
+Microarray,"A tool used to detect the expression of thousands of genes at once.",advanced
+DNA Ligase,"An enzyme that joins DNA fragments together.",advanced
+Restriction Enzyme,"An enzyme that cuts DNA at specific sequences.",advanced
+Model Organism,"A non-human species used in research to understand biological processes.",intermediate
+Biopharmaceutical,"Medicines produced using biotechnology often involving proteins or nucleic acids.",intermediate
+Gene Cloning,"The process of making multiple copies of a specific gene.",intermediate
+Gene Pool,"The total genetic diversity found within a population or species.",intermediate
+Transcription,"The process of copying a segment of DNA into RNA.",intermediate
+Translation,"The process of converting mRNA into a protein.",intermediate
+Proteomics,"The large-scale study of proteins particularly their functions and structures.",advanced
+Metabolite,"A substance formed during metabolism (often measured in biotechnology studies).",advanced
+Bioinformatics,"The use of computer technology to manage and analyze biological data.",advanced
+Pharmacogenomics,"The study of how genes affect a person's response to drugs.",advanced
+Synthetic Biology,"An interdisciplinary field that involves designing and constructing new biological parts and devices and systems.",advanced
+Gene Expression,"The process by which information from a gene is used to synthesize a functional gene product (usually protein).",advanced
+Gene Silencing,"A technique used to reduce or eliminate the expression of a specific gene.",advanced
+Gene Editing,"The process of making precise changes to the DNA of an organism.",advanced
