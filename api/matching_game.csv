@@ -5,6 +5,7 @@ Chromosome,"A structure made of DNA and protein that contains many genes.",begin
 Genetic Engineering,"The process of changing the DNA of an organism.",intermediate
 Cloning,"Creating an exact copy of an organism or cell.",intermediate
 Mutation,"A change in the DNA sequence of a gene.",beginner
+Genetic Modification,"The alteration of the genetic material of an organism.",intermediate
 Bacteria,"Microscopic organisms often used in biotechnology to produce medicines like insulin.",beginner
 Insulin,"A hormone that helps control blood sugar often made using genetically engineered bacteria.",beginner
 Biotechnology,"Using living organisms or systems to develop useful products.",beginner
@@ -31,6 +32,18 @@ Gene Mapping,"The process of determining the location of genes on a chromosome."
 DNA Sequencing,"The process of determining the exact order of nucleotides in a DNA molecule.",advanced
 Micropipette,"A laboratory tool used to measure and transfer very small volumes of liquid.",beginner
 Genotype,"The genetic makeup of an organism.",beginner
+Genetic Drift,"A change in the frequency of a gene variant in a population due to random sampling.",advanced
+Genetic Recombination,"The process by which genetic material is physically mixed during meiosis or fertilization.",advanced
+Gene Expression Profiling,"A technique used to measure the activity of thousands of genes at once to create a global picture of cellular function.",advanced
+Bioluminescence,"The production and emission of light by living organisms.",beginner
+Bioremediation,"The use of microorganisms to remove or neutralize contaminants from soil and water.",intermediate
+Biotechnology Industry,"The sector of the economy that uses biological processes for industrial purposes.",beginner
+Biophysics,"The study of biological processes using the principles and methods of physics.",beginner
+Biochemistry,"The study of chemical processes within and relating to living organisms.",beginner
+Biostatistics,"The application of statistics to biological data.",beginner
+Biomarker,"A biological molecule found in blood, other body fluids, or tissues that is a sign of a normal or abnormal process, or of a condition or disease.",intermediate
+Biodegradable,"Capable of being decomposed by biological agents, especially bacteria.",beginner
+Biomass,"The total mass of living matter within a given unit of environmental area.",beginner
 Phenotype,"The observable traits or characteristics of an organism resulting from its genotype.",beginner
 Agarose Gel,"A jelly-like substance used in electrophoresis to separate DNA fragments.",intermediate
 Host Cell,"A cell into which foreign DNA is introduced during genetic engineering.",intermediate
@@ -56,3 +69,63 @@ Gene Silencing,"A technique used to reduce or eliminate the expression of a spec
 Gene Editing,"The process of making precise changes to the DNA of an organism.",advanced
 Gene Regulation,"The process of turning genes on or off to control their expression.",advanced
 Gene Drive,"A genetic engineering technology that increases the likelihood of a particular trait being passed on to the next generation.",advanced
+Allele,"Different versions of the same gene that result in different traits.",beginner
+Chromatin,"A complex of DNA and protein found in eukaryotic cells that packages DNA into a more compact form.",intermediate
+Chromatid,"One of the two identical halves of a replicated chromosome.",intermediate
+Centromere,"The region of a chromosome where the two sister chromatids are joined.",intermediate
+Telomere,"The protective end of a chromosome that prevents degradation and fusion with other chromosomes.",intermediate
+Centrioles,"Cylindrical structures involved in cell division that help organize the mitotic spindle.",intermediate
+Mitosis,"The process of cell division that results in two identical daughter cells.",beginner
+Meiosis,"A type of cell division that reduces the chromosome number by half, producing gametes.",beginner
+Gamete,"A reproductive cell (sperm or egg) that contains half the genetic material of an organism.",beginner
+Nucleotide,"The basic building block of DNA and RNA consisting of a sugar, phosphate, and a base.",beginner
+Nucleic Acid,"Biomolecules (DNA and RNA) that carry genetic information.",beginner
+RNA,"A molecule that plays a central role in the synthesis of proteins and can also have other functions in the cell.",beginner
+Trait,"A specific characteristic of an organism, such as eye color or height.",beginner
+Intron,"A segment of DNA or RNA that does not code for proteins and is removed during processing.",intermediate
+Exon,"A portion of a gene that codes for amino acids in a protein.",intermediate
+Transposon,"A DNA sequence that can change its position within the genome, potentially disrupting genes.",advanced
+CRISPR-Cas9,"A revolutionary gene-editing technology that allows for precise modifications to DNA.",advanced
+Gene Expression Vector,"A plasmid or virus used to introduce a gene into a host cell for expression.",advanced
+Gene Amplification,"The process of increasing the number of copies of a specific gene.",advanced
+Gene Fusion,"The joining of two or more genes to produce a hybrid gene with a new function.",advanced
+cDNA (complementary DNA),"DNA synthesized from an mRNA template used in gene cloning and expression studies.",advanced
+Operon,"A cluster of genes under the control of a single promoter, common in prokaryotes.",advanced
+tRNA (transfer RNA),"A type of RNA that carries amino acids to the ribosome during protein synthesis.",intermediate
+mRNA (messenger RNA),"RNA that carries the genetic instructions from DNA to the ribosome.",intermediate
+Epigenetics,"The study of changes in gene expression not caused by changes in the DNA sequence.",advanced
+RNA Interference,"A biological process in which RNA molecules inhibit gene expression or translation.",advanced
+RNA Polymerase,"An enzyme that synthesizes RNA from a DNA template during transcription.",intermediate
+Ribosome,"A cellular structure that synthesizes proteins by translating mRNA.",beginner
+Codon,"A sequence of three nucleotides in mRNA that codes for a specific amino acid.",intermediate
+Polypeptide,"A chain of amino acids that forms a protein.",intermediate
+Peptide Bond,"The bond formed between two amino acids during protein synthesis.",intermediate
+Codon Usage,"The frequency with which different codons are used in a given organism's genome.",intermediate
+Codon Bias,"The preference for certain codons over others in the coding sequences of genes.",intermediate
+Codon Table,"A chart that shows the correspondence between codons and the amino acids they code for.",intermediate
+Start Codon,"The first codon of a messenger RNA (mRNA) transcript that is translated by a ribosome.",intermediate
+Stop Codon,"A codon that signals the end of protein synthesis.",intermediate
+Start Site,"The location on the DNA where transcription begins.",intermediate
+Stop Site,"The location on the DNA where transcription ends.",intermediate
+5' Cap,"A modified guanine nucleotide added to the 5' end of mRNA that protects it from degradation.",intermediate
+Poly-A Tail,"A stretch of adenine nucleotides added to the 3' end of mRNA that aids in stability and export from the nucleus.",intermediate
+Spliceosome,"A complex of proteins and RNA that removes introns from pre-mRNA.",advanced
+Ribosomal RNA (rRNA),"A type of RNA that is a structural component of ribosomes.",beginner
+Ribosomal Subunit,"The two parts of a ribosome that come together during protein synthesis.",intermediate
+Ribosomal Binding Site,"The region on mRNA where the ribosome binds to initiate translation.",intermediate
+Aminoacyl-tRNA,"A tRNA molecule that is covalently bonded to its corresponding amino acid.",intermediate
+Amino Acid Sequence,"The order of amino acids in a protein, determined by the sequence of codons in mRNA.",intermediate
+Peptide Chain,"A series of amino acids linked together by peptide bonds.",intermediate
+Peptide Synthesis,"The process of forming peptide bonds between amino acids to create proteins.",intermediate
+Polypeptide Chain,"A long chain of amino acids that makes up a protein.",intermediate
+Protein Folding,"The process by which a protein assumes its functional shape or conformation.",advanced
+Protein Structure,"The three-dimensional arrangement of atoms in a protein molecule.",advanced
+Protein Domain,"A distinct functional and structural unit within a protein.",advanced
+Protein Conformation,"The specific three-dimensional shape of a protein that is crucial for its function.",advanced
+Protein Denaturation,"The process in which a protein loses its native structure and function due to external stress.",advanced
+Protein Misfolding,"The incorrect folding of a protein that can lead to loss of function or disease.",advanced
+Protein Aggregation,"The clustering of misfolded proteins that can lead to cellular dysfunction.",advanced
+Protein Degradation,"The process of breaking down proteins into their constituent amino acids.",advanced
+Amino Acid,"The building blocks of proteins, coded for by codons in mRNA.",beginner
+Antisense RNA,"RNA that is complementary to a given mRNA and can inhibit its translation.",advanced
+RNA Splicing,"The process of removing introns and joining exons in mRNA before translation.",advanced
