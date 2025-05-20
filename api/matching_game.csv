@@ -9,9 +9,12 @@ Bacteria,"Microscopic organisms often used in biotechnology to produce medicines
 Insulin,"A hormone that helps control blood sugar often made using genetically engineered bacteria.",beginner
 Biotechnology,"Using living organisms or systems to develop useful products.",beginner
 Genome,"All the genetic material in an organism.",beginner
+Transcription Factor,"A protein that helps control the transcription of specific genes.",intermediate
 PCR (Polymerase Chain Reaction),"A technique used to make many copies of a DNA segment.",intermediate
 Protein,"A molecule made by cells that performs many functions in the body.",beginner
 Enzyme,"A type of protein that speeds up chemical reactions in cells.",beginner
+Antigen,"A substance that triggers an immune response in the body.",intermediate
+Antibiotic,"A drug used to kill or inhibit the growth of bacteria.",beginner
 Plasmid,"A small circular piece of DNA found in bacteria often used in genetic engineering.",intermediate
 Recombinant DNA,"DNA that is formed by combining DNA from two different sources.",intermediate
 Transgenic Organism,"An organism that contains genes from a different species.",intermediate
@@ -51,3 +54,5 @@ Synthetic Biology,"An interdisciplinary field that involves designing and constr
 Gene Expression,"The process by which information from a gene is used to synthesize a functional gene product (usually protein).",advanced
 Gene Silencing,"A technique used to reduce or eliminate the expression of a specific gene.",advanced
 Gene Editing,"The process of making precise changes to the DNA of an organism.",advanced
+Gene Regulation,"The process of turning genes on or off to control their expression.",advanced
+Gene Drive,"A genetic engineering technology that increases the likelihood of a particular trait being passed on to the next generation.",advanced
