@@ -15,6 +15,7 @@ def get_user_scores():
     user_scores = [{
         "id": score.id,
         "score": score.score,
+        "difficulty": score.difficulty,
         "timestamp": score.timestamp.strftime('%Y-%m-%d %H:%M:%S')
     } for score in scores]
     return jsonify(user_scores)
@@ -29,12 +30,13 @@ def add_score():
 
     data = request.get_json()
     score_value = data.get('score')
+    difficulty = data.get('difficulty', 'easy')  # Default to 'easy' if not provided
 
     if score_value is None:
         return jsonify({"error": "Missing score"}), 400
 
     try:
-        new_score = Scoreboard(uid=current_user._uid, score=score_value)
+        new_score = Scoreboard(uid=current_user._uid, score=score_value, difficulty=difficulty)
         db.session.add(new_score)
         db.session.commit()
         return jsonify({"message": "Score added successfully", "id": new_score.id}), 201
@@ -44,14 +46,21 @@ def add_score():
 
 @scoreboard_api.route('/top', methods=['GET'])
 def get_top_scores():
-    """Retrieve the top 10 scores across all users."""
-    top_scores = Scoreboard.query.order_by(Scoreboard.score.desc()).limit(10).all()
+    """Retrieve the top 10 scores across all users. Optional difficulty filter: ?difficulty=medium"""
+    difficulty = request.args.get('difficulty')
+    query = Scoreboard.query
+
+    if difficulty:
+        query = query.filter_by(difficulty=difficulty)
+
+    top_scores = query.order_by(Scoreboard.score.desc()).limit(10).all()
     leaderboard = []
 
     for score in top_scores:
         leaderboard.append({
-            "username":  score.uid,  # use the uid stored on the scoreboard entry
+            "username":  score.uid,
             "score":     score.score,
+            "difficulty": score.difficulty,
             "timestamp": score.timestamp.strftime('%Y-%m-%d %H:%M:%S')
         })
 

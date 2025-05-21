@@ -15,25 +15,27 @@ class Scoreboard(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     uid = db.Column(db.String, db.ForeignKey('users._uid'), nullable=False)
     score = db.Column(db.Integer, nullable=False)
+    difficulty = db.Column(db.String(10), nullable=False, default='easy')  # New field
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
     user = db.relationship('User', backref='scoreboard', lazy=True)
 
     def __repr__(self):
-        return f"<Scoreboard(id={self.id}, uid={self.uid}, score={self.score}, timestamp={self.timestamp})>"
+        return f"<Scoreboard(id={self.id}, uid={self.uid}, score={self.score}, difficulty={self.difficulty}, timestamp={self.timestamp})>"
 
     def read(self):
         return {
             "username": self.user.name,
             "score": self.score,
+            "difficulty": self.difficulty,
             "timestamp": self.timestamp.strftime('%Y-%m-%d %H:%M:%S')
         }
 
 # Function to submit a score
-def submit_score(uid, score):
+def submit_score(uid, score, difficulty='easy'):
     with app.app_context():
         try:
-            new_score = Scoreboard(uid=uid, score=score)
+            new_score = Scoreboard(uid=uid, score=score, difficulty=difficulty)
             db.session.add(new_score)
             db.session.commit()
             return f"Score submitted successfully for user: {uid}"
