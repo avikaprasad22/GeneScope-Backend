@@ -24,6 +24,6 @@ def get_pairs():
         return jsonify({'error': 'No terms available for this level'}), 404
 
     # Shuffle and select 8 random pairs (or fewer if not enough)
-    pairs = filtered.sample(n=min(8, len(filtered))).to_dict(orient='records')
+    pairs = filtered.sample(frac=1).head(min(8, len(filtered))).to_dict(orient='records')
 
     return jsonify(pairs)
