@@ -25,6 +25,7 @@ from api.section import section_api
 from api.student import student_api
 from api.nestPost import nestPost_api
 from api.messages_api import messages_api
+from api.news import news_api
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 from api.vote import vote_api
@@ -51,6 +52,7 @@ app.register_blueprint(section_api)
 app.register_blueprint(student_api)
 app.register_blueprint(nestPost_api)
 app.register_blueprint(messages_api)
+app.register_blueprint(news_api)
 app.register_blueprint(questions_api)
 app.register_blueprint(scoreboard_api)
 app.register_blueprint(vote_api)
