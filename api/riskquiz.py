@@ -1,14 +1,14 @@
 from flask import Blueprint, request, jsonify
 from flask_cors import cross_origin
-from model.chatbot import DiseasePredictor
+from model.riskquiz import DiseasePredictor
 
 # Define Flask blueprint
-chatbot_api = Blueprint("chatbot_api", __name__, url_prefix="/chatbot")
+riskquiz_api = Blueprint("riskquiz_api", __name__, url_prefix="/riskquiz")
 
 # Load model from JSON
 predictor = DiseasePredictor("symptoms.json")
 
-@chatbot_api.route("/get_symptoms")
+@riskquiz_api.route("/get_symptoms")
 @cross_origin(origins="http://127.0.0.1:4504")
 def get_symptoms():
     disease = request.args.get("disease", "")
@@ -17,7 +17,7 @@ def get_symptoms():
         return jsonify({"success": False, "error": "Disease not found"})
     return jsonify({"success": True, "symptoms": top_symptoms, "matched_disease": disease})
 
-@chatbot_api.route("/predict", methods=["POST"])
+@riskquiz_api.route("/predict", methods=["POST"])
 @cross_origin(origins="http://127.0.0.1:4504")
 def predict():
     data = request.get_json()
