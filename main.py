@@ -32,7 +32,7 @@ from api.vote import vote_api
 from api.resource import resource_api
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
-from api.chatbot import chatbot_api
+# from api.chatbot import chatbot_api
 from api.dnabot import dnabot_api
 from api.college import college_api  # <-- added line
 
@@ -60,7 +60,7 @@ app.register_blueprint(dnabot_api)
 
 # Login Manager
 app.register_blueprint(dna_api)
-app.register_blueprint(chatbot_api)
+# app.register_blueprint(chatbot_api)
 app.register_blueprint(gene_resources_api)
 # Login Manager
 login_manager.login_view = "login"
