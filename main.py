@@ -12,8 +12,6 @@ from werkzeug.security import generate_password_hash
 from __init__ import app, db, login_manager
 # CORS for frontend running on a different port
 # Flask app setup
-from __init__ import app, db, login_manager
-# :white_check_mark: CORS for frontend running on a different port
 # API imports (teammate + yours)
 from api.user import user_api
 from api.pfp import pfp_api
@@ -25,7 +23,6 @@ from api.section import section_api
 from api.student import student_api
 from api.nestPost import nestPost_api
 from api.messages_api import messages_api
-from api.news import news_api
 from api.questions import questions_api
 from api.scoreboard import scoreboard_api
 from api.vote import vote_api
@@ -35,10 +32,10 @@ from api.vote import vote_api
 from api.resource import resource_api
 from api.illumina import illumina_api
 from api.dna_sequencing import dna_api
-from api.riskquiz import riskquiz_api
+from api.chatbot import chatbot_api
 from api.dnabot import dnabot_api
-from api.college import college_api 
-from api.matching import matching_api 
+from api.college import college_api  # <-- added line
+
 # Register all blueprints
 from api.gene_resource import gene_resources_api
 # Register all blueprints
@@ -52,7 +49,6 @@ app.register_blueprint(section_api)
 app.register_blueprint(student_api)
 app.register_blueprint(nestPost_api)
 app.register_blueprint(messages_api)
-app.register_blueprint(news_api)
 app.register_blueprint(questions_api)
 app.register_blueprint(scoreboard_api)
 app.register_blueprint(vote_api)
@@ -60,10 +56,11 @@ app.register_blueprint(resource_api)
 # :white_check_mark: Register yours
 app.register_blueprint(illumina_api)
 app.register_blueprint(college_api)
-app.register_blueprint(matching_api)
+app.register_blueprint(dnabot_api)
+
 # Login Manager
 app.register_blueprint(dna_api)
-app.register_blueprint(riskquiz_api)
+app.register_blueprint(chatbot_api)
 app.register_blueprint(gene_resources_api)
 # Login Manager
 login_manager.login_view = "login"
