@@ -1,5 +1,3 @@
-# dna_api.py
-
 import os
 import requests
 from flask import Blueprint, request, jsonify
@@ -17,7 +15,29 @@ api = Api(dna_api)
 # Correct CORS: allow frontend at 4504 to access everything under /api
 CORS(dna_api, resources={r"/*": {"origins": "http://127.0.0.1:4504"}}, supports_credentials=True)
 
+
 class DNAGene(Resource):
+    def get(self):
+        try:
+            # For demo purposes — you can replace with dynamic data if needed
+            options = [
+                {"organism": "homo_sapiens", "gene": "BRCA1"},
+                {"organism": "mus_musculus", "gene": "TP53"},
+                {"organism": "danio_rerio", "gene": "EGFR"},
+            ]
+            response = jsonify(options)
+
+            # Add CORS headers
+            response.headers.add("Access-Control-Allow-Origin", "http://127.0.0.1:4504")
+            response.headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+            response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
+            response.headers.add("Access-Control-Allow-Credentials", "true")
+
+            return response
+
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
     def post(self):
         try:
             print("Sequence request received")
@@ -28,7 +48,6 @@ class DNAGene(Resource):
             if not organism or not gene_symbol:
                 return jsonify({"error": "Please provide both 'organism' and 'gene'"}), 400
 
-            # Lookup Ensembl gene ID
             lookup_url = f"https://rest.ensembl.org/xrefs/symbol/{organism}/{gene_symbol}?content-type=application/json"
             lookup_response = requests.get(lookup_url)
 
@@ -42,17 +61,15 @@ class DNAGene(Resource):
             if seq_response.status_code != 200:
                 return jsonify({"error": "Failed to fetch sequence from Ensembl"}), 500
 
-            # Prepare the response with sequence data (return only the first 30 characters)
             response = jsonify({
                 "gene": gene_symbol,
                 "organism": organism,
                 "ensembl_id": gene_id,
-                "sequence": seq_response.text[:30]  # Only first 30 characters
+                "sequence": seq_response.text[:30]
             })
 
-            # Add CORS headers to the response
             response.headers.add("Access-Control-Allow-Origin", "http://127.0.0.1:4504")
-            response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
+            response.headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
             response.headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization")
             response.headers.add("Access-Control-Allow-Credentials", "true")
             return response
@@ -60,6 +77,3 @@ class DNAGene(Resource):
         except Exception as e:
             print(f"Error: {str(e)}")
             return jsonify({"error": str(e)}), 500
-
-# Register only this
-api.add_resource(DNAGene, '/sequence')
