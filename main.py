@@ -14,6 +14,7 @@ from __init__ import app, db, login_manager
 # Flask app setup
 # API imports (teammate + yours)
 from api.user import user_api
+from api.news import news_api
 from api.pfp import pfp_api
 from api.nestImg import nestImg_api
 from api.post import post_api
@@ -40,6 +41,7 @@ from api.college import college_api  # <-- added line
 from api.gene_resource import gene_resources_api
 # Register all blueprints
 app.register_blueprint(user_api)
+app.register_blueprint(news_api)
 app.register_blueprint(pfp_api)
 app.register_blueprint(nestImg_api)
 app.register_blueprint(post_api)
