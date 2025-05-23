@@ -36,7 +36,7 @@ from api.dna_sequencing import dna_api
 # from api.chatbot import chatbot_api
 from api.dnabot import dnabot_api
 from api.college import college_api  # <-- added line
-
+from api.matching import matching_api
 # Register all blueprints
 from api.gene_resource import gene_resources_api
 # Register all blueprints
@@ -58,6 +58,7 @@ app.register_blueprint(resource_api)
 # :white_check_mark: Register yours
 app.register_blueprint(illumina_api)
 app.register_blueprint(college_api)
+app.register_blueprint(matching_api)
 app.register_blueprint(dnabot_api)
 
 # Login Manager
