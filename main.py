@@ -40,7 +40,7 @@ from api.dnabot import dnabot_api
 from api.college import college_api 
 from api.matching import matching_api 
 # Register all blueprints
-from api.gene_resource import gene_resources_api
+from api.gene_resource import gene_resource_api
 # Register all blueprints
 app.register_blueprint(user_api)
 app.register_blueprint(pfp_api)
@@ -64,7 +64,7 @@ app.register_blueprint(matching_api)
 # Login Manager
 app.register_blueprint(dna_api)
 app.register_blueprint(riskquiz_api)
-app.register_blueprint(gene_resources_api)
+app.register_blueprint(gene_resource_api)
 # Login Manager
 login_manager.login_view = "login"
 @login_manager.unauthorized_handler
