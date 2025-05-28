@@ -1,11 +1,9 @@
 from flask import Blueprint, jsonify
-from flask_cors import cross_origin
 
 gene_resource_api = Blueprint('gene_resource_api', __name__, url_prefix='/api/gene_resource')
 
 
 @gene_resource_api.route("/", methods=["GET"])
-@cross_origin()
 def get_gene_flashcards():
     flashcards = [
         {

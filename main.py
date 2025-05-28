@@ -17,6 +17,7 @@ from api.user import user_api
 from api.news import news_api
 from api.pfp import pfp_api
 from api.nestImg import nestImg_api
+from api.riskquiz import riskquiz_api
 from api.post import post_api
 from api.channel import channel_api
 from api.group import group_api
@@ -49,6 +50,7 @@ app.register_blueprint(channel_api)
 app.register_blueprint(group_api)
 app.register_blueprint(section_api)
 app.register_blueprint(student_api)
+app.register_blueprint(riskquiz_api)
 app.register_blueprint(nestPost_api)
 app.register_blueprint(messages_api)
 app.register_blueprint(questions_api)
