@@ -65,7 +65,7 @@ class DNAGene(Resource):
 def get_gene_list():
     # Ideally, you'd fetch this from a DB or file
     gene_list = [
-        {"gene": "IacZ", "organism": "Escherichia coli"},
+        {"gene": "ESR1", "organism": "Danio rerio"},
         {"gene": "FOXP2", "organism": "Pan troglodytes"},
         {"gene": "MDR1", "organism": "Canis lupus familiaris"},
         {"gene": "SHH", "organism": "Gallus gallus"},
