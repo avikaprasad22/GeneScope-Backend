@@ -20,3 +20,4 @@ boto3
 cmake
 opencv_python
 face_recognition
+google-generativeai
