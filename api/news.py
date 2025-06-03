@@ -4,7 +4,7 @@ import os
 
 news_api = Blueprint('news_api', __name__)
 
-API_KEY = "68a69dddbb9341d0a5f8fe2aa38967fd"
+API_KEY = os.getenv("NEWS_API_KEY")
 
 # Top Headlines Endpoint
 @news_api.route('/api/science-news')
