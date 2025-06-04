@@ -232,6 +232,6 @@ def backup_database(src_uri, backup_uri):
         except Exception as e:
             print("Error backing up database file:", e)
 
-# Run Flask on port 8504
+# Run Flask on port 5329
 if __name__ == "__main__":
-    app.run(debug=True, port=8504)
+    app.run(debug=True, port=5329)

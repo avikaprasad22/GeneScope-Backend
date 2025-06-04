@@ -19,4 +19,4 @@ def apply_cors_headers(response):
 app.register_blueprint(illumina_api)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8504)
+    app.run(debug=True, port=5329)

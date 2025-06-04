@@ -4,7 +4,7 @@
       server_name genescope.opencodingsociety.com;
 
       location / {
-          proxy_pass http://localhost:8504;
+          proxy_pass http://localhost:5329;
 
           # Preflighted requests
           if ($request_method = OPTIONS) {
