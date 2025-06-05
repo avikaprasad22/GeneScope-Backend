@@ -6,6 +6,7 @@ from urllib.parse import urljoin, urlparse
 from flask import abort, redirect, render_template, request, send_from_directory, url_for, jsonify, current_app, current_app
 from flask_login import current_user, login_user, logout_user, login_required, login_required
 from flask.cli import AppGroup
+from flask_cors import CORS
 from werkzeug.security import generate_password_hash
 
 # Flask app setup
