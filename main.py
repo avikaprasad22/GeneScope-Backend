@@ -10,6 +10,8 @@ from werkzeug.security import generate_password_hash
 
 # Flask app setup
 from __init__ import app, db, login_manager
+CORS(app, supports_credentials=True)
+
 # CORS for frontend running on a different port
 # Flask app setup
 # API imports (teammate + yours)
