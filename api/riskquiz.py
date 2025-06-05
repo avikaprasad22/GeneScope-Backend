@@ -7,7 +7,7 @@ from model.riskquiz import DiseasePredictor
 riskquiz_api = Blueprint("riskquiz_api", __name__, url_prefix="/riskquiz")
 predictor = DiseasePredictor("symptoms.json")
 
-@riskquiz_api.route("/get_symptoms")
+@riskquiz_api.route("/api/get_symptoms")
 @cross_origin(origins="http://127.0.0.1:4504")
 def get_symptoms():
     disease = request.args.get("disease", "")
@@ -16,7 +16,7 @@ def get_symptoms():
         return jsonify({"success": False, "error": "Disease not found"})
     return jsonify({"success": True, "symptoms": top_symptoms, "matched_disease": disease})
 
-@riskquiz_api.route("/predict", methods=["POST"])
+@riskquiz_api.route("/api/predict", methods=["POST"])
 @cross_origin(origins="http://127.0.0.1:4504")
 def predict():
     data = request.get_json()
