@@ -235,6 +235,15 @@ def backup_database(src_uri, backup_uri):
         except Exception as e:
             print("Error backing up database file:", e)
 
+CORS(app, resources={
+    r"/riskquiz/api/*": {
+        "origins": [
+            "http://127.0.0.1:4504",
+            "https://open-coding-society.github.io"
+        ]
+    }
+})
+
 # Run Flask on port 8504
 if __name__ == "__main__":
     app.run(debug=True, port=8504)
